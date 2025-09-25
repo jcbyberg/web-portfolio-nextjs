@@ -38,7 +38,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Let's bring your idea to life!
+            Let&apos;s bring your idea to life!
           </p>
           <div>
             <Link
