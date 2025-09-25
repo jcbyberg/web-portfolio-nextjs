@@ -9,12 +9,12 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Javascript</li>
         <li>React</li>
+        <li>Next.js</li>
+        <li>Git</li>
+        <li>Java</li>
       </ul>
     ),
   },
@@ -53,16 +53,21 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <div className="relative w-full h-[500px] overflow-hidden rounded-lg">
+          <Image
+            src="/images/about-image.jpg"
+            alt="About section portrait"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "center 75%" }}
+            sizes="(min-width: 768px) 500px, 100vw"
+            priority
+          />
+        </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I’m a full-stack developer and graphic designer who loves building fast, interactive, and responsive experiences. My toolkit spans Java, JavaScript, React, Node.js, Python, HTML/CSS, and Git a strong track record with WordPress, Magento, Next.js, Shopify, and more. I move quickly, learn even faster, and enjoy pairing clean UI with reliable, scalable backends. I’m a collaborative teammate who values clear communication and code quality, and I’m especially excited about automation and AI—using them to streamline workflows, boost performance, and unlock smarter, more delightful products.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -72,13 +77,7 @@ const AboutSection = () => {
               {" "}
               Skills{" "}
             </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
+         
             <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
