@@ -7,21 +7,21 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Password: 1234",
+    title: "Shopify Dempo Store",
+    description: "Use Password: 1234",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/jcbyberg/notus-nextjs",
     previewUrl: "https://lorem-soap.myshopify.com/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Portfolio Website",
+    description: "A Rebranded Template",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/jcbyberg/notus-nextjs",
+    previewUrl: "https://notus-nextjs-delta.vercel.app/landing",
   },
   {
     id: 3,
