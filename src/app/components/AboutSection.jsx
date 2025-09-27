@@ -153,7 +153,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I'm a full-stack developer and graphic designer who loves building fast, interactive, and responsive experiences. My toolkit spans Java, JavaScript, React, Node.js, Python, HTML/CSS, and Git a strong track record with WordPress, Magento, Next.js, Shopify, and more. I move quickly, learn even faster, and enjoy pairing clean UI with reliable, scalable backends. I'm a collaborative teammate who values clear communication and code quality, and I'm especially excited about automation and AI-using them to streamline workflows, boost performance, and unlock smarter, more delightful products.
+            I&apos;m a full-stack developer and graphic designer who loves building fast, interactive, and responsive experiences. My toolkit spans Java, JavaScript, React, Node.js, Python, HTML/CSS, and Git a strong track record with WordPress, Magento, Next.js, Shopify, and more. I move quickly, learn even faster, and enjoy pairing clean UI with reliable, scalable backends. I&apos;m a collaborative teammate who values clear communication and code quality, and I&apos;m especially excited about automation and AI-using them to streamline workflows, boost performance, and unlock smarter, more delightful products.
           </p>
           <div className="flex flex-row justify-start mt-8 space-x-4">
             <TabButton
