@@ -8,11 +8,11 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "Password: 1234",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://lorem-soap.myshopify.com/",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const projectsData = [
     title: "Food Ordering Application",
     description: "Project 4 description",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Graphics"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -97,8 +97,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Graphics"
+          isSelected={tag === "Graphics"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
