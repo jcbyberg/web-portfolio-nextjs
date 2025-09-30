@@ -3,6 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
+const bccEmail = "jcbyberg@gmail.com";
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
@@ -12,12 +13,14 @@ export async function POST(req, res) {
       from: fromEmail,
       to: email,
       subject: subject,
+      bcc: bccEmail,
       react: (
         <>
-          <h1>{subject}</h1>
-          <p>Thank you for contacting us!</p>
+          <h1>Thanks for reaching out</h1>
+          <p>Thank you for reaching out. I appreciate the opportunity to help and will follow up shortly with a response and any questions.</p>
           <p>New message submitted:</p>
-          <p>{message}</p>
+          <p>Best regards,</p> 
+          <p>Josh Byberg [info@joshbyberg.com] · [joshbyberg.com]</p>
         </>
       ),
     });
@@ -26,3 +29,5 @@ export async function POST(req, res) {
     return NextResponse.json({ error });
   }
 }
+
+
