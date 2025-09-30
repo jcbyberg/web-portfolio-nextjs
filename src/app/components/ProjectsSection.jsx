@@ -16,8 +16,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A Rebranded Template",
+    title: "Customized Portfolio Template",
+    description: "A rebranded Notus NextJS template, tailored for my personal portfolio.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/notus-nextjs",
