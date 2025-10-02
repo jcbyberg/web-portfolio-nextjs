@@ -25,8 +25,8 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Simple Blog Website",
+    description: "Customized blog for small businesses using Next.js and Markdown.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/nextjs-portfolio",
