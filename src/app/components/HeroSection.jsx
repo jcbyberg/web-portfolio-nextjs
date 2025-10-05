@@ -27,10 +27,19 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
-                1000,
                 "Graphic Designer",
                 1000,
+                "Digital Artist",
+                1000,
+                "Javascript Developer",
+                1000,
+                "Creative Specialist",
+                1000,
+                "Python Developer",
+                1000,
+                "Brand Identity Specialist",
+                1000,
+                "Motion Designer",
               ]}
               wrapper="span"
               speed={50}
