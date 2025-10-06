@@ -21,7 +21,7 @@ export async function POST(req, res) {
           <p>{message}</p>
           <p>Thank you for reaching out. I appreciate the opportunity to help and will follow up shortly with a response and any questions.</p>
           <p>Josh Byberg</p>
-          <p>[josh@yourdomain.com] · [yourwebsite.com]</p>
+          <p>[info@joshbyberg.com] · [joshbyberg.com]</p>
         </>
       ),
     });
