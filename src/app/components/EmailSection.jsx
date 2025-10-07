@@ -1,19 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaError, setCaptchaError] = useState("");
+  const recaptchaRef = useRef(null);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaToken) {
+      setCaptchaError("Please verify that you are not a robot.");
+      return;
+    }
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
+      captchaToken,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -31,11 +42,26 @@ const EmailSection = () => {
     };
 
     const response = await fetch(endpoint, options);
+    if (!response.ok) {
+      setCaptchaError("Something went wrong. Please try again.");
+      return;
+    }
+
     const resData = await response.json();
 
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
+      setCaptchaError("");
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
+    }
+  };
+
+  const onCaptchaChange = (value) => {
+    setCaptchaToken(value);
+    if (value) {
+      setCaptchaError("");
     }
   };
 
@@ -117,9 +143,27 @@ const EmailSection = () => {
                 placeholder="Let's talk about..."
               />
             </div>
+            <div className="mb-6">
+              {siteKey ? (
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={siteKey}
+                  onChange={onCaptchaChange}
+                  theme="dark"
+                />
+              ) : (
+                <p className="text-red-500 text-sm">
+                  reCAPTCHA site key is not configured.
+                </p>
+              )}
+              {captchaError && (
+                <p className="text-red-500 text-sm mt-2">{captchaError}</p>
+              )}
+            </div>
             <button
               type="submit"
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              disabled={!siteKey}
             >
               Send Message
             </button>
