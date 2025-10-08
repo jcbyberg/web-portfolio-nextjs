@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Shopify Dempo Store",
+    title: "Shopify Demo Store",
     description: "Use Password: 1234",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
