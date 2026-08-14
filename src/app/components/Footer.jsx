@@ -13,7 +13,6 @@ const Footer = () => {
             width={240}
             height={96}
             className="h-15 w-auto filter brightness-0 invert"
-            priority
           />
         </Link>
         <p className="text-slate-600">All rights reserved.</p>

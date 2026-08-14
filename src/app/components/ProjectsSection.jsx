@@ -6,25 +6,45 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 0,
+    title: "Bourne To Climb",
+    description:
+      "Website for an Oshawa tree service. Mobile-first one-page build with service details and a direct contact path.",
+    image: "/images/projects/bourne-to-climb.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "https://bournetoclimb.ca/",
+  },
+  {
     id: 1,
+    title: "Guitar Vault",
+    description:
+      "Next.js storefront for electric and acoustic guitars, parts, and accessories, with search, sorting, and a product catalogue built from a detail scraper.",
+    image: "/images/projects/guitar-vault.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/jcbyberg/aliexpress-store",
+    previewUrl: "https://guitars.joshbyberg.com/",
+  },
+  {
+    id: 2,
     title: "Shopify Demo Store",
     description: "Use Password: 1234",
-    image: "/images/projects/1.png",
+    image: "/images/projects/1.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/notus-nextjs",
     previewUrl: "https://lorem-soap.myshopify.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Customized Portfolio Template",
     description: "A rebranded Notus NextJS template, tailored for my personal portfolio.",
-    image: "/images/projects/2.png",
+    image: "/images/projects/2.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/notus-nextjs",
     previewUrl: "https://notus-nextjs-delta.vercel.app/landing",
   },
   {
-    id: 3,
+    id: 4,
     title: "Simple Blog Website",
     description: "Customized blog for small businesses using Next.js and Markdown.",
     image: "/images/projects/3.png",

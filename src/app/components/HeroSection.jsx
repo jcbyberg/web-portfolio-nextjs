@@ -17,14 +17,12 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-600">
-              Hello, I&apos;m{" "}
+              Hello, I&apos;m Josh Byberg
             </span>
             <br></br>
             <TypeAnimation
               className="text-3xl sm:text-4xl lg:text-7xl"
               sequence={[
-                "Josh",
-                1000,
                 "Web Developer",
                 1000,
                 "Graphic Designer",
@@ -68,8 +66,9 @@ const HeroSection = () => {
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden">
             <Image
               src="/images/hero-image.jpg"
-              alt="hero image"
+              alt="Portrait of Josh Byberg"
               fill
+              priority
               className="object-cover"
               style={{ objectPosition: "center calc(50% + 50px)" }}
               sizes="(max-width: 1024px) 250px, 400px"

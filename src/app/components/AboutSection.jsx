@@ -147,7 +147,6 @@ const AboutSection = () => {
             height={500}
             className="w-full h-auto max-w-[500px] rounded-lg object-cover"
             style={{ objectPosition: "center 75%" }}
-            priority
           />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
