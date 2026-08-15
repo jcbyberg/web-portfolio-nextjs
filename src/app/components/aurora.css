@@ -1,0 +1,149 @@
+.aurora {
+  --aurora-x: 0;
+  --aurora-y: 0;
+  --aurora-opacity: 0.62;
+  --aurora-travel: 95px;
+  --aurora-blur: 58px;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aurora[data-intensity="subtle"] {
+  --aurora-opacity: 0.30;
+  --aurora-travel: 46px;
+  --aurora-blur: 88px;
+}
+
+.aurora__layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.aurora__layer--a {
+  transform: translate3d(
+    calc(var(--aurora-x) * var(--aurora-travel)),
+    calc(var(--aurora-y) * var(--aurora-travel)),
+    0
+  );
+}
+
+.aurora__layer--b {
+  transform: translate3d(
+    calc(var(--aurora-x) * var(--aurora-travel) * -0.65),
+    calc(var(--aurora-y) * var(--aurora-travel) * -0.65),
+    0
+  );
+}
+
+.aurora__layer--c {
+  transform: translate3d(
+    calc(var(--aurora-x) * var(--aurora-travel) * 0.4),
+    calc(var(--aurora-y) * var(--aurora-travel) * 0.4),
+    0
+  );
+}
+
+.aurora__blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: var(--aurora-opacity);
+  /* saturate is static, not animated — it costs one paint, not one per frame */
+  filter: blur(var(--aurora-blur)) saturate(1.3);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/*
+  Blob sizing is a composition decision, not an arbitrary one. Larger fields
+  (70vmax+) at this blur all overlap the centre and merge into a single flat
+  wash — the dark gaps between colour zones are what make it read as aurora
+  rather than a gradient. Keep these sizes and the diagonal anchor spread.
+*/
+.aurora__blob--a {
+  top: -18%;
+  left: -12%;
+  width: 52vmax;
+  height: 52vmax;
+  background: radial-gradient(
+    circle at center,
+    #38bdf8 0%,
+    transparent 70%
+  );
+  animation: aurora-drift-a 31s ease-in-out infinite alternate;
+}
+
+.aurora__blob--b {
+  top: 2%;
+  left: 62%;
+  width: 42vmax;
+  height: 42vmax;
+  background: radial-gradient(
+    circle at center,
+    #67e8f9 0%,
+    transparent 70%
+  );
+  animation: aurora-drift-b 41s ease-in-out infinite alternate;
+}
+
+.aurora__blob--c {
+  top: 58%;
+  left: 18%;
+  width: 46vmax;
+  height: 46vmax;
+  background: radial-gradient(
+    circle at center,
+    #2563eb 0%,
+    transparent 70%
+  );
+  animation: aurora-drift-c 53s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift-a {
+  0% {
+    transform: translate3d(-6.2vw, -3.1vh, 0);
+  }
+  50% {
+    transform: translate3d(4.7vw, 7.8vh, 0);
+  }
+  100% {
+    transform: translate3d(10.8vw, -6.2vh, 0);
+  }
+}
+
+@keyframes aurora-drift-b {
+  0% {
+    transform: translate3d(7.8vw, -4.7vh, 0);
+  }
+  50% {
+    transform: translate3d(-6.2vw, 6.2vh, 0);
+  }
+  100% {
+    transform: translate3d(-10.8vw, -7.8vh, 0);
+  }
+}
+
+@keyframes aurora-drift-c {
+  0% {
+    transform: translate3d(-4.7vw, 7.8vh, 0);
+  }
+  50% {
+    transform: translate3d(9.3vw, -4.7vh, 0);
+  }
+  100% {
+    transform: translate3d(-7.8vw, -10.8vh, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora__layer {
+    transform: none;
+  }
+
+  .aurora__blob {
+    animation: none;
+  }
+}

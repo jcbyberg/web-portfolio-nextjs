@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Aurora from "../components/Aurora";
 import {
   MapPinIcon,
   CheckIcon,
@@ -132,6 +133,8 @@ export default function OshawaLanding() {
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
+      <Aurora intensity="subtle" />
+      <div className="relative z-[1]">
       {/*
         Reveal animations start at opacity:0 and are un-hidden by framer-motion
         once IntersectionObserver fires. Without JS that never happens, so force
@@ -154,14 +157,6 @@ export default function OshawaLanding() {
 
       {/* ------------------------------------------------------------- HERO */}
       <section className="relative overflow-hidden">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-30 blur-3xl"
-          style={{
-            background:
-              "radial-gradient(45rem 22rem at 20% -10%, #0284c7 0%, transparent 60%), radial-gradient(35rem 20rem at 85% 10%, #2563eb 0%, transparent 60%)",
-          }}
-        />
         <div className="relative container mx-auto px-6 py-20 text-center sm:py-28 lg:px-12">
           <motion.div {...fadeUp}>
             <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1.5 text-sm font-semibold text-cyan-300">
@@ -473,6 +468,7 @@ export default function OshawaLanding() {
           </p>
         </div>
       </footer>
+      </div>
     </main>
   );
 }
