@@ -55,6 +55,12 @@ export const metadata = {
     description: siteDescription,
     images: ['/images/og-image.png'],
   },
+  // Google Search Console ownership proof for the https://joshbyberg.com
+  // URL-prefix property. Not a secret — it is served in the page source by
+  // design. Removing it un-verifies the property, so leave it in place.
+  verification: {
+    google: 'lFulI05BSOQpfqLHpeT5W_eMxD8Qqjx92jraM3ZvyEY',
+  },
   robots: {
     index: true,
     follow: true,
