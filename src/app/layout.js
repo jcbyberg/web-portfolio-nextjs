@@ -21,11 +21,13 @@ export const metadata = {
   keywords: [
     'Josh Byberg',
     'web developer',
+    'web designer',
     'graphic designer',
     'full-stack developer',
     'Next.js',
     'React',
     'Oshawa',
+    'Durham Region',
     'Ontario',
   ],
   alternates: {
@@ -65,19 +67,56 @@ export const metadata = {
   },
 }
 
-const personSchema = {
+// ProfessionalService (not Person): this site markets a local web-design and
+// development service, so the entity schema carries the service area, service
+// types, and profile links that both search engines and AI assistants extract.
+const professionalServiceSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Josh Byberg',
+  '@type': 'ProfessionalService',
+  name: 'Josh Byberg — Web Developer & Graphic Designer',
+  description: siteDescription,
   url: siteUrl,
-  jobTitle: 'Web Developer & Graphic Designer',
-  email: 'mailto:info@joshbyberg.com',
+  email: 'info@joshbyberg.com',
+  image: `${siteUrl}/images/og-image.png`,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Oshawa',
     addressRegion: 'ON',
     addressCountry: 'CA',
   },
+  // Mirrors SERVICE_AREA in src/app/oshawa/offer-config.js plus the region
+  // itself. Keep the two lists in sync if the service area changes.
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Durham Region', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'City', name: 'Oshawa', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'Town', name: 'Whitby', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'Place', name: 'Courtice', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'AdministrativeArea', name: 'Clarington', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'Town', name: 'Ajax', addressRegion: 'ON', addressCountry: 'CA' },
+    { '@type': 'Place', name: 'Bowmanville', addressRegion: 'ON', addressCountry: 'CA' },
+  ],
+  sameAs: [
+    'https://github.com/jcbyberg',
+    'https://www.linkedin.com/in/joshua-byberg-134b91208/',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Josh Byberg',
+    jobTitle: 'Web Developer & Graphic Designer',
+    email: 'info@joshbyberg.com',
+    sameAs: [
+      'https://github.com/jcbyberg',
+      'https://www.linkedin.com/in/joshua-byberg-134b91208/',
+    ],
+  },
+  serviceType: [
+    'Web development',
+    'Web design',
+    'Graphic design',
+    'Brand identity design',
+    'E-commerce development',
+    'AI implementation and workflow automation',
+  ],
   knowsAbout: [
     'Web development',
     'Graphic design',
@@ -96,7 +135,9 @@ export default function RootLayout({ children }) {
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(professionalServiceSchema),
+          }}
         />
       </body>
     </html>

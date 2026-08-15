@@ -150,9 +150,24 @@ const AboutSection = () => {
           />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          {/* Answer-first heading: states what the visitor gets before any
+              background detail. */}
+          <h2 className="text-4xl font-bold text-white mb-4">
+            What I do for my clients
+          </h2>
           <p className="text-base lg:text-lg">
-            I&apos;m a full-stack developer and graphic designer who loves building fast, interactive, and responsive experiences. My toolkit spans Java, JavaScript, React, Node.js, Python, HTML/CSS, and Git I have a strong track record with many frameworks such as WordPress, Magento, Next.js, Shopify, and more. I move quickly, learn even faster, and enjoy pairing clean UI with reliable, scalable backends. I&apos;m a collaborative teammate who values clear communication and code quality, and I&apos;m especially excited about automation and AI-using them to streamline workflows, boost performance, and unlock smarter, more delightful products.
+            I&apos;m a full-stack developer and graphic designer based in
+            Oshawa, Ontario. I build fast, mobile-first websites, web apps, and
+            brand identities for businesses in Oshawa, across the Durham
+            Region, and beyond — pairing clean, accessible interfaces with
+            reliable, scalable backends. Along the way I use automation and AI
+            to streamline workflows, cut busywork, and keep projects lean.
+          </p>
+          <p className="text-base lg:text-lg mt-4">
+            My toolkit spans JavaScript, React, Next.js, Python, Java,
+            HTML/CSS, and Git, with hands-on experience across WordPress,
+            Magento, Shopify, and Wix. I move quickly, communicate clearly, and
+            treat every build like it carries my name — because it does.
           </p>
           <div className="flex flex-row justify-start mt-8 space-x-4">
             <TabButton

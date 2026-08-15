@@ -15,7 +15,15 @@ const Footer = () => {
             className="h-15 w-auto filter brightness-0 invert"
           />
         </Link>
-        <p className="text-slate-600">All rights reserved.</p>
+        <div className="text-right">
+          <p className="text-slate-500">
+            Josh Byberg — Web Developer &amp; Graphic Designer
+          </p>
+          <p className="text-slate-500">
+            Oshawa, Ontario · Serving the Durham Region
+          </p>
+          <p className="text-slate-600">All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
