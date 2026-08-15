@@ -23,6 +23,13 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
+  // Absolute path, unlike the in-page hashes above: this one leaves the home
+  // page for the Oshawa offer, and must still work when the navbar is rendered
+  // on a route other than "/".
+  {
+    title: "Oshawa Offer",
+    path: "/oshawa",
+  },
 ];
 
 const Navbar = () => {

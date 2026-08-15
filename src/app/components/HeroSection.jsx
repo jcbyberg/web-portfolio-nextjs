@@ -47,14 +47,24 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Let&apos;s bring your idea to life!
           </p>
-          <div>
+          {/* Stacked, not side by side: the promo sits beneath Contact so it
+              reads as a second, separate offer rather than competing with the
+              primary action. */}
+          <div className="flex flex-col items-start gap-3">
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 hover:from-sky-400 hover:via-cyan-300 hover:to-blue-500 text-white"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 hover:from-sky-400 hover:via-cyan-300 hover:to-blue-500 text-white text-center"
             >
               Contact
             </Link>
-            
+            <Link
+              href="/oshawa"
+              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 hover:from-sky-400 hover:via-cyan-300 hover:to-blue-500 text-white block"
+            >
+              <span className="block bg-[#121212] hover:bg-[#181818] rounded-full px-5 py-2 text-center">
+                $500 website promotion for local business
+              </span>
+            </Link>
           </div>
         </motion.div>
         <motion.div

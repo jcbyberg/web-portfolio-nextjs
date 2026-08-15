@@ -10,16 +10,19 @@ const projectsData = [
     id: 0,
     title: "Bourne To Climb",
     description:
-      "Website for an Oshawa tree service. Mobile-first one-page build with service details and a direct contact path.",
-    // Outcome wording mirrors the vetted copy on /oshawa: client-reported,
-    // explicitly unverified, no causation promised
-    // (data/permissions/bourne-to-climb.md).
-    problem:
-      "An owner-operated Oshawa tree service had no website — customers couldn't find the business online, review its services, or ask for a quote.",
-    stack:
-      "Next.js, React, and Tailwind CSS in a one-page, mobile-first layout, with semantic structured data so search engines and AI assistants can read the services and the Oshawa service area correctly.",
-    impact:
-      "A live site at bournetoclimb.ca with clear service details and a direct contact path. Since it launched, the owner reports more work leads than the team can handle. Reported by the owner; not independently verified, and not a result promised to anyone else.",
+      "A one-page site for an owner-operated tree service here in Oshawa. Built for the phone, because that's where people look for one.",
+    features: [
+      "Highly optimized local SEO",
+      "schema.org structured data — readable by Google and AI assistants",
+      // Forward-looking capability, not an achieved-ranking claim: the /oshawa
+      // copy rules forbid ranking and SEO-outcome language on this site
+      // (docs/campaign/oshawa-outreach.md §11), and a bullet asserting the site
+      // *is* found in local results would break them.
+      "Set up to build your SEO and improve your local search visibility",
+      "Mobile-first — built for customers calling from a phone",
+      "Tap-to-call and quote requests",
+      "Performance and accessibility checked before launch",
+    ],
     // Screenshot of the client's live site, permission-gated exactly like
     // /oshawa: if approval is ever withdrawn, flipping BOURNE_QUOTE_APPROVED
     // removes it here too, not only from the offer page
@@ -33,13 +36,14 @@ const projectsData = [
     id: 1,
     title: "Guitar Vault",
     description:
-      "Next.js storefront for electric and acoustic guitars, parts, and accessories, with search, sorting, and a product catalogue built from a detail scraper.",
-    problem:
-      "Prove out a production-grade e-commerce storefront with a large product catalogue — without entering every product by hand.",
-    stack:
-      "Next.js, React, and Tailwind CSS, plus a custom scraper pipeline that collects and normalizes product details into a searchable, sortable catalogue.",
-    impact:
-      "A live storefront at guitars.joshbyberg.com where visitors can browse electric and acoustic guitars, parts, and accessories with search and sorting across the full catalogue.",
+      "A full online guitar shop — electric, acoustic, parts and accessories — with search and sorting across the whole catalogue.",
+    features: [
+      "Full product catalogue with search and sorting",
+      "Structured product data for search engines",
+      "Fast page loads on a large catalogue",
+      "Mobile-first storefront",
+      "Automated product data pipeline",
+    ],
     image: "/images/projects/guitar-vault.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/aliexpress-store",
@@ -49,13 +53,12 @@ const projectsData = [
     id: 2,
     title: "Shopify Demo Store",
     description:
-      "A working Shopify storefront demo. Use Password: 1234 to browse it.",
-    problem:
-      "Show businesses what a Shopify store looks and feels like in practice, before they commit to a build.",
-    stack:
-      "Shopify storefront with a customized theme, demo product catalogue, and standard checkout flow.",
-    impact:
-      "A browsable store anyone can walk through (password 1234), useful for judging structure, layout, and product presentation on Shopify.",
+      "A real Shopify store you can walk through before deciding whether Shopify is right for you. The password is 1234.",
+    features: [
+      "Custom Shopify theme work",
+      "Mobile-first storefront",
+      "Product and collection layouts",
+    ],
     image: "/images/projects/1.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/notus-nextjs",
@@ -65,13 +68,12 @@ const projectsData = [
     id: 3,
     title: "Customized Portfolio Template",
     description:
-      "A rebranded Notus NextJS template, tailored for my personal portfolio.",
-    problem:
-      "An open-source template didn't match the branding or content structure the site actually needed.",
-    stack:
-      "Next.js and Tailwind CSS, reworking the Notus template's components, styling, and pages rather than rebuilding from scratch.",
-    impact:
-      "A live landing and portfolio demo showing how a stock template can be adapted into a custom, on-brand site.",
+      "An off-the-shelf template reworked until it stopped looking off-the-shelf.",
+    features: [
+      "Custom rebrand of a Next.js template",
+      "Responsive across desktop and mobile",
+      "Reusable component library",
+    ],
     image: "/images/projects/2.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/notus-nextjs",
@@ -81,17 +83,34 @@ const projectsData = [
     id: 4,
     title: "Simple Blog Website",
     description:
-      "Customized blog for small businesses using Next.js and Markdown.",
-    problem:
-      "Small businesses need a blog they can publish to without paying for or maintaining a heavy CMS.",
-    stack:
-      "Next.js with Markdown-based content and Tailwind CSS — posts are plain files, so publishing needs no admin panel.",
-    impact:
-      "A lightweight blog template that is cheap to host and simple to update, suitable as a starting point for a small-business content site.",
+      "A blog a small business can actually keep up with. No CMS, no monthly fee, no admin panel to log into.",
+    features: [
+      "Markdown-driven publishing",
+      "Fast static page delivery",
+      "Structured data for articles",
+      "Mobile-first reading layout",
+    ],
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/jcbyberg/nextjs-portfolio",
     previewUrl: "https://nextjs-portfolio-woad-iota.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Emet Bible",
+    description:
+      "A Hebrew and Greek interlinear Bible reader with an interactive verse graph. The biggest thing I've built.",
+    features: [
+      "Hebrew and Greek text word by word, with transliteration and gloss",
+      "Interactive verse graph built with Sigma.js",
+      "Trace a single word everywhere it appears",
+      "Python FastAPI and Postgres backend",
+      "Mobile-first reading layout",
+    ],
+    image: "/images/projects/emet-bible.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "https://emet-bible.com/",
   },
 ];
 
@@ -121,10 +140,10 @@ const ProjectsSection = () => {
         Websites and apps I&apos;ve built
       </h2>
       <p className="mx-auto mb-8 md:mb-12 max-w-3xl text-center text-[#ADB7BE]">
-        Every project below is live and visitable today — from a website for an
-        Oshawa tree service serving the Durham Region to a full e-commerce
-        storefront. Each entry covers the problem it solved, how it was built,
-        and what it does for the people using it.
+        All six of these are live right now, and you can go click around in
+        them — a tree service here in Oshawa, a guitar shop with a full
+        catalogue, a Shopify store you can walk through, and a Bible study app
+        that reads the Greek and Hebrew word by word. Each one lists what went into it.
       </p>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
@@ -159,9 +178,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
-              problem={project.problem}
-              stack={project.stack}
-              impact={project.impact}
+              features={project.features}
             />
           </motion.li>
         ))}

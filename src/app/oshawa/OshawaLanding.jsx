@@ -45,12 +45,12 @@ const Blocker = ({ children }) => (
 // position, or outcome claims (docs/campaign/oshawa-outreach.md, PLAN §11).
 const packageIncludes = [
   {
-    title: "A clean, custom one-page website",
-    body: "Designed for your business specifically — not a template with your name dropped into it. Up to five sections covering your services, your work, your service area, and how to reach you.",
+    title: "A new site, or a rebuild of your current one",
+    body: "Starting from nothing or replacing a site that has dated badly — same price either way. Designed for your business specifically, not a template with your name dropped into it. Up to five sections covering your services, your work, your service area, and how to reach you.",
   },
   {
     title: "Optimized for web search",
-    body: "Proper page titles and descriptions, a sitemap, and structured data — so search engines can read your site correctly and show the right information about your business when someone looks you up.",
+    body: "Concretely: your business name, address and phone written into the page as schema.org LocalBusiness structured data, so Google reads them as facts instead of guessing from your text. A title and description written for each page rather than left as the default. A sitemap so nothing gets missed when your site is crawled. The areas you serve named in the copy where they belong. All of it checked against Google's own structured-data testing tool before launch — not just built and hoped over.",
   },
   {
     title: "Optimized for AI search",
@@ -90,11 +90,11 @@ const otherSites = [
     host: "guitars.joshbyberg.com",
   },
   {
-    name: "MotoMini",
+    name: "Small Business Blog",
     blurb:
-      "Media sharing site for mini moto racing — uploads, moderation, and galleries.",
-    url: "https://motomini.joshbyberg.com/",
-    host: "motomini.joshbyberg.com",
+      "A blog for a small business with no CMS behind it — nothing to log into, nothing to pay for monthly, and articles that are quick to publish.",
+    url: "https://nextjs-portfolio-woad-iota.vercel.app/",
+    host: "nextjs-portfolio-woad-iota.vercel.app",
   },
 ];
 
@@ -169,9 +169,10 @@ export default function OshawaLanding() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[#ADB7BE] sm:text-xl">
-              A clean, custom website for your business — heavily optimized,
-              built to be found in local search, and live in five business
-              days. One fixed price, no surprises.
+              A new website, or a rebuild of the one you already have.
+              Clean, custom, heavily optimized, built to be found in local
+              search — live in five business days. One fixed price, no
+              surprises.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

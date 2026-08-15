@@ -72,9 +72,13 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
+        {/* h2, not h5: this is a top-level section like About, Projects and
+            FAQ. An h5 here skips two heading levels and breaks screen-reader
+            heading navigation — the same fix already applied to ProjectCard.
+            Size is set by the class, so the visual design is unchanged. */}
+        <h2 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
-        </h5>
+        </h2>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
           I&apos;m currently looking for new opportunities, my inbox is always

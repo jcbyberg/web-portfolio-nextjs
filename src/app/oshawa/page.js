@@ -2,7 +2,7 @@ import OshawaLanding from './OshawaLanding'
 
 const title = 'The $500 Website Package — Oshawa & Durham Region'
 const description =
-  'A clean, custom one-page website for Oshawa and Durham Region businesses. Built to be found in local search, mobile-first, live in five business days. CAD $500 plus HST.'
+  'A new website or a rebuild of your current one, for Oshawa and Durham Region businesses. Built to be found in local search, mobile-first, live in five business days. CAD $500 plus HST.'
 
 export const metadata = {
   title,

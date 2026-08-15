@@ -8,9 +8,7 @@ const ProjectCard = ({
   description,
   gitUrl,
   previewUrl,
-  problem,
-  stack,
-  impact,
+  features,
 }) => {
   const gitLink =
     typeof gitUrl === "string" && gitUrl.trim().length > 0 ? gitUrl : null;
@@ -18,14 +16,6 @@ const ProjectCard = ({
     typeof previewUrl === "string" && previewUrl.trim().length > 0
       ? previewUrl
       : null;
-
-  // Expanded case-study details. Kept as a plain definition list in the HTML
-  // so the text is extractable without any JavaScript.
-  const details = [
-    { label: "Problem", text: problem },
-    { label: "How it was built", text: stack },
-    { label: "Impact", text: impact },
-  ].filter(({ text }) => typeof text === "string" && text.trim().length > 0);
 
   return (
     <div>
@@ -67,17 +57,12 @@ const ProjectCard = ({
             and breaks screen-reader heading navigation. */}
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-[#ADB7BE]">{description}</p>
-        {details.length > 0 ? (
-          <dl className="mt-4 space-y-3 border-t border-[#33353F] pt-4 text-sm">
-            {details.map(({ label, text }) => (
-              <div key={label}>
-                <dt className="font-semibold text-white">{label}</dt>
-                <dd className="mt-0.5 leading-relaxed text-[#ADB7BE]">
-                  {text}
-                </dd>
-              </div>
+        {features && features.length > 0 ? (
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-[#ADB7BE] marker:text-[#ADB7BE]">
+            {features.map((feature) => (
+              <li key={feature}>{feature}</li>
             ))}
-          </dl>
+          </ul>
         ) : null}
       </div>
     </div>
