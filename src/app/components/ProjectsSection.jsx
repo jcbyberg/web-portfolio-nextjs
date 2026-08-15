@@ -14,11 +14,12 @@ const projectsData = [
     features: [
       "Highly optimized local SEO",
       "schema.org structured data — readable by Google and AI assistants",
-      // Forward-looking capability, not an achieved-ranking claim: the /oshawa
-      // copy rules forbid ranking and SEO-outcome language on this site
-      // (docs/campaign/oshawa-outreach.md §11), and a bullet asserting the site
-      // *is* found in local results would break them.
-      "Set up to build your SEO and improve your local search visibility",
+      // Deliverable only. docs/campaign/oshawa-outreach.md §11 forbids ranking
+      // and SEO-outcome language sitewide, and that covers phrasing like
+      // "improve your visibility" as well as outright ranking claims —
+      // "optimized for" describes work done, "improve your X" promises a
+      // result. Keep this bullet naming artifacts, not effects.
+      "Written page title, meta description, and sitemap — not left as defaults",
       "Mobile-first — built for customers calling from a phone",
       "Tap-to-call and quote requests",
       "Performance and accessibility checked before launch",
