@@ -55,11 +55,15 @@ export const metadata = {
     description: siteDescription,
     images: ['/images/og-image.png'],
   },
-  // Google Search Console ownership proof for the https://joshbyberg.com
-  // URL-prefix property. Not a secret — it is served in the page source by
-  // design. Removing it un-verifies the property, so leave it in place.
+  // Ownership proofs for the https://joshbyberg.com property (Google
+  // Search Console URL-prefix property and Facebook domain verification).
+  // Not secrets — they are served in the page source by design. Removing
+  // one un-verifies the corresponding property, so leave them in place.
   verification: {
     google: 'lFulI05BSOQpfqLHpeT5W_eMxD8Qqjx92jraM3ZvyEY',
+    other: {
+      'facebook-domain-verification': 'cqb2po07fwbu4l3rt8gawoc4xb3bk0',
+    },
   },
   robots: {
     index: true,
