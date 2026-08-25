@@ -1,0 +1,479 @@
+/* ============================================================
+   AI BLOG — systems / orchestration identity
+   Signature device: "the trace node" — a square bracket marker
+   ([xx]) that pulses live in the masthead, numbers the post index
+   like a process log, and flags each heading inside an article.
+   Dark, cool, indigo-signal accent. Distinct from Race Dad's warm
+   asphalt + safety yellow — this is a console, not a pit board.
+
+   ISOLATION: every selector below is scoped under .ai-root.
+   Never a bare body/h1/a rule — see docs/superpowers/specs/
+   2026-08-24-blogs-and-landing-design.md.
+   ============================================================ */
+
+.ai-root {
+  --ai-bg: #0a0c10;
+  --ai-panel: #12151c;
+  --ai-panel-hi: #171b24;
+  --ai-ink: #e7e9ee;
+  --ai-ink-60: #9ca3b4;
+  --ai-ink-40: #7f8595; /* text-safe: 4.95:1 on --ai-panel, 5.30:1 on --ai-bg (was 4.01/3.74, both below 4.5) */
+  --ai-rule: #232733;
+  --ai-rule-hi: #2e3444;
+  --ai-accent: #7c9cff;
+  --ai-accent-ink: #0a0c10;
+  --ai-accent-soft: rgba(124, 156, 255, 0.12);
+  --ai-mint: #3ddc97;
+  --ai-code-bg: #0d0f15;
+
+  --ai-mono: var(--ai-font-mono), ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --ai-gutter: clamp(1.25rem, 5vw, 4rem);
+  --ai-measure: 34rem;
+
+  background: var(--ai-bg);
+  color: var(--ai-ink);
+  min-height: 100vh;
+  line-height: 1.7;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+}
+
+.ai-root *,
+.ai-root *::before,
+.ai-root *::after {
+  box-sizing: border-box;
+}
+
+.ai-root a {
+  color: inherit;
+}
+
+.ai-root :focus-visible {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: 3px;
+}
+
+.ai-wrap {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 var(--ai-gutter);
+}
+
+.ai-root h1,
+.ai-root h2,
+.ai-root h3,
+.ai-root .ai-display {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+  color: var(--ai-ink);
+}
+
+.ai-mono-label {
+  font-family: var(--ai-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ai-ink-40);
+}
+
+/* --- the trace node: the recurring signature mark --- */
+.ai-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ai-mono);
+  font-size: 0.6875rem;
+  color: var(--ai-accent);
+  border: 1px solid var(--ai-rule-hi);
+  background: var(--ai-accent-soft);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.ai-node.is-live {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.ai-node.is-live::before {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ai-mint);
+  box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.6);
+  animation: ai-pulse 2.2s ease-out infinite;
+}
+
+@keyframes ai-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(61, 220, 151, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(61, 220, 151, 0); }
+}
+
+/* --- Masthead --- */
+.ai-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--ai-rule);
+}
+.ai-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  color: var(--ai-ink);
+}
+.ai-masthead nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.ai-masthead nav a {
+  font-family: var(--ai-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ai-ink-60);
+}
+.ai-masthead nav a:hover {
+  color: var(--ai-accent);
+}
+
+/* --- Hero (index page) --- */
+.ai-hero {
+  padding: clamp(3.5rem, 12vh, 7rem) 0 clamp(2.5rem, 7vh, 4rem);
+  border-bottom: 1px solid var(--ai-rule);
+}
+.ai-hero .ai-mono-label {
+  margin-bottom: 1.1rem;
+  display: inline-block;
+}
+.ai-hero h1 {
+  font-size: clamp(2.25rem, 6.5vw, 4.25rem);
+  max-width: 18ch;
+}
+.ai-hero h1 .ai-accent-text {
+  color: var(--ai-accent);
+}
+.ai-hero p {
+  margin: 1.5rem 0 0;
+  max-width: var(--ai-measure);
+  color: var(--ai-ink-60);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+}
+
+/* --- Index: the trace log --- */
+.ai-log {
+  padding: clamp(2rem, 6vh, 3.5rem) 0 clamp(3rem, 8vh, 5rem);
+  position: relative;
+}
+.ai-index-head {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr 10rem 7rem;
+  gap: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ai-rule-hi);
+}
+.ai-entry {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr 10rem 7rem;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--ai-rule);
+  text-decoration: none;
+  position: relative;
+}
+.ai-entry:hover,
+.ai-entry:focus-visible {
+  background: var(--ai-panel);
+}
+.ai-entry .ai-node {
+  margin-top: 0.15rem;
+}
+.ai-entry h2 {
+  font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.65rem);
+  color: var(--ai-ink);
+  transition: color 0.15s ease;
+}
+.ai-entry:hover h2 {
+  color: var(--ai-accent);
+}
+.ai-entry p {
+  margin: 0.6rem 0 0;
+  color: var(--ai-ink-60);
+  font-size: 0.9375rem;
+  max-width: 52ch;
+}
+.ai-entry .ai-tags {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  padding-top: 0.3rem;
+}
+.ai-entry .ai-tags span {
+  font-family: var(--ai-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ai-ink-40);
+  border: 1px solid var(--ai-rule-hi);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.ai-entry .ai-date {
+  font-family: var(--ai-mono);
+  font-size: 0.75rem;
+  color: var(--ai-ink-40);
+  padding-top: 0.3rem;
+  text-align: right;
+}
+@media (max-width: 860px) {
+  .ai-index-head { display: none; }
+  .ai-entry { grid-template-columns: 2.25rem 1fr; }
+  .ai-entry .ai-tags,
+  .ai-entry .ai-date { grid-column: 2; text-align: left; }
+  .ai-entry .ai-tags { margin-top: 0.6rem; }
+  .ai-entry .ai-date { margin-top: 0.35rem; }
+}
+
+/* --- Article --- */
+.ai-article {
+  padding: clamp(2.5rem, 8vh, 5rem) 0 4rem;
+}
+.ai-article-head {
+  max-width: 46rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ai-rule);
+}
+.ai-article-head h1 {
+  font-size: clamp(2.125rem, 5.5vw, 3.75rem);
+  margin-top: 1.1rem;
+}
+.ai-article-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.ai-article-meta .ai-date {
+  font-family: var(--ai-mono);
+  font-size: 0.75rem;
+  color: var(--ai-ink-40);
+}
+
+.ai-article-body {
+  max-width: var(--ai-measure);
+  margin-top: clamp(2.5rem, 6vh, 3.5rem);
+}
+.ai-article-body > * + * {
+  margin-top: 1.4rem;
+}
+.ai-article-body p {
+  margin: 0;
+  color: var(--ai-ink);
+}
+.ai-article-body p:first-of-type {
+  font-size: 1.1875rem;
+  line-height: 1.65;
+  color: var(--ai-ink);
+}
+.ai-article-body strong {
+  color: #fff;
+  font-weight: 650;
+}
+.ai-article-body em {
+  color: var(--ai-accent);
+  font-style: italic;
+}
+.ai-article-body a {
+  color: var(--ai-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--ai-rule-hi);
+  text-underline-offset: 3px;
+}
+.ai-article-body a:hover {
+  text-decoration-color: var(--ai-accent);
+}
+
+/* heading rhythm inside prose, node-flagged like the index */
+.ai-article-body h2,
+.ai-article-body h3 {
+  position: relative;
+  padding-left: 1.65rem;
+  margin-top: 2.75rem !important;
+}
+.ai-article-body h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); }
+.ai-article-body h3 { font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem); }
+.ai-article-body h2::before,
+.ai-article-body h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--ai-accent);
+  background: var(--ai-accent-soft);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.ai-article-body ul,
+.ai-article-body ol {
+  padding-left: 1.35rem;
+  color: var(--ai-ink);
+}
+.ai-article-body li + li {
+  margin-top: 0.5rem;
+}
+.ai-article-body li::marker {
+  color: var(--ai-accent);
+}
+
+.ai-article-body blockquote {
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 2px solid var(--ai-accent);
+  color: var(--ai-ink-60);
+  font-style: italic;
+}
+
+.ai-article-body hr {
+  border: none;
+  border-top: 1px solid var(--ai-rule);
+  margin: 2.5rem 0;
+}
+
+.ai-article-body img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--ai-rule);
+  border-radius: 4px;
+}
+
+/* --- Code: the weak spot everywhere else, so it gets real care --- */
+.ai-article-body code {
+  font-family: var(--ai-mono);
+  font-size: 0.875em;
+  color: var(--ai-mint);
+  background: var(--ai-panel-hi);
+  border: 1px solid var(--ai-rule-hi);
+  border-radius: 3px;
+  padding: 0.15em 0.4em;
+  white-space: break-spaces;
+  word-break: break-word;
+}
+
+.ai-article-body pre {
+  position: relative;
+  margin: 0;
+  background: var(--ai-code-bg);
+  border: 1px solid var(--ai-rule-hi);
+  border-radius: 8px;
+  padding: 1.15rem 1.25rem 1.1rem;
+  padding-top: 2.4rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+/* the trace node reappears as a tiny window chrome, top-left of every block */
+.ai-article-body pre::before {
+  content: "OUT";
+  position: absolute;
+  top: 0.7rem;
+  left: 1.15rem;
+  font-family: var(--ai-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  color: var(--ai-ink-40);
+}
+.ai-article-body pre code {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ai-ink);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  white-space: pre;
+  overflow-x: visible;
+}
+
+/* --- CTA --- */
+.ai-cta {
+  margin-top: clamp(4rem, 10vh, 7rem);
+  background: var(--ai-panel);
+  border: 1px solid var(--ai-rule-hi);
+  border-left: 2px solid var(--ai-accent);
+  border-radius: 4px;
+  padding: 2.25rem clamp(1.5rem, 4vw, 2.75rem);
+  max-width: 46rem;
+}
+.ai-cta h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  max-width: 24ch;
+}
+.ai-cta p {
+  color: var(--ai-ink-60);
+  margin: 0.75rem 0 0;
+  max-width: var(--ai-measure);
+}
+.ai-cta a.ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+  background: var(--ai-accent);
+  color: var(--ai-accent-ink);
+  font-family: var(--ai-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 3px;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s ease;
+}
+.ai-cta a.ai-btn:hover {
+  transform: translateX(4px);
+  background: #93aeff;
+}
+
+/* --- Footer --- */
+.ai-footer {
+  margin-top: clamp(3.5rem, 9vh, 6rem);
+  border-top: 1px solid var(--ai-rule);
+  padding: 1.75rem 0 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-root *,
+  .ai-root *::before,
+  .ai-root *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
