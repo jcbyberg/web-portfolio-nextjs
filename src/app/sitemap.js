@@ -1,9 +1,17 @@
+import { getAllPosts } from '@/lib/posts'
+
 const siteUrl = 'https://joshbyberg.com'
 
-// Single-page site: the section anchors live on "/", so one canonical entry is
-// the honest sitemap. Add real routes here if pages are ever split out.
+const BRAND_ROUTES = [
+  { brand: 'whitespace', path: '/whitespace' },
+  { brand: 'race-dad', path: '/race-dad' },
+  { brand: 'ai', path: '/blog' },
+]
+
+// Blog sections and the landing page are real routes; the rest of the site
+// remains a single page whose sections live at "/".
 export default function sitemap() {
-  return [
+  const entries = [
     {
       url: siteUrl,
       lastModified: new Date(),
@@ -16,5 +24,32 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${siteUrl}/bring-your-idea-to-life`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
   ]
+
+  for (const { brand, path } of BRAND_ROUTES) {
+    entries.push({
+      url: `${siteUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    })
+
+    const posts = getAllPosts(brand)
+    for (const post of posts) {
+      entries.push({
+        url: `${siteUrl}${path}/${post.slug}`,
+        lastModified: post.date ? new Date(post.date) : new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      })
+    }
+  }
+
+  return entries
 }

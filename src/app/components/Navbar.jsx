@@ -23,12 +23,24 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
-  // Absolute path, unlike the in-page hashes above: this one leaves the home
-  // page for the Oshawa offer, and must still work when the navbar is rendered
-  // on a route other than "/".
+  // Absolute paths, unlike the in-page hashes above: these leave the home
+  // page for other top-level sections, and must still work when the navbar
+  // is rendered on a route other than "/".
   {
     title: "Oshawa Offer",
     path: "/oshawa",
+  },
+  {
+    title: "Design",
+    path: "/whitespace",
+  },
+  {
+    title: "Racing",
+    path: "/race-dad",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
   },
 ];
 
@@ -66,7 +78,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu hidden md:flex md:w-auto md:items-center md:gap-4" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -74,6 +86,18 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          {/*
+            Prominent CTA, separate from the plain NavLink list above: this is
+            the single conversion target every blog section funnels into, so
+            it needs to stand out rather than blend into "About / Projects /
+            FAQ / Contact".
+          */}
+          <Link
+            href="/bring-your-idea-to-life"
+            className="rounded-full bg-gradient-to-r from-[#FF6A00] via-[#FF9E2C] to-[#FF6A00] px-5 py-2 text-sm font-semibold text-white transition hover:brightness-110"
+          >
+            Bring Your Idea to Life
+          </Link>
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
