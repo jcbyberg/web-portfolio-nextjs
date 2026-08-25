@@ -71,7 +71,7 @@ export default function WhitespaceIndexPage() {
           brochure or a site that isn&rsquo;t pulling its weight, let&rsquo;s talk.
         </p>
         <Link className="btn" href="/bring-your-idea-to-life">
-          Bring Your Idea to Life &#8599;
+          Bring Your Idea to Life
         </Link>
       </section>
     </>

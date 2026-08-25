@@ -79,7 +79,7 @@ export default async function WhitespacePostPage({ params }) {
           businesses and racing programs across Ontario.
         </p>
         <Link className="btn" href="/bring-your-idea-to-life">
-          Bring Your Idea to Life &#8599;
+          Bring Your Idea to Life
         </Link>
       </section>
     </article>

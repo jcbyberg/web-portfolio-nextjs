@@ -54,7 +54,7 @@ export default function WhitespaceLayout({ children }) {
           <nav>
             <Link href="/whitespace">Work</Link>
             <Link href="/whitespace/about">About</Link>
-            <Link href="/bring-your-idea-to-life">Hire me &#8599;</Link>
+            <Link href="/bring-your-idea-to-life">Hire me</Link>
           </nav>
         </header>
 

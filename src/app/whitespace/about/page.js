@@ -40,7 +40,7 @@ export default function WhitespaceAboutPage() {
           and racing programs.
         </p>
         <Link className="btn" href="/bring-your-idea-to-life">
-          Bring Your Idea to Life &#8599;
+          Bring Your Idea to Life
         </Link>
       </section>
     </section>
