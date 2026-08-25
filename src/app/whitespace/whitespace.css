@@ -10,9 +10,11 @@
   --sheet:  #FCFCFA;   /* uncoated stock */
   --ink:    #16161A;   /* rich black */
   --ink-60: #5C5C63;
-  --ink-35: #96969C;
+  --ink-35: #96969C;   /* decorative only below 4.5:1 on --sheet - do not use for text */
+  --ink-50: #8C8C92;   /* text-safe recessive grey for LARGE text only: 3.25:1 on --sheet */
   --rule:   #DEDED8;   /* crop-mark grey */
-  --reg:    #EC008C;   /* registration magenta - the ONE accent */
+  --reg:    #EC008C;   /* registration magenta - the ONE accent. Decoration/borders only (4.13:1, fails small text) */
+  --accent-dim: #D1007A; /* text-safe magenta for small text: 5.12:1 on --sheet */
   --cyan:   #00A0DF;
   --yellow: #FFF200;
 
@@ -76,7 +78,7 @@
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-35);
+  color: var(--ink-60);
   font-weight: 400;
 }
 
@@ -117,7 +119,7 @@
   letter-spacing: 0.12em; text-transform: uppercase;
   text-decoration: none; color: var(--ink-60);
 }
-.ws-root .masthead nav a:hover { color: var(--reg); }
+.ws-root .masthead nav a:hover { color: var(--accent-dim); }
 
 /* --- Hero --- */
 .ws-root .hero { padding: clamp(4rem, 14vh, 9rem) 0 clamp(3rem, 8vh, 5rem); }
@@ -126,7 +128,7 @@
   font-size: clamp(2.5rem, 7.5vw, 5.75rem);
   max-width: 16ch;
 }
-.ws-root .hero h1 span { color: var(--ink-35); }
+.ws-root .hero h1 span { color: var(--ink-50); }
 .ws-root .hero p {
   margin: 2rem 0 0;
   max-width: var(--measure);
@@ -159,7 +161,7 @@
   transition: width 0.4s cubic-bezier(.2,.8,.2,1);
 }
 .ws-root .entry:hover::after, .ws-root .entry:focus-visible::after { width: 100%; }
-.ws-root .entry-no { font-family: var(--mono); font-size: 0.75rem; color: var(--reg); padding-top: 0.35rem; }
+.ws-root .entry-no { font-family: var(--mono); font-size: 0.75rem; color: var(--accent-dim); padding-top: 0.35rem; }
 .ws-root .entry h2 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.9rem); }
 .ws-root .entry p {
   margin: 0.65rem 0 0; color: var(--ink-60);
@@ -212,7 +214,7 @@
   border-top: 1px solid var(--ink);
   padding-top: 1rem;
 }
-.ws-root .essay-marker .spec { color: var(--reg); }
+.ws-root .essay-marker .spec { color: var(--accent-dim); }
 
 /* --- CTA --- */
 .ws-root .cta {
@@ -233,7 +235,7 @@
   padding-bottom: 0.35rem;
   color: inherit;
 }
-.ws-root .cta a.btn:hover { color: var(--reg); }
+.ws-root .cta a.btn:hover { color: var(--accent-dim); }
 
 /* --- Footer --- */
 .ws-root footer.site {

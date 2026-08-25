@@ -17,7 +17,7 @@
   --ai-panel-hi: #171b24;
   --ai-ink: #e7e9ee;
   --ai-ink-60: #9ca3b4;
-  --ai-ink-40: #6b7180;
+  --ai-ink-40: #7f8595; /* text-safe: 4.95:1 on --ai-panel, 5.30:1 on --ai-bg (was 4.01/3.74, both below 4.5) */
   --ai-rule: #232733;
   --ai-rule-hi: #2e3444;
   --ai-accent: #7c9cff;

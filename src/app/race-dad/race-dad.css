@@ -9,6 +9,7 @@
   --asphalt:  #1C1F22;
   --curb:     #24282C;
   --curb-hi:  #2E3439;
+  --curb-text: #80878D; /* text-safe recessive grey, informational (lap no.): 4.55:1 on --asphalt */
   --paint:    #F2F3F0;
   --gap:      #8A939B;
   --flag:     #FFD400;   /* safety yellow - pit board + caution */
@@ -169,7 +170,7 @@
 .rd-root .lap:hover, .rd-root .lap:focus-visible { background: var(--curb); padding-left: 0.75rem; }
 .rd-root .lap .no {
   font-family: var(--display); font-weight: 800;
-  font-size: 2rem; line-height: 1; color: var(--curb-hi);
+  font-size: 2rem; line-height: 1; color: var(--curb-text);
   transition: color 0.2s ease;
 }
 .rd-root .lap:hover .no { color: var(--maple); }
