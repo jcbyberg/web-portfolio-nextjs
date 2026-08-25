@@ -6,7 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const EmailSection = () => {
+// variant: "aurora" (default, purple portfolio palette — used by the
+// homepage) | "ember" (warm orange, used only by the
+// bring-your-idea-to-life landing page). Default MUST stay "aurora" so the
+// homepage's output is byte-identical to before this prop existed.
+const EmailSection = ({ variant = "aurora" }) => {
+  const isEmber = variant === "ember";
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
   const [captchaError, setCaptchaError] = useState("");
@@ -70,7 +75,13 @@ const EmailSection = () => {
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      <div
+        className={
+          isEmber
+            ? "bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#FF6A00]/20 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"
+            : "bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"
+        }
+      ></div>
       <div className="z-10">
         {/* h2, not h5: this is a top-level section like About, Projects and
             FAQ. An h5 here skips two heading levels and breaks screen-reader
@@ -166,7 +177,11 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className={
+                isEmber
+                  ? "bg-gradient-to-r from-[#FF6A00] via-[#FF9E2C] to-[#FF6A00] hover:brightness-110 transition text-white font-medium py-2.5 px-5 rounded-lg w-full"
+                  : "bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              }
               disabled={!siteKey}
             >
               Send Message

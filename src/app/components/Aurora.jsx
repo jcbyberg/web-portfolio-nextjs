@@ -6,9 +6,10 @@ import "./aurora.css";
 const SETTLE_THRESHOLD = 0.0005;
 const EASING = 0.055;
 
-export default function Aurora({ intensity = "full" }) {
+export default function Aurora({ intensity = "full", palette = "aurora" }) {
   const containerRef = useRef(null);
   const preset = intensity === "subtle" ? "subtle" : "full";
+  const paletteName = palette === "ember" ? "ember" : "aurora";
 
   useEffect(() => {
     const container = containerRef.current;
@@ -144,6 +145,7 @@ export default function Aurora({ intensity = "full" }) {
       ref={containerRef}
       className="aurora"
       data-intensity={preset}
+      data-palette={paletteName}
       aria-hidden="true"
     >
       <div className="aurora__layer aurora__layer--a">

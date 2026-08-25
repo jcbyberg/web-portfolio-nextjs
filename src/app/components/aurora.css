@@ -53,8 +53,39 @@
   opacity: var(--aurora-opacity);
   /* saturate is static, not animated — it costs one paint, not one per frame */
   filter: blur(var(--aurora-blur)) saturate(1.3);
-  mix-blend-mode: screen;
+  mix-blend-mode: var(--aurora-blend, screen);
   will-change: transform;
+}
+
+/*
+  Ember palette: warm orange over a near-white ground, for the
+  bring-your-idea-to-life landing page. `screen` (the default blend, tuned
+  for the dark blue "aurora" palette) washes out to near-nothing over a
+  light background, so ember switches to `multiply` and pulls opacity/blur
+  back so the blobs stay soft rather than turning into hard orange discs.
+*/
+.aurora[data-palette="ember"] {
+  --aurora-blend: multiply;
+  --aurora-opacity: 0.5;
+  --aurora-blur: 72px;
+  background: #fdfcfb;
+}
+
+.aurora[data-palette="ember"][data-intensity="subtle"] {
+  --aurora-opacity: 0.28;
+  --aurora-blur: 96px;
+}
+
+.aurora[data-palette="ember"] .aurora__blob--a {
+  background: radial-gradient(circle at center, #ff6a00 0%, transparent 70%);
+}
+
+.aurora[data-palette="ember"] .aurora__blob--b {
+  background: radial-gradient(circle at center, #ff9e2c 0%, transparent 70%);
+}
+
+.aurora[data-palette="ember"] .aurora__blob--c {
+  background: radial-gradient(circle at center, #ffd8a8 0%, transparent 70%);
 }
 
 /*
