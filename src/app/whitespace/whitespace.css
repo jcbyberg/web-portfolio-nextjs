@@ -1,7 +1,7 @@
 /* ============================================================
    WHITESPACE DESIGNS — prepress identity
    The page is a press sheet: crop marks, trim, CMYK registration.
-   Ported from D:\whitespace\src\styles\global.css. Every selector
+   Ported from the original Astro site's global.css. Every selector
    is scoped under .ws-root — this file is imported ONLY by the
    whitespace section layout and must never leak a bare rule.
    ============================================================ */
