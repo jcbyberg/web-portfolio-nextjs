@@ -35,7 +35,7 @@ The only people hitting the broken door were strangers. And strangers don't tell
 You don't need any tools for this. You just need to stop checking your site the way an insider checks it.
 
 1. **Open it on your phone, on cell data, in a private window.** Not office wifi. Not the laptop you built it on. This one step catches most problems.
-2. **Try it with and without the "www."** Those are two different addresses and can point at two different servers. One working doesn't mean the other does.
+2. **Try it with and without the `www.`** Those are two different addresses and can point at two different servers. One working doesn't mean the other does.
 3. **Tap the padlock and check the certificate's expiry date.** Most are free ones that renew every 90 days. That's twelve chances a year to quietly stop.
 4. **Google your own organization.** See what comes up and where it points.
 5. **Ask someone outside your organization to open it and send you a screenshot.** Theirs is the only answer that counts.
