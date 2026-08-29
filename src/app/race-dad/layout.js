@@ -1,27 +1,9 @@
 import './race-dad.css'
 import Link from 'next/link'
-import { Big_Shoulders_Display, Archivo, Martian_Mono } from 'next/font/google'
+import { rdDisplay, rdBody, rdMono } from '@/app/fonts'
 
-const rdDisplay = Big_Shoulders_Display({
-  subsets: ['latin'],
-  weight: ['700', '800'],
-  variable: '--font-rd-display',
-  display: 'swap',
-})
 
-const rdBody = Archivo({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-rd-body',
-  display: 'swap',
-})
 
-const rdMono = Martian_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-rd-mono',
-  display: 'swap',
-})
 
 export const metadata = {
   title: {

@@ -1,7 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from '@/app/fonts'
 
 const siteUrl = 'https://joshbyberg.com'
 const siteTitle = 'Josh Byberg — Web Developer & Graphic Designer'

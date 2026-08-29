@@ -1,29 +1,10 @@
-import { Schibsted_Grotesk, Literata, DM_Mono } from 'next/font/google'
+import { wsDisplay, wsBody, wsMono } from '@/app/fonts'
 import Link from 'next/link'
 import './whitespace.css'
 import Punct from '@/app/whitespace/punct'
 
-const schibstedGrotesk = Schibsted_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--ws-font-display',
-  display: 'swap',
-})
 
-const literata = Literata({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  variable: '--ws-font-body',
-  display: 'swap',
-})
 
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal'],
-  variable: '--ws-font-mono',
-  display: 'swap',
-})
 
 export const metadata = {
   title: {
@@ -38,7 +19,7 @@ export const metadata = {
 export default function WhitespaceLayout({ children }) {
   return (
     <div
-      className={`ws-root ${schibstedGrotesk.variable} ${literata.variable} ${dmMono.variable}`}
+      className={`ws-root ${wsDisplay.variable} ${wsBody.variable} ${wsMono.variable}`}
     >
       <div className="sheet-marks" aria-hidden="true">
         <span className="tl"></span>
