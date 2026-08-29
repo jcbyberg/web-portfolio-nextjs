@@ -89,7 +89,10 @@ const proof = [
   },
 ];
 
-export default function BringYourIdeaToLife({ fontVars = "" }) {
+export default function BringYourIdeaToLife({
+  fontVars = "",
+  brand = "josh",
+}) {
   return (
     <div className={`byitl-root ${fontVars}`}>
       <Aurora palette="ember" intensity="subtle" />
@@ -109,17 +112,34 @@ export default function BringYourIdeaToLife({ fontVars = "" }) {
             The wordmark and "Home" link are the way back to the rest of
             the site. */}
         <header className="masthead">
-          <Link className="wordmark" href="/">
-            Josh<em aria-hidden="true"></em>Byberg
-          </Link>
-          <nav>
-            <Link className="is-home" href="/">
-              Home
-            </Link>
-            <Link href="/whitespace">Design</Link>
-            <Link href="/race-dad">Racing</Link>
-            <Link href="/blog">Blog</Link>
-          </nav>
+          {brand === "whitespace" ? (
+            <>
+              <Link className="wordmark" href="/whitespace">
+                White<em aria-hidden="true"></em>space Designs
+              </Link>
+              <nav>
+                <Link className="is-home" href="/whitespace">
+                  Work
+                </Link>
+                <Link href="/whitespace/about">About</Link>
+                <Link href="/hire-me">Hire me</Link>
+              </nav>
+            </>
+          ) : (
+            <>
+              <Link className="wordmark" href="/">
+                Josh<em aria-hidden="true"></em>Byberg
+              </Link>
+              <nav>
+                <Link className="is-home" href="/">
+                  Home
+                </Link>
+                <Link href="/whitespace">Design</Link>
+                <Link href="/race-dad">Racing</Link>
+                <Link href="/blog">Blog</Link>
+              </nav>
+            </>
+          )}
         </header>
 
         <main>
@@ -242,7 +262,13 @@ export default function BringYourIdeaToLife({ fontVars = "" }) {
         </main>
 
         <footer className="site">
-          <span className="spec">Josh Byberg &mdash; Design, print &amp; automation</span>
+          {brand === "whitespace" ? (
+            <span className="spec">Whitespace Designs &mdash; Josh Byberg</span>
+          ) : (
+            <span className="spec">
+              Josh Byberg &mdash; Design, print &amp; automation
+            </span>
+          )}
           <span className="spec">joshbyberg.com</span>
         </footer>
       </div>
