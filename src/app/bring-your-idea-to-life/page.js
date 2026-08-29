@@ -1,31 +1,5 @@
-import { Schibsted_Grotesk, Literata, DM_Mono } from "next/font/google";
 import BringYourIdeaToLife from "./BringYourIdeaToLife";
-
-// This page carries the Whitespace Designs press-sheet type system
-// (Schibsted Grotesk / Literata / DM Mono) rather than the site's default
-// Inter, so it needs its own font instances — scoped with distinct CSS
-// variable names so they never collide with the whitespace section's copy.
-const schibstedGrotesk = Schibsted_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--byitl-font-display",
-  display: "swap",
-});
-
-const literata = Literata({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--byitl-font-body",
-  display: "swap",
-});
-
-const dmMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal"],
-  variable: "--byitl-font-mono",
-  display: "swap",
-});
+import { byitlFontVars } from "./fonts";
 
 const title = "Bring Your Idea to Life — Web Design, Print & AI Automation";
 const description =
@@ -62,8 +36,6 @@ export const metadata = {
 
 export default function BringYourIdeaToLifePage() {
   return (
-    <BringYourIdeaToLife
-      fontVars={`${schibstedGrotesk.variable} ${literata.variable} ${dmMono.variable}`}
-    />
+    <BringYourIdeaToLife fontVars={byitlFontVars} />
   );
 }

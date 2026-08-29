@@ -1,27 +1,5 @@
-import { Schibsted_Grotesk, Literata, DM_Mono } from "next/font/google";
 import BringYourIdeaToLife from "../bring-your-idea-to-life/BringYourIdeaToLife";
-
-const schibstedGrotesk = Schibsted_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--byitl-font-display",
-  display: "swap",
-});
-
-const literata = Literata({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--byitl-font-body",
-  display: "swap",
-});
-
-const dmMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal"],
-  variable: "--byitl-font-mono",
-  display: "swap",
-});
+import { byitlFontVars } from "../bring-your-idea-to-life/fonts";
 
 const title = "Hire White Space Designs — Web, Print & Automation";
 const description =
@@ -57,10 +35,5 @@ export const metadata = {
 };
 
 export default function HireMePage() {
-  return (
-    <BringYourIdeaToLife
-      brand="whitespace"
-      fontVars={`${schibstedGrotesk.variable} ${literata.variable} ${dmMono.variable}`}
-    />
-  );
+  return <BringYourIdeaToLife brand="whitespace" fontVars={byitlFontVars} />;
 }
