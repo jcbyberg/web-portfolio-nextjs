@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'About',
+  alternates: { canonical: '/whitespace/about' },
 }
 
 export default function WhitespaceAboutPage() {

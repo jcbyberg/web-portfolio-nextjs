@@ -4,6 +4,7 @@ import { getAllPosts } from '@/lib/posts'
 export const metadata = {
   description:
     'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
+  alternates: { canonical: '/whitespace' },
 }
 
 function fmt(dateStr) {
