@@ -3,11 +3,11 @@ title: "One Suit, Three Riders, One Flight to China"
 date: "2026-08-29"
 type: case-study
 client: "Road Race Canada"
-deliverable: "National team race suit livery"
+deliverable: "National team race suit design"
 trim: "Front, back and glove panels"
 colour: "Pantone, matched to leather"
 excerpt: "At an international round nobody knows the riders yet. They know the flag. So the hierarchy is country first, rider second."
-tags: ["livery", "race suit", "team kit", "racing"]
+tags: ["race suit", "team kit", "racing", "identity"]
 ---
 
 A club suit gets looked at by the people in the paddock. A national team suit gets looked at by everyone else — on a grid in another country, in a series photographer's images, next to fifteen other countries' kits.
@@ -64,4 +64,4 @@ So the last version before it goes to the builder gets read like a proof, not lo
 
 That check exists because it is easy to build a rider's suit out of the previous rider's file and leave one of the three numbers behind. Worth a slow read of the final PDF every single time, on a piece where the revision round happens in leather.
 
-**Got a team kit, a livery or a suit that needs designing?** I design race suit liveries, event graphics and print for racing programs across Ontario.
+**Got a team kit or a suit that needs designing?** I design race suits, event graphics and print for racing programs across Ontario.

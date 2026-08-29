@@ -3,11 +3,11 @@ title: "A Race Suit With Two Flags in One Leaf"
 date: "2026-08-29"
 type: case-study
 client: "Clive Ng-A-Kien Racing"
-deliverable: "Custom race suit livery"
+deliverable: "Custom race suit design"
 trim: "Front, back and glove panels"
 colour: "Pantone, matched to leather"
 excerpt: "One maple leaf holding the flag of Guyana inside it, for a five-time Canadian champion who won titles in both countries. Two flags side by side would have read as two stickers."
-tags: ["livery", "race suit", "identity", "racing"]
+tags: ["race suit", "identity", "racing", "print"]
 ---
 
 Some jobs you take because they pay. This one I took because of who it was for.
@@ -63,4 +63,4 @@ Built by Gryphon, who make proper custom leathers in Canada — the same people 
 
 And thank you, Clive, for what you have taught my two. They can both ride because of how you explain things. Half the grid at a MotoMini round can say the same.
 
-**Got a suit, a helmet or a livery that needs designing?** I design print, event and social media graphics for racing programs and small businesses across Ontario.
+**Got a suit or a helmet that needs designing?** I design print, event and social media graphics for racing programs and small businesses across Ontario.

@@ -36,6 +36,42 @@
 
 .ws-root *, .ws-root *::before, .ws-root *::after { box-sizing: border-box; }
 
+/* --- Aurora: a barely-there wash behind the sheet ---------------------------
+   Three soft radials in registration magenta — the palette's existing accent,
+   not a new colour — at 2.2-3% alpha over the uncoated stock. At that strength
+   it reads as a faint warmth in the paper rather than as a gradient, which is
+   the intent: you should notice the page feels less flat, not notice a colour.
+
+   Fixed rather than scrolled, so it behaves like stock the content sits on top
+   of. Sits at z-index 0 with .wrap lifted to 1, because a negative z-index
+   would paint behind .ws-root's own --sheet background and vanish. Overscanned
+   by 10% so the slow drift never exposes an edge. */
+.ws-root { position: relative; }
+.ws-root::before {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(58rem 42rem at 12% 6%,  rgba(236, 0, 140, 0.030), transparent 72%),
+    radial-gradient(50rem 36rem at 90% 26%, rgba(236, 0, 140, 0.022), transparent 70%),
+    radial-gradient(64rem 44rem at 55% 94%, rgba(236, 0, 140, 0.026), transparent 74%);
+  will-change: transform;
+  animation: ws-aurora 72s ease-in-out infinite alternate;
+}
+@keyframes ws-aurora {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(0, -2.5%, 0) scale(1.06); }
+}
+/* Motion is decorative here and the page is identical without it. The wash itself
+   stays; only the drift stops. Dropped on small screens too — at this alpha the
+   movement is imperceptible on a phone, and a permanently animated full-viewport
+   compositor layer is not worth the battery. 700px matches the crop-mark breakpoint. */
+@media (prefers-reduced-motion: reduce), (max-width: 700px) {
+  .ws-root::before { animation: none; will-change: auto; }
+}
+
 /* --- The press sheet: crop marks at the four corners of the viewport --- */
 .ws-root .sheet-marks { position: fixed; inset: 0; pointer-events: none; z-index: 100; }
 .ws-root .sheet-marks span {
@@ -61,7 +97,8 @@
 .ws-root .colourbar i:nth-child(3) { background: var(--yellow); }
 .ws-root .colourbar i:nth-child(4) { background: var(--ink); }
 
-.ws-root .wrap { max-width: 74rem; margin: 0 auto; padding: 0 var(--gutter); }
+/* z-index 1 keeps all content above the aurora layer. */
+.ws-root .wrap { position: relative; z-index: 1; max-width: 74rem; margin: 0 auto; padding: 0 var(--gutter); }
 
 /* --- Typography --- */
 .ws-root h1, .ws-root h2, .ws-root h3, .ws-root .display {

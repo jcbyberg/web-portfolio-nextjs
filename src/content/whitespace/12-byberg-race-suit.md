@@ -3,11 +3,11 @@ title: "Two Colourways, Taken Far Enough to Actually Choose"
 date: "2026-08-29"
 type: case-study
 client: "Byberg Racing"
-deliverable: "Custom race suit livery"
+deliverable: "Custom race suit design"
 trim: "Front, back and glove panels"
 colour: "Pantone, matched to leather"
 excerpt: "Most colour decisions get made from swatches, and most of them get made wrong. So this suit was designed twice, both directions finished."
-tags: ["livery", "race suit", "colour", "racing"]
+tags: ["race suit", "colour", "racing", "identity"]
 ---
 
 Most colour decisions get made from swatches, and most of them get made wrong.
@@ -56,10 +56,10 @@ It also solves a real problem with junior kit. A young rider usually has no pers
 
 **The number appears three times** — both shoulders and the centre back — and the surname once, across the shoulders. Super Sonic Road Race School and Road Race Canada run down the forearms, where side-on race photography actually catches them.
 
-## What I would tell anyone choosing between two liveries
+## What I would tell anyone choosing between two designs
 
 Do not choose from thumbnails. Build both properly, put them side by side at full size, and then ask the only two questions that matter: *can I find this rider in a pack*, and *does it still work when it is scuffed, dusty and photographed in flat grey light at eight in the morning?*
 
-Half the liveries on any grid were chosen from a swatch on a screen. It shows.
+A lot of the suits on any grid were chosen from a swatch on a screen. It shows.
 
-**Got a livery, a suit or a set of team colours to decide on?** I design race suit liveries, event graphics and print for racing programs across Ontario.
+**Got a suit or a set of team colours to decide on?** I design race suits, event graphics and print for racing programs across Ontario.

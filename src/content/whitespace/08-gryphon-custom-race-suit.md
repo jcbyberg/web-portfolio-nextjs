@@ -78,4 +78,4 @@ Leave room. Riders pick up sponsors mid-season, and a suit with every square inc
 
 The current ordering details, the seven templates and both PDFs are on Gryphon's own page: **[gryphonmoto.com/pages/custom-race-suits](https://gryphonmoto.com/pages/custom-race-suits)**.
 
-**Need the artwork side handled?** I design race suit liveries, helmets and sponsor layouts for racing programs across Ontario.
+**Need the artwork side handled?** I design race suits, helmets and sponsor layouts for racing programs across Ontario.
