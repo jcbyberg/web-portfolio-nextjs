@@ -191,6 +191,24 @@
 .ws-root .article-body strong { font-weight: 600; }
 .ws-root .article-body em { color: var(--ink-60); }
 
+/* Posts can carry artwork. Images are full-column and never overflow the
+   measure; the italic line directly after an image is treated as its caption. */
+.ws-root .article-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0 0.75rem;
+  border: 1px solid var(--rule, rgba(0,0,0,.12));
+}
+.ws-root .article-body p > img:only-child { margin-bottom: 0.5rem; }
+.ws-root .article-body img + em {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--ink-60);
+  margin: 0 0 2rem;
+}
+
 /* --- Spec table: the print-spec signature --- */
 .ws-root .specsheet {
   margin-top: 2.5rem;
