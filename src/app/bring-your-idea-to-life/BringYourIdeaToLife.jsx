@@ -177,24 +177,37 @@ export default function BringYourIdeaToLife({
             </div>
 
             {audiences.map(
-              ({ label, title, body, href, linkLabel, linkDescription }, i) => (
-                <Link
-                  key={title}
-                  className="entry"
-                  href={href}
-                  aria-label={linkDescription}
-                >
-                  <span className="entry-no">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <span className="entry-tag">{label}</span>
-                    <h3>{title}</h3>
-                    <p>{body}</p>
-                  </div>
-                  <span className="entry-link">{linkLabel}</span>
-                </Link>
-              ),
+              ({ label, title, body, href, linkLabel, linkDescription }, i) => {
+                // /race-dad and /blog live only on joshbyberg.com. On the
+                // whitespace brand they are cross-origin, and a next/link
+                // prefetch of their RSC payload is blocked by CORS - six
+                // console errors and two wasted requests per page load. A
+                // plain anchor to the absolute URL avoids the prefetch
+                // entirely. On the josh brand they stay same-origin links.
+                const foreign = href === "/race-dad" || href === "/blog";
+                const external = brand === "whitespace" && foreign;
+                const Tag = external ? "a" : Link;
+                const target = external ? `https://joshbyberg.com${href}` : href;
+
+                return (
+                  <Tag
+                    key={title}
+                    className="entry"
+                    href={target}
+                    aria-label={linkDescription}
+                  >
+                    <span className="entry-no">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <span className="entry-tag">{label}</span>
+                      <h3>{title}</h3>
+                      <p>{body}</p>
+                    </div>
+                    <span className="entry-link">{linkLabel}</span>
+                  </Tag>
+                );
+              },
             )}
           </section>
 
