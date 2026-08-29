@@ -1,6 +1,7 @@
 import { Schibsted_Grotesk, Literata, DM_Mono } from 'next/font/google'
 import Link from 'next/link'
 import './whitespace.css'
+import Punct from '@/app/whitespace/punct'
 
 const schibstedGrotesk = Schibsted_Grotesk({
   subsets: ['latin'],
@@ -61,8 +62,12 @@ export default function WhitespaceLayout({ children }) {
         <main>{children}</main>
 
         <footer className="site">
-          <span className="spec">Whitespace Designs &mdash; Josh Byberg</span>
-          <span className="spec">joshbyberg.com</span>
+          <span className="spec">
+            <Punct>Whitespace Designs &mdash; Josh Byberg</Punct>
+          </span>
+          <span className="spec">
+            <Punct>joshbyberg.com</Punct>
+          </span>
         </footer>
       </div>
     </div>

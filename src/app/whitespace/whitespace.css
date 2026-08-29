@@ -37,8 +37,9 @@
 .ws-root *, .ws-root *::before, .ws-root *::after { box-sizing: border-box; }
 
 /* --- Aurora: a barely-there wash behind the sheet ---------------------------
-   Three soft radials in registration magenta — the palette's existing accent,
-   not a new colour — at 2.2-3% alpha over the uncoated stock. At that strength
+   Three soft radials built on the palette's existing accent, registration
+   magenta, with a deeper rose core (#A80052) fading out through it. The two-tone
+   core is what gives the wash depth rather than a flat tint. At this strength
    it reads as a faint warmth in the paper rather than as a gradient, which is
    the intent: you should notice the page feels less flat, not notice a colour.
 
@@ -54,9 +55,15 @@
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(58rem 42rem at 12% 6%,  rgba(236, 0, 140, 0.030), transparent 72%),
-    radial-gradient(50rem 36rem at 90% 26%, rgba(236, 0, 140, 0.022), transparent 70%),
-    radial-gradient(64rem 44rem at 55% 94%, rgba(236, 0, 140, 0.026), transparent 74%);
+    radial-gradient(76rem 54rem at 16% 6%,
+      rgba(168, 0, 82, 0.062) 0%, rgba(168, 0, 82, 0.052) 22%,
+      rgba(236, 0, 140, 0.032) 46%, transparent 72%),
+    radial-gradient(68rem 48rem at 90% 28%,
+      rgba(168, 0, 82, 0.048) 0%, rgba(168, 0, 82, 0.040) 20%,
+      rgba(236, 0, 140, 0.025) 44%, transparent 70%),
+    radial-gradient(82rem 56rem at 50% 97%,
+      rgba(168, 0, 82, 0.055) 0%, rgba(168, 0, 82, 0.046) 22%,
+      rgba(236, 0, 140, 0.028) 46%, transparent 74%);
   will-change: transform;
   animation: ws-aurora 72s ease-in-out infinite alternate;
 }
@@ -227,6 +234,21 @@
 }
 .ws-root .article-body strong { font-weight: 600; }
 .ws-root .article-body em { color: var(--ink-60); }
+
+/* --- Pink punctuation ------------------------------------------------------
+   Punctuation in display and UI type is set in the accent. Body copy is
+   excluded on purpose: .article-body is rendered from markdown and never passes
+   through <Punct>, because colouring the commas in running prose fights the
+   reading. Uses --accent-dim rather than --reg so the marks stay legible at
+   small sizes (5.12:1 on the sheet, vs 4.13:1).
+
+   The doubled .punct.punct raises specificity to (0,3,0) so it beats
+   element-heavy selectors that colour spans inside headings — notably
+   `.ws-root .hero h1 span` at whitespace.css:175, which is (0,2,2) and would
+   otherwise repaint the marks grey. Doubling the class avoids !important and
+   keeps the rule overridable by anything more specific later. */
+.ws-root .punct.punct { color: var(--accent-dim); }
+.ws-root .article-body .punct.punct { color: inherit; }
 
 /* Posts can carry artwork. Images are full-column and never overflow the
    measure; the italic line directly after an image is treated as its caption. */

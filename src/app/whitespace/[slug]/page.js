@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostSlugs, getPost } from '@/lib/posts'
+import Punct from '@/app/whitespace/punct'
 
 export async function generateStaticParams() {
   return getPostSlugs('whitespace').map((slug) => ({ slug }))
@@ -36,6 +37,7 @@ export default async function WhitespacePostPage({ params }) {
   return (
     <article className="article">
       <div className="article-head">
+        <Punct>
         <p className="spec">
           {isCaseStudy ? post.client : 'Essay'} &middot; {fmt(post.date)}
         </p>
@@ -65,6 +67,7 @@ export default async function WhitespacePostPage({ params }) {
             <span className="spec">Field notes, not a spec sheet</span>
           </div>
         )}
+        </Punct>
       </div>
 
       <div
@@ -74,7 +77,9 @@ export default async function WhitespacePostPage({ params }) {
 
       <section className="cta">
         <p className="spec">Available for work</p>
-        <h2>Got a piece that has to earn its place on a table?</h2>
+        <h2>
+          <Punct>Got a piece that has to earn its place on a table?</Punct>
+        </h2>
         <p>
           I design print, trade show graphics, websites and social media for small
           businesses and racing programs across Ontario.
