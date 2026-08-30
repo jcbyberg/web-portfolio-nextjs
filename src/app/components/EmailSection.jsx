@@ -4,7 +4,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-import ReCAPTCHA from "react-google-recaptcha";
+import TurnstileWidget from "./TurnstileWidget";
 
 // variant: "aurora" (default, purple portfolio palette — used by the
 // homepage) | "ember" (warm orange, used only by the
@@ -15,8 +15,8 @@ const EmailSection = ({ variant = "aurora" }) => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
   const [captchaError, setCaptchaError] = useState("");
-  const recaptchaRef = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const captchaRef = useRef(null);
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ const EmailSection = ({ variant = "aurora" }) => {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
-      captchaToken,
+      turnstileToken: captchaToken,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -46,20 +46,29 @@ const EmailSection = ({ variant = "aurora" }) => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    if (!response.ok) {
-      setCaptchaError("Something went wrong. Please try again.");
-      return;
-    }
+    try {
+      const response = await fetch(endpoint, options);
 
-    const resData = await response.json();
+      if (!response.ok) {
+        let message = "Something went wrong. Please try again.";
+        try {
+          const errorBody = await response.json();
+          if (errorBody?.error) message = errorBody.error;
+        } catch {
+          // Non-JSON error body; keep the generic message.
+        }
+        setCaptchaError(message);
+        return;
+      }
 
-    if (response.status === 200) {
-      console.log("Message sent.");
       setEmailSubmitted(true);
       setCaptchaError("");
+    } finally {
+      // A Turnstile token is single-use, so it is spent whether the send
+      // succeeded or failed. Resetting only on success left the old token in
+      // state and made the visitor's second attempt fail invisibly.
       setCaptchaToken(null);
-      recaptchaRef.current?.reset();
+      captchaRef.current?.reset();
     }
   };
 
@@ -201,15 +210,21 @@ const EmailSection = ({ variant = "aurora" }) => {
             </div>
             <div className={isEmber ? "ember-field" : "mb-6"}>
               {siteKey ? (
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={siteKey}
-                  onChange={onCaptchaChange}
+                <TurnstileWidget
+                  ref={captchaRef}
+                  siteKey={siteKey}
+                  action="contact"
                   theme={isEmber ? "light" : "dark"}
+                  onVerify={onCaptchaChange}
+                  onExpire={() => onCaptchaChange(null)}
                 />
               ) : (
                 <p className="text-red-500 text-sm">
-                  reCAPTCHA site key is not configured.
+                  The form is unavailable right now. Email{" "}
+                  <a href="mailto:info@joshbyberg.com" className="underline">
+                    info@joshbyberg.com
+                  </a>{" "}
+                  instead.
                 </p>
               )}
               {captchaError && (

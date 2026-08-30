@@ -7,6 +7,21 @@ import { Resend } from "resend";
 const inboxEmail = process.env.CONTACT_INBOX_EMAIL || "info@joshbyberg.com";
 const bccEmail = "jcbyberg@gmail.com";
 
+// Turnstile. The action is stamped on the widget in the form and checked here,
+// so a token minted for some other surface cannot be spent on this one.
+const EXPECTED_ACTION = "contact";
+
+// Which frontend hostnames a token may legitimately have come from. Configured
+// rather than hard-coded because the production list must NOT contain localhost
+// while a development one must. Empty means misconfigured, and the route fails
+// closed rather than accepting anything.
+const EXPECTED_HOSTNAMES = new Set(
+  (process.env.TURNSTILE_HOSTNAMES ?? "")
+    .split(",")
+    .map((hostname) => hostname.trim())
+    .filter(Boolean)
+);
+
 const MAX_EMAIL = 254;
 const MAX_SUBJECT = 200;
 const MAX_MESSAGE = 5000;
@@ -82,11 +97,17 @@ function sendFailed(result) {
 
 export async function POST(req) {
   try {
+    // First hop only. X-Forwarded-For is a client-controllable list, so the
+    // trailing entries cannot be trusted; siteverify treats remoteip as a hint
+    // and the decision does not rest on it.
+    const clientIp =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "";
+
     // Constructed per-request, not at module scope: a missing key must fail
     // this one request, not the whole production build.
     const apiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.FROM_EMAIL;
-    const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const turnstileSecret = process.env.TURNSTILE_SECRET;
 
     if (!apiKey || !fromEmail) {
       return NextResponse.json(
@@ -112,41 +133,74 @@ export async function POST(req) {
     }
     // Use the normalised values from here on, never the raw body.
     const { email, subject, message } = values;
-    const captchaToken = body.captchaToken;
 
-    if (!recaptchaSecretKey) {
+    if (!turnstileSecret || EXPECTED_HOSTNAMES.size === 0) {
       return NextResponse.json(
-        { error: "reCAPTCHA secret key is not configured." },
+        { error: "Captcha is not configured." },
         { status: 500 }
       );
     }
 
-    if (!captchaToken) {
+    // Accept the Turnstile field name, and the old reCAPTCHA one so a page
+    // cached from before the migration still submits successfully.
+    const captchaToken = body.turnstileToken ?? body.captchaToken;
+
+    if (
+      typeof captchaToken !== "string" ||
+      captchaToken.length === 0 ||
+      captchaToken.length > 2048
+    ) {
       return NextResponse.json(
-        { error: "Captcha token is missing." },
+        { error: "Please complete the captcha." },
         { status: 400 }
       );
     }
 
-    const captchaResponse = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `secret=${encodeURIComponent(
-          recaptchaSecretKey
-        )}&response=${encodeURIComponent(captchaToken)}`,
-      }
-    );
+    // Fail closed. A network error, a non-2xx, or a non-JSON body must reject
+    // the submission rather than fall through to sending the email.
+    let captchaResult;
+    try {
+      const verify = await fetch(
+        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          signal: AbortSignal.timeout(10_000),
+          body: new URLSearchParams({
+            secret: turnstileSecret,
+            response: captchaToken,
+            // Best-effort client IP. Absent behind some proxies, and
+            // siteverify treats it as optional.
+            ...(clientIp ? { remoteip: clientIp } : {}),
+          }),
+        }
+      );
+      if (!verify.ok) throw new Error(`siteverify ${verify.status}`);
+      captchaResult = await verify.json();
+    } catch (verifyError) {
+      console.error("Turnstile siteverify failed:", verifyError);
+      return NextResponse.json(
+        { error: "Could not verify the captcha. Please try again." },
+        { status: 403 }
+      );
+    }
 
-    const captchaResult = await captchaResponse.json();
-
-    if (!captchaResult.success) {
+    // Three checks, not one. `success` alone would accept a token minted for a
+    // different action, or on a different site, and replayed against this form.
+    if (
+      !captchaResult.success ||
+      captchaResult.action !== EXPECTED_ACTION ||
+      !EXPECTED_HOSTNAMES.has(captchaResult.hostname)
+    ) {
+      console.error("Turnstile rejected:", {
+        success: captchaResult.success,
+        action: captchaResult.action,
+        hostname: captchaResult.hostname,
+        errors: captchaResult["error-codes"],
+      });
       return NextResponse.json(
         { error: "Captcha validation failed." },
-        { status: 400 }
+        { status: 403 }
       );
     }
 

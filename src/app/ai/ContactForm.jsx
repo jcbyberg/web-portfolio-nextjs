@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import TurnstileWidget from "@/app/components/TurnstileWidget";
 
 // The AI section's own contact form.
 //
@@ -15,17 +15,17 @@ import ReCAPTCHA from "react-google-recaptcha";
 // whitespacedesign.ca/hire-me. That is a redirect off the domain, mid-intent,
 // at the exact moment someone has decided to get in touch.
 //
-// CAPTCHA NOTE: reCAPTCHA site keys are registered per domain. This form only
-// works once ai.whitespacedesign.ca is added to the key's domain list — the
-// same restriction that silently broke the form on whitespacedesign.ca and
-// racedad.ca. A Turnstile migration is planned, which removes the trap.
+// CAPTCHA: Cloudflare Turnstile. One widget covers every hostname the form is
+// served from, which is the whole reason for moving off reCAPTCHA — its keys
+// are registered per domain, and that silently broke this form on
+// whitespacedesign.ca and racedad.ca for three days.
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const captchaRef = useRef(null);
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,7 +45,7 @@ export default function ContactForm() {
           email: e.target.email.value,
           subject: e.target.subject.value,
           message: e.target.message.value,
-          captchaToken,
+          turnstileToken: captchaToken,
         }),
       });
 
@@ -73,7 +73,7 @@ export default function ContactForm() {
       // cannot see.
       setSending(false);
       setCaptchaToken(null);
-      recaptchaRef.current?.reset();
+      captchaRef.current?.reset();
     }
   };
 
@@ -126,14 +126,16 @@ export default function ContactForm() {
 
       {siteKey ? (
         <div className="wsai-captcha">
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={siteKey}
+          <TurnstileWidget
+            ref={captchaRef}
+            siteKey={siteKey}
+            action="contact"
             theme="dark"
-            onChange={(value) => {
-              setCaptchaToken(value);
-              if (value) setError("");
+            onVerify={(token) => {
+              setCaptchaToken(token);
+              setError("");
             }}
+            onExpire={() => setCaptchaToken(null)}
           />
         </div>
       ) : null}

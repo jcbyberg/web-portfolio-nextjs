@@ -39,3 +39,8 @@ next-env.d.ts
 .omc/
 .playwright-mcp/
 .reviews/
+
+# env backups. `.env*.local` does NOT match a .bak suffix, so a timestamped
+# backup of .env.local would otherwise be committable — with live secrets in it.
+.env*.local.bak-*
+.env.local.bak-*
