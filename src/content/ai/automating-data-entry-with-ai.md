@@ -22,7 +22,7 @@ It simply looks for the *meaning*.
 
 ## The Workflow: Unstructured to Structured
 
-Here is the exact pipeline we use to automate data entry for clients at [White Space Designs](https://whitespace.joshbyberg.com):
+Here is the exact pipeline we use to automate data entry for clients at [White Space Designs](https://whitespacedesign.ca):
 
 1.  **Ingestion:** An email arrives, a file is dropped into a cloud folder, or a webhook triggers. We extract the raw text, the PDF, or the image.
 2.  **The LLM Extraction:** We pass that raw data to an AI model with a strict prompt. We don't ask it to summarize; we ask it to extract specific entities (e.g., "Find the Customer Name, the Purchase Order Number, and the total cost").

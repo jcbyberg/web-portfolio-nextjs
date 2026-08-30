@@ -81,6 +81,7 @@ export const metadata = {
 const professionalServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': `${siteUrl}/#professionalservice`,
   name: 'Josh Byberg — Web Developer & Graphic Designer',
   description: siteDescription,
   url: siteUrl,

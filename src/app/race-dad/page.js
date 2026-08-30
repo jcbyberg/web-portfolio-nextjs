@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+import { racedadUrl, RACEDAD_ORIGIN, blogSchema } from '@/lib/seo'
 
 export const metadata = {
-  alternates: { canonical: '/race-dad' },
+  alternates: { canonical: racedadUrl() },
 }
 
 function groupByYear(posts) {
@@ -20,9 +21,20 @@ export default function RaceDadIndexPage() {
   const groups = groupByYear(posts)
   const total = posts.length
   const lapNumbers = new Map(posts.map((post, i) => [post.slug, total - i]))
+  const blog = blogSchema({
+    origin: RACEDAD_ORIGIN,
+    name: 'Race Dad',
+    description:
+      'A dad following his kids through Canadian minimoto and supermoto racing — Ohvale, MiniSBK, FIM MotoMini Canada.',
+    postSlugs: posts.map((p) => p.slug),
+  })
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blog) }}
+      />
       <section className="hero">
         <div>
           <p className="data">Ontario &middot; Quebec &middot; Minimoto &amp; Supermoto</p>

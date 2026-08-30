@@ -1,8 +1,24 @@
 import Link from 'next/link'
+import { whitespaceUrl, WHITESPACE_ORIGIN } from '@/lib/seo'
 
 export const metadata = {
   title: 'About',
-  alternates: { canonical: '/whitespace/about' },
+  alternates: { canonical: whitespaceUrl('about') },
+  openGraph: {
+    type: 'website',
+    url: whitespaceUrl('about'),
+    siteName: 'Whitespace Designs',
+    title: 'About',
+    locale: 'en_CA',
+    images: [
+      {
+        url: `${WHITESPACE_ORIGIN}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Whitespace Designs',
+      },
+    ],
+  },
 }
 
 export default function WhitespaceAboutPage() {

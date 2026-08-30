@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+import { whitespaceUrl, WHITESPACE_ORIGIN, blogSchema } from '@/lib/seo'
 import Punct from '@/app/whitespace/punct'
 
 export const metadata = {
   description:
     'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
-  alternates: { canonical: '/whitespace' },
+  alternates: { canonical: whitespaceUrl() },
 }
 
 function fmt(dateStr) {
@@ -17,9 +18,20 @@ function fmt(dateStr) {
 
 export default function WhitespaceIndexPage() {
   const posts = getAllPosts('whitespace')
+  const blog = blogSchema({
+    origin: WHITESPACE_ORIGIN,
+    name: 'Whitespace Designs',
+    description:
+      'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
+    postSlugs: posts.map((p) => p.slug),
+  })
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blog) }}
+      />
       <section className="hero">
         <p className="spec">
           <Punct>Design journal &middot; Print, identity &amp; large format</Punct>

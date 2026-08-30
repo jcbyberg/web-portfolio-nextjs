@@ -46,7 +46,7 @@ The move both directions share: **Gryphon's own crest, used at full size as the 
 
 Normally the manufacturer gets a wordmark on the hump and that is that. Promoting their heraldic griffin to the main graphic does something a name cannot: it gives the suit a *symbol*. From behind, at speed, you do not read BYBERG — you see a griffin, and that is enough to know which rider it is.
 
-It also solves a real problem with junior kit. A young rider usually has no personal logo, no team crest, nothing but a number and a surname. Borrowing the builder's mark gives the suit an emblem years before the rider has one of their own.
+It also solves a real problem with junior kit. A young rider usually has no personal logo, no team crest, nothing but a number and a surname. Borrowing the builder's mark gives the suit an emblem years before the rider has one of their own — and when we finally [designed the family team logo](https://racedad.ca/designing-a-race-team-logo), it took six versions and a name change.
 
 ## Details that only matter once it is leather
 

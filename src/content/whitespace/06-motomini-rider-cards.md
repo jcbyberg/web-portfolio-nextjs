@@ -56,7 +56,7 @@ A layout would have collapsed there. A system just carries on with one field emp
 
 ![Round 3 qualifying result — fastest lap](/images/whitespace/motomini-rider-cards/result-card-190-fastest-lap.jpg)
 
-After a session, the payload changes. It is no longer *who is this* — it is *what happened*. So the result card drops the sponsor bars, goes vertical for stories, and promotes one piece of information to the biggest element on the sheet: the lap time, boxed in white so it reads as a scoreboard rather than as a caption.
+After [a session like round three at Shannonville](https://racedad.ca/shannonville-round-three), the payload changes. It is no longer *who is this* — it is *what happened*. So the result card drops the sponsor bars, goes vertical for stories, and promotes one piece of information to the biggest element on the sheet: the lap time, boxed in white so it reads as a scoreboard rather than as a caption.
 
 Class colour stays. The lockup stays. The typeface stays. Somebody who has seen four of these already knows what they are looking at before they have read it, and that recognition is the entire return on keeping a system tight across a season.
 

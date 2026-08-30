@@ -1,10 +1,29 @@
 import Link from 'next/link'
+import { racedadUrl, RACEDAD_ORIGIN } from '@/lib/seo'
+
+const description =
+  'Josh Byberg, aka Race Dad — following his kid through Canadian minimoto and supermoto racing.'
 
 export const metadata = {
   title: 'About',
-  description:
-    'Josh Byberg, aka Race Dad — following his kid through Canadian minimoto and supermoto racing.',
-  alternates: { canonical: '/race-dad/about' },
+  description,
+  alternates: { canonical: racedadUrl('about') },
+  openGraph: {
+    type: 'website',
+    url: racedadUrl('about'),
+    siteName: 'Race Dad',
+    title: 'About',
+    description,
+    locale: 'en_CA',
+    images: [
+      {
+        url: `${RACEDAD_ORIGIN}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Race Dad',
+      },
+    ],
+  },
 }
 
 export default function RaceDadAboutPage() {

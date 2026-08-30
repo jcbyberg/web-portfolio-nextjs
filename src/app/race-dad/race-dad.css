@@ -207,6 +207,122 @@
 .rd-root .article-body em { color: var(--flag); font-style: italic; }
 .rd-root .article-body strong { color: var(--paint); font-weight: 700; }
 
+/* Race reports carry photographs; the essays that came before them did not, so
+   this section had no image rule at all. Without it a photo renders at its
+   intrinsic pixel width and blows straight through the 36rem measure. */
+.rd-root .article-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+/* The first-clutch essay embeds a short clip. Like the photos it needs the
+   36rem measure (its intrinsic width would blow straight through it), but it
+   carries no extra margin: its .article-body wrapper already supplies the
+   spacing above, and the content block below supplies its own. */
+.rd-root .article-body video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* --- Track directory --- */
+.rd-root .directory-head { padding: clamp(3rem, 9vh, 6rem) 0 2.5rem; max-width: 48rem; }
+.rd-root .directory-head h1 { font-size: clamp(3.5rem, 10vw, 7rem); color: var(--flag); }
+.rd-root .directory-head > p:not(.data) { color: var(--gap); max-width: var(--measure); margin-top: 1.5rem; }
+
+/* The 1px rules between cards come from each card's own outline rather than
+   from a background showing through the gaps. With an odd number of tracks the
+   grid has an empty trailing cell, and a container background paints that empty
+   cell as a large solid block that reads as a broken card. An outline takes no
+   layout space, so adjacent cards still meet in a single hairline. */
+.rd-root .track-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+}
+.rd-root .track-card {
+  min-height: 21rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--asphalt);
+  outline: 1px solid var(--curb-hi);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease;
+}
+.rd-root .track-card:hover { background: var(--curb); }
+.rd-root .track-card h2 { margin: 1rem 0 0.25rem; font-size: clamp(1.8rem, 4vw, 3rem); }
+.rd-root .track-card:hover h2 { color: var(--flag); }
+.rd-root .track-card p { color: var(--gap); margin: 1.25rem 0 0; }
+.rd-root .track-card .track-location {
+  margin: 0; color: var(--paint);
+  font-family: var(--mono); font-size: 0.625rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+/* The card link is not pinned to the bottom: cards vary in height once some
+   carry a photo, and a pinned link leaves a large void in the shorter ones. */
+.rd-root .track-card-link {
+  margin-top: 1.75rem;
+  color: var(--flag);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Track photos: full-bleed on the card, hero on the detail page. */
+.rd-root .track-hero { margin: 0 0 2.5rem; }
+.rd-root .track-hero img {
+  display: block; width: 100%; max-height: 30rem;
+  aspect-ratio: 16 / 9; object-fit: cover;
+  background: var(--curb);
+}
+.rd-root .track-hero figcaption { margin-top: 0.6rem; color: var(--gap); font-size: 0.6875rem; letter-spacing: 0.06em; }
+
+.rd-root .track-card-photo {
+  display: block;
+  /* Tailwind's preflight sets img { max-width: 100% } globally, which clamps the
+     full-bleed width below back to the card's content box while the negative
+     margins still apply — leaving the photo both too narrow and shifted left.
+     Opting out here is what makes the bleed work. */
+  max-width: none;
+  width: calc(100% + 2 * clamp(1.5rem, 4vw, 2.5rem));
+  margin: calc(-1 * clamp(1.5rem, 4vw, 2.5rem)) calc(-1 * clamp(1.5rem, 4vw, 2.5rem)) 1.5rem;
+  aspect-ratio: 16 / 9; object-fit: cover;
+  background: var(--curb);
+  filter: saturate(0.85) brightness(0.85);
+  transition: filter 0.2s ease;
+}
+.rd-root .track-card:hover .track-card-photo { filter: none; }
+
+/* Callout that links out to a track's official website. */
+.rd-root .track-callout {
+  max-width: 42rem;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--curb-hi);
+  border-left: 5px solid var(--maple);
+  background: var(--curb);
+}
+.rd-root .track-callout h2 { margin: 0.45rem 0 0.75rem; font-size: clamp(1.4rem, 3vw, 2rem); }
+.rd-root .track-callout p:not(.data) { color: var(--gap); margin: 0 0 0.75rem; }
+.rd-root .track-callout .data { margin-top: 0; }
+.rd-root .track-callout a {
+  color: var(--flag);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .rd-root .track-grid { grid-template-columns: 1fr; }
+  .rd-root .track-card { min-height: 18rem; }
+}
+
 /* --- CTA --- */
 .rd-root .cta {
   margin-top: clamp(3.5rem, 9vh, 6rem);

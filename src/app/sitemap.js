@@ -3,13 +3,15 @@ import { getAllPosts } from '@/lib/posts'
 const siteUrl = 'https://joshbyberg.com'
 
 const BRAND_ROUTES = [
-  { brand: 'whitespace', path: '/whitespace' },
-  { brand: 'race-dad', path: '/race-dad' },
   { brand: 'ai', path: '/blog' },
 ]
 
-// Blog sections and the landing page are real routes; the rest of the site
-// remains a single page whose sections live at "/".
+// Only the "ai" brand still lives on this domain. The whitespace and race-dad
+// sections are proxied to their own brand domains (whitespacedesign.ca and
+// racedad.ca, respectively), which list their own URLs in per-brand sitemaps —
+// so this hub sitemap must not claim them. The landing page and the /blog
+// section are the real routes here; the rest of the site remains a single page
+// whose sections live at "/".
 export default function sitemap() {
   const entries = [
     {

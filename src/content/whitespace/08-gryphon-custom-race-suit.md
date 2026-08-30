@@ -10,7 +10,7 @@ tags: ["race suit", "process", "gryphon", "guide"]
 
 Gryphon spent years building custom suits privately for their own sponsored racers. They now build them for anyone, which is a bigger deal than it sounds — a genuinely custom, measured-to-you race suit from a Canadian company, starting at $1,600, is not a thing there are many of.
 
-I get asked how it works, usually by a parent whose kid has outgrown a second-hand suit. So here is the process, start to finish, from the design side.
+I get asked how it works, usually by a parent whose kid has outgrown a second-hand suit — and, before that, whether the [armour inside it is actually up to the job](https://racedad.ca/the-gear). So here is the process, start to finish, from the design side.
 
 ## Step 1 — Decide what you are designing
 
