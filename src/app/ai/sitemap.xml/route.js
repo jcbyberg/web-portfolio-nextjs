@@ -1,14 +1,25 @@
 import { NextResponse } from 'next/server'
+import { getAllPosts } from '@/lib/posts'
 import { aiUrl } from '@/lib/seo'
 
 export const dynamic = 'force-static'
 
 // The AI section is proxied onto ai.whitespacedesign.ca with the /ai prefix
 // stripped, so this sitemap lists subdomain URLs — not the /ai paths this app
-// serves them from. One page today; the array is the seam for the case-study
-// pages if they ever get written.
+// serves them from.
+//
+// /blog is the exception: it is passed through at its own path rather than
+// under the section prefix, because its Next routes stay at src/app/blog (moving
+// them under src/app/ai would nest their .ai-root layout inside .wsai-root).
+// So blog URLs keep /blog on this domain too. joshbyberg.com/blog/* 301s here.
 export function GET() {
-  const entries = [{ loc: aiUrl(), lastmod: null }]
+  const posts = getAllPosts('ai')
+
+  const entries = [
+    { loc: aiUrl(), lastmod: null },
+    { loc: aiUrl('blog'), lastmod: null },
+    ...posts.map((post) => ({ loc: aiUrl(`blog/${post.slug}`), lastmod: post.date })),
+  ]
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
