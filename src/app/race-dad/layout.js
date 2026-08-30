@@ -1,5 +1,6 @@
 import './race-dad.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { rdDisplay, rdBody, rdMono } from '@/app/fonts'
 import { RACEDAD_ORIGIN, WHITESPACE_ORIGIN, organizationSchema } from '@/lib/seo'
 
@@ -22,7 +23,7 @@ export const metadata = {
     locale: 'en_CA',
     images: [
       {
-        url: `${RACEDAD_ORIGIN}/images/og-image.png`,
+        url: `${RACEDAD_ORIGIN}/images/race-dad/brand/og-race-dad.png`,
         width: 1200,
         height: 630,
         alt: 'Race Dad',
@@ -33,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: rdTitle,
     description: rdDescription,
-    images: [`${RACEDAD_ORIGIN}/images/og-image.png`],
+    images: [`${RACEDAD_ORIGIN}/images/race-dad/brand/og-race-dad.png`],
   },
 }
 
@@ -66,8 +67,15 @@ export default function RaceDadLayout({ children }) {
         <main>{children}</main>
 
         <footer className="site">
+          <Image
+            className="footer-mark"
+            src="/images/race-dad/brand/race-dad-logo.png"
+            alt="Race Dad"
+            width={273}
+            height={351}
+          />
           <span className="data">Race Dad &mdash; Josh Byberg &middot; Ontario</span>
-          <span className="data"><a href={WHITESPACE_ORIGIN}>Whitespace Designs</a></span>
+          <span className="data"><a href={WHITESPACE_ORIGIN}>Whitespace Design</a></span>
           <span className="data">Abel &middot; Crosby &middot; Cohen</span>
         </footer>
 

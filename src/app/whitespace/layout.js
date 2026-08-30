@@ -1,10 +1,11 @@
 import { wsDisplay, wsBody, wsMono } from '@/app/fonts'
 import Link from 'next/link'
+import Image from 'next/image'
 import './whitespace.css'
 import Punct from '@/app/whitespace/punct'
 import { WHITESPACE_ORIGIN, RACEDAD_ORIGIN, organizationSchema } from '@/lib/seo'
 
-const wsTitle = 'Whitespace Designs — Josh Byberg'
+const wsTitle = 'Whitespace Design — Josh Byberg'
 const wsDescription =
   'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.'
 
@@ -12,22 +13,22 @@ export const metadata = {
   title: {
     default: wsTitle,
     absolute: wsTitle,
-    template: '%s — Whitespace Designs',
+    template: '%s — Whitespace Design',
   },
   description: wsDescription,
   openGraph: {
     type: 'website',
     url: `${WHITESPACE_ORIGIN}/`,
-    siteName: 'Whitespace Designs',
+    siteName: 'Whitespace Design',
     title: wsTitle,
     description: wsDescription,
     locale: 'en_CA',
     images: [
       {
-        url: `${WHITESPACE_ORIGIN}/images/og-image.png`,
+        url: `${WHITESPACE_ORIGIN}/images/whitespace/brand/og-whitespace.png`,
         width: 1200,
         height: 630,
-        alt: 'Whitespace Designs',
+        alt: 'Whitespace Design',
       },
     ],
   },
@@ -35,13 +36,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: wsTitle,
     description: wsDescription,
-    images: [`${WHITESPACE_ORIGIN}/images/og-image.png`],
+    images: [`${WHITESPACE_ORIGIN}/images/whitespace/brand/og-whitespace.png`],
   },
 }
 
 const wsOrganization = organizationSchema({
   origin: WHITESPACE_ORIGIN,
-  name: 'Whitespace Designs',
+  name: 'Whitespace Design',
   otherBrandOrigin: RACEDAD_ORIGIN,
 })
 
@@ -60,7 +61,7 @@ export default function WhitespaceLayout({ children }) {
       <div className="wrap">
         <header className="masthead">
           <Link className="wordmark" href="/whitespace">
-            White<em></em>space Designs
+            White<em></em>space Design
           </Link>
           <nav>
             <Link href="/whitespace">Work</Link>
@@ -72,8 +73,15 @@ export default function WhitespaceLayout({ children }) {
         <main>{children}</main>
 
         <footer className="site">
+          <Image
+            className="footer-mark"
+            src="/images/whitespace/brand/whitespace-logo.png"
+            alt="Whitespace Design"
+            width={648}
+            height={205}
+          />
           <span className="spec">
-            <Punct>Whitespace Designs &mdash; Josh Byberg</Punct>
+            <Punct>Whitespace Design &mdash; Josh Byberg</Punct>
           </span>
           <span className="spec">
             <Punct>

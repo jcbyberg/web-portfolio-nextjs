@@ -7,15 +7,15 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: whitespaceUrl('about'),
-    siteName: 'Whitespace Designs',
+    siteName: 'Whitespace Design',
     title: 'About',
     locale: 'en_CA',
     images: [
       {
-        url: `${WHITESPACE_ORIGIN}/images/og-image.png`,
+        url: `${WHITESPACE_ORIGIN}/images/whitespace/brand/og-whitespace.png`,
         width: 1200,
         height: 630,
-        alt: 'Whitespace Designs',
+        alt: 'Whitespace Design',
       },
     ],
   },

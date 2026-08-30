@@ -319,7 +319,19 @@
   margin-top: clamp(4rem, 10vh, 7rem);
   border-top: 1px solid var(--rule);
   padding: 1.75rem 0 3.5rem;
-  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; flex-wrap: wrap;
+}
+
+/* The lockup is wide and short, so it is sized off its height and signs off the
+   footer the way a printer's mark would. */
+.ws-root .footer-mark {
+  height: 1.5rem; width: auto;
+  display: block;
+  flex: none;
+}
+@media (max-width: 520px) {
+  .ws-root .footer-mark { height: 1.15rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
       locale: 'en_CA',
       images: [
         {
-          url: `${RACEDAD_ORIGIN}/images/og-image.png`,
+          url: `${RACEDAD_ORIGIN}/images/race-dad/brand/og-race-dad.png`,
           width: 1200,
           height: 630,
           alt: 'Race Dad',

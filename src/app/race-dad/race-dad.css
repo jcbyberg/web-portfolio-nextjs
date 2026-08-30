@@ -78,6 +78,17 @@
   font-family: var(--display); font-weight: 800;
   font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.01em;
 }
+/* The stacked lockup is taller than it is wide, so it is sized off its height
+   and left to keep its own aspect ratio. The masthead keeps the plate wordmark;
+   this mark signs off the footer instead. */
+.rd-root .footer-mark {
+  height: 3.25rem; width: auto;
+  display: block;
+  flex: none;
+}
+@media (max-width: 520px) {
+  .rd-root .footer-mark { height: 2.5rem; }
+}
 .rd-root .masthead nav { display: flex; gap: 1.5rem; }
 .rd-root .masthead nav a {
   font-family: var(--mono); font-size: 0.625rem;
@@ -441,7 +452,8 @@
   margin-top: clamp(3.5rem, 9vh, 6rem);
   border-top: 1px solid var(--curb);
   padding: 1.5rem 0 3rem;
-  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; flex-wrap: wrap;
 }
 
 @media (prefers-reduced-motion: reduce) {
