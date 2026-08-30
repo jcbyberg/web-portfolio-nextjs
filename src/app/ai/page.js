@@ -1,10 +1,7 @@
-import { WHITESPACE_ORIGIN } from '@/lib/seo'
+import ContactForm from './ContactForm'
 
-// The contact page lives on the apex and is linked absolutely, not as a Next
-// route. /hire-me is a foreign section on this subdomain's worker (it would
-// otherwise self-canonicalise a third copy of the contact page onto this host),
-// so a relative link here would only earn the reader a 301.
-const HIRE_ME = `${WHITESPACE_ORIGIN}/hire-me`
+// The section now has its own form, so nothing here links to the apex contact
+// page. WHITESPACE_ORIGIN is still imported for the footer link in layout.js.
 
 // Clients are described, not named. Every figure below is one that can be
 // demonstrated on request — the vidx numbers are measured, and the rest are
@@ -29,7 +26,7 @@ export default function AiPage() {
           work off your team and hand back the week.
         </p>
         <div className="wsai-actions">
-          <a className="wsai-cta" href={HIRE_ME}>
+          <a className="wsai-cta" href="#contact">
             Tell me what is eating your week
           </a>
           <a className="wsai-cta-ghost" href="#work">
@@ -145,16 +142,14 @@ export default function AiPage() {
         </p>
       </section>
 
-      <section className="wsai-close">
+      <section className="wsai-close" id="contact">
         <h2>What takes your team all week?</h2>
         <p>
           Tell me the job nobody wants on a Friday afternoon. If it is worth
           automating I will tell you how I would do it, and if it is not, I will
           tell you that instead — it is a short conversation either way.
         </p>
-        <a className="wsai-cta" href={HIRE_ME}>
-          Start the conversation
-        </a>
+        <ContactForm />
       </section>
     </>
   )

@@ -371,3 +371,104 @@
 @media (prefers-reduced-motion: reduce) {
   .wsai-root * { transition: none !important; }
 }
+
+/* --- Contact form ----------------------------------------------------------
+   The section's own form, replacing a CTA that sent visitors to the apex
+   mid-intent. Inputs are underlines rather than boxes, matching the way the
+   sibling brands set their forms, but inverted onto the black ground. */
+.wsai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 30rem;
+}
+
+.wsai-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.wsai-field label {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-55);
+}
+
+.wsai-field input,
+.wsai-field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule-hi);
+  border-radius: 0;
+  padding: 0.5rem 0;
+  transition: border-color 140ms ease;
+}
+
+.wsai-field textarea {
+  resize: vertical;
+  min-height: 6rem;
+  line-height: 1.6;
+}
+
+/* The placeholder must not read as entered text. --ink-30 is decoration-only
+   against the ground, which is the correct weight for a hint and the wrong one
+   for anything a visitor has to read. */
+.wsai-field input::placeholder,
+.wsai-field textarea::placeholder {
+  color: var(--ink-30);
+}
+
+.wsai-field input:focus,
+.wsai-field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--reg);
+}
+
+/* The default reCAPTCHA widget is a light card and would sit on this ground
+   like a lightbox. The component asks for the dark theme; this only softens
+   the seam it still leaves. */
+.wsai-captcha {
+  min-height: 78px;
+  color-scheme: dark;
+}
+
+.wsai-form-error {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--reg-hi);
+  margin: 0;
+}
+
+.wsai-form-error a { color: inherit; }
+
+.wsai-form button[type='submit'] {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--display);
+}
+
+.wsai-form button[type='submit']:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.wsai-form-done {
+  max-width: var(--measure);
+  padding: 1.25rem 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--reg);
+  border-radius: 2px;
+}
+
+.wsai-form-done p { margin: 0; color: var(--ink-70); }
+.wsai-form-done strong { color: var(--ink); font-weight: 600; }
