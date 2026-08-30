@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+import { whitespaceUrl, WHITESPACE_ORIGIN, blogSchema } from '@/lib/seo'
+import Punct from '@/app/whitespace/punct'
 
 export const metadata = {
   description:
     'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
+  alternates: { canonical: whitespaceUrl() },
 }
 
 function fmt(dateStr) {
@@ -15,13 +18,28 @@ function fmt(dateStr) {
 
 export default function WhitespaceIndexPage() {
   const posts = getAllPosts('whitespace')
+  const blog = blogSchema({
+    origin: WHITESPACE_ORIGIN,
+    name: 'Whitespace Designs',
+    description:
+      'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
+    postSlugs: posts.map((p) => p.slug),
+  })
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blog) }}
+      />
       <section className="hero">
-        <p className="spec">Design journal &middot; Print, identity &amp; large format</p>
+        <p className="spec">
+          <Punct>Design journal &middot; Print, identity &amp; large format</Punct>
+        </p>
         <h1>
-          The work, <span>and the specs it was built to.</span>
+          <Punct>
+            The work, <span>and the specs it was built to.</span>
+          </Punct>
         </h1>
         <p>
           I&rsquo;m Josh Byberg. I design print and brand collateral for people who have
@@ -50,21 +68,31 @@ export default function WhitespaceIndexPage() {
           <Link key={post.slug} className="entry" href={`/whitespace/${post.slug}`}>
             <span className="entry-no">{String(posts.length - i).padStart(2, '0')}</span>
             <div>
-              <h2>{post.title}</h2>
+              <h2>
+                <Punct>{post.title}</Punct>
+              </h2>
               <p>{post.excerpt}</p>
             </div>
             <div className="entry-meta">
-              <div className="spec">{post.deliverable ?? 'Essay'}</div>
-              <div className="spec">{post.trim ?? '—'}</div>
+              <div className="spec">
+                <Punct>{post.deliverable ?? 'Essay'}</Punct>
+              </div>
+              <div className="spec">
+                <Punct>{post.trim ?? '—'}</Punct>
+              </div>
             </div>
-            <div className="entry-date spec">{fmt(post.date)}</div>
+            <div className="entry-date spec">
+              <Punct>{fmt(post.date)}</Punct>
+            </div>
           </Link>
         ))}
       </section>
 
       <section className="cta">
         <p className="spec">Available for work</p>
-        <h2>Need something that has to survive a print run?</h2>
+        <h2>
+          <Punct>Need something that has to survive a print run?</Punct>
+        </h2>
         <p>
           I do web design, print collateral, trade show graphics and social media for
           small businesses and racing programs across Ontario. If you have a booth, a

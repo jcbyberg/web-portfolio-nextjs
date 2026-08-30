@@ -18,7 +18,7 @@ It is the very first question every non-racing parent asks me when they find out
 
 But the truth is, the safety gear these kids wear is phenomenal. 
 
-They aren't wearing jeans and a windbreaker. They are wearing custom-fit, armored leather suits from sponsors like Gryphon Moto. Underneath the leather, they are strapped into CE-rated back protectors and chest plates. Their heads are wrapped in FIM-approved helmets, and their boots and gloves feature rigid sliders to protect joints. 
+They aren't wearing jeans and a windbreaker. They are wearing [custom-fit, armored leather suits](https://whitespacedesign.ca/gryphon-custom-race-suit) from sponsors like Gryphon Moto. Underneath the leather, they are strapped into CE-rated back protectors and chest plates. Their heads are wrapped in FIM-approved helmets, and their boots and gloves feature rigid sliders to protect joints. 
 
 They are essentially wearing modern armor. 
 

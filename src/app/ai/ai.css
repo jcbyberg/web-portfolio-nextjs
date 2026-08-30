@@ -1,0 +1,373 @@
+/* ============================================================
+   WHITESPACE AI — the inverted press sheet
+
+   whitespace.css builds the page as a printed sheet: uncoated
+   stock, crop marks, registration magenta, serif body. This is
+   that identity turned inside out on every axis —
+
+     white stock          ->  black ground
+     ink on paper         ->  light emitted from it
+     subtractive / CMYK   ->  additive / RGB
+     serif body           ->  mono body
+     crop marks + trim    ->  no print furniture at all
+
+   which is also the honest difference between the two arms of
+   the business: one prints things, one runs software.
+
+   THE ACCENT IS THE SAME INK. Registration magenta #EC008C is
+   the Whitespace accent, and on white stock it measures 4.13:1
+   — which is why whitespace.css marks it decoration-only and
+   keeps a darkened #D1007A for small text. On this ground it
+   measures 4.74:1 and passes for body text unaided. The colour
+   did not change; the ground did. Every ratio in this file is
+   computed against --void, not estimated.
+
+   ISOLATION: every selector is scoped under .wsai-root. This
+   file is imported ONLY by the AI section layout and must never
+   emit a bare element rule. Note .ai-root is a DIFFERENT
+   section (the AI blog under /blog) — do not merge the two.
+   ============================================================ */
+
+.wsai-root {
+  --void:     #07070A;  /* the unlit ground */
+  --panel:    #0E0E13;  /* a surface lifted just off it */
+  --panel-hi: #14141B;
+
+  --ink:      #F4F2F0;  /* 18.02:1 — warm white, echoes the --sheet it inverts */
+  --ink-70:   #B9B7BE;  /* 10.14:1 — secondary prose */
+  --ink-55:   #8E8C96;  /*  6.08:1 — labels, captions; still passes small text */
+  --ink-30:   #62606B;  /*  3.26:1 — DECORATION ONLY. Never text. */
+
+  --rule:     #1D1D25;
+  --rule-hi:  #2A2A35;
+
+  --reg:      #EC008C;  /* 4.74:1 — the registration ink, lit */
+  --reg-hi:   #FF4FB0;  /* 6.70:1 — links, emphasis, hover */
+  --reg-glow: rgba(236, 0, 140, 0.55);
+  --cyan:     #4FC8F5;  /* 10.45:1 — the second signal, used sparingly */
+
+  --display: var(--wsai-font-display), 'Helvetica Neue', Arial, sans-serif;
+  --mono:    var(--wsai-font-mono), ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  --gutter:  clamp(1.25rem, 5vw, 4.5rem);
+  --measure: 36rem;
+
+  position: relative;
+  background: var(--void);
+  color: var(--ink);
+
+  /* Prose is set in the sans, not the mono. The inversion of a serif body IS
+     mono, and the whole page was originally set that way — but this page has a
+     job, and its reader is a business owner rather than an engineer. A full
+     page of monospace is measurably slower to read, and legibility outranks
+     the concept where the two disagree. Mono is kept for everything that
+     signals rather than reads: the eyebrow, the section numbers, stat
+     captions, nav and footer. Those are the places it earns its keep. */
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  line-height: 1.68;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.wsai-root *,
+.wsai-root *::before,
+.wsai-root *::after { box-sizing: border-box; }
+
+.wsai-root a { color: inherit; }
+
+.wsai-root :focus-visible {
+  outline: 2px solid var(--reg-hi);
+  outline-offset: 3px;
+}
+
+/* --- The emitted wash ------------------------------------------------------
+   whitespace.css warms its paper with three barely-there radials. The inverse
+   is light coming OUT of the black rather than tinting a stock, so the same
+   device is rebuilt as two magenta sources bleeding up from behind the content
+   with a cold cyan counterweight. Fixed, so it behaves like a light source the
+   page moves across. Overscanned 10% so no edge is ever exposed. */
+.wsai-root::before {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(70rem 46rem at 12% -6%,
+      rgba(236, 0, 140, 0.16) 0%, rgba(236, 0, 140, 0.08) 34%, transparent 68%),
+    radial-gradient(56rem 40rem at 92% 16%,
+      rgba(79, 200, 245, 0.075) 0%, transparent 62%),
+    radial-gradient(80rem 50rem at 50% 108%,
+      rgba(236, 0, 140, 0.10) 0%, transparent 66%);
+}
+
+/* 56rem, not 68: the prose measure is 36rem, so a 68rem wrap left every
+   heading and paragraph pinned to the left edge with a third of the page empty
+   to their right. Narrowing the wrap centres the column instead, so the empty
+   space falls symmetrically and reads as margin rather than as a layout that
+   ran out of content. */
+.wsai-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* The button and its ghost link. Previously the ghost carried a margin-left,
+   which is correct beside the button and wrong the moment it wraps underneath
+   on a phone — it landed indented off the button edge. A flex row with a gap
+   is right at both widths. */
+.wsai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+/* --- Masthead -------------------------------------------------------------- */
+.wsai-masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.75rem 0 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wsai-wordmark {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* The gap in the wordmark is a lit dot rather than a printed one: the same
+   punctuation Whitespace sets in registration magenta, emitting instead. */
+.wsai-wordmark em {
+  display: inline-block;
+  width: 0.34em;
+  height: 0.34em;
+  margin: 0 0.16em;
+  border-radius: 50%;
+  background: var(--reg);
+  box-shadow: 0 0 0.65em var(--reg-glow);
+  vertical-align: 0.06em;
+}
+
+.wsai-masthead nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-70);
+}
+
+.wsai-masthead nav a { text-decoration: none; }
+.wsai-masthead nav a:hover { color: var(--reg-hi); }
+
+/* --- Hero ------------------------------------------------------------------ */
+.wsai-hero { padding: clamp(4rem, 12vw, 8.5rem) 0 clamp(3.5rem, 9vw, 6rem); }
+
+.wsai-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-55);
+  margin: 0 0 1.5rem;
+}
+
+.wsai-eyebrow span { color: var(--reg); }
+
+.wsai-hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 1.2rem + 4.6vw, 4.5rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.75rem;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.wsai-hero h1 strong {
+  font-weight: 700;
+  color: var(--reg-hi);
+  text-shadow: 0 0 2.2rem var(--reg-glow);
+}
+
+.wsai-lede {
+  font-size: clamp(1rem, 0.95rem + 0.28vw, 1.1875rem);
+  line-height: 1.65;
+  color: var(--ink-70);
+  max-width: var(--measure);
+  margin: 0 0 2.5rem;
+}
+
+/* --- Buttons --------------------------------------------------------------- */
+.wsai-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  padding: 0.85em 1.5em;
+  border-radius: 2px;
+  background: var(--reg);
+  color: #0A0007;
+  box-shadow: 0 0 0 1px var(--reg), 0 0 2.4rem -0.4rem var(--reg-glow);
+  transition: background 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.wsai-cta:hover {
+  background: var(--reg-hi);
+  box-shadow: 0 0 0 1px var(--reg-hi), 0 0 3.2rem -0.2rem var(--reg-glow);
+  transform: translateY(-1px);
+}
+
+.wsai-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  color: var(--ink-70);
+  text-decoration: none;
+}
+
+.wsai-cta-ghost:hover { color: var(--reg-hi); }
+
+/* --- Sections -------------------------------------------------------------- */
+.wsai-section {
+  padding: clamp(3rem, 8vw, 5.5rem) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.wsai-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wsai-index {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--reg);
+  flex: none;
+}
+
+.wsai-section h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+  margin: 0;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.wsai-section p {
+  max-width: var(--measure);
+  color: var(--ink-70);
+  margin: 0 0 1.15rem;
+}
+
+.wsai-section p strong { color: var(--ink); font-weight: 600; }
+
+/* --- The figure: one number, lit ------------------------------------------
+   The proof device for the page. Whitespace sets specs in small mono under a
+   rule; this sets measured numbers large enough to read as the claim itself. */
+.wsai-figure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  margin: 2.25rem 0 0;
+  padding: 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--reg);
+  border-radius: 2px;
+}
+
+.wsai-stat { flex: 1 1 12rem; }
+
+.wsai-stat b {
+  display: block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+}
+
+.wsai-stat b em {
+  font-style: normal;
+  color: var(--reg-hi);
+  text-shadow: 0 0 1.6rem var(--reg-glow);
+}
+
+.wsai-stat span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-55);
+}
+
+/* --- Closing block --------------------------------------------------------- */
+.wsai-close {
+  padding: clamp(3.5rem, 10vw, 6.5rem) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.wsai-close h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.028em;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.wsai-close p {
+  color: var(--ink-70);
+  max-width: var(--measure);
+  margin: 0 0 2.25rem;
+}
+
+/* --- Footer ---------------------------------------------------------------- */
+.wsai-footer {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  gap: 0.6rem 1.75rem;
+  padding: 1.75rem 0 2.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-55);
+}
+
+.wsai-footer a { text-decoration: none; }
+.wsai-footer a:hover { color: var(--reg-hi); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wsai-root * { transition: none !important; }
+}

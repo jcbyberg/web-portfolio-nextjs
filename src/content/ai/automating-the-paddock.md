@@ -8,10 +8,10 @@ tags: ["automation", "AI agents", "reelcut", "productivity"]
 
 When you spend half your summer in a paddock at Shannonville or Lombardy Raceway wrenching on an Ohvale minimoto, you quickly realize you have zero time for busywork. 
 
-Between traveling for the [FIM MotoMini Canada](https://racedad.joshbyberg.com) series and trying to run a business, my schedule is packed. That’s why I leaned so heavily into building the AI stack I write about here. I needed a way to clone myself. 
+Between traveling for the [FIM MotoMini Canada](https://racedad.ca) series and trying to run a business, my schedule is packed. That’s why I leaned so heavily into building the AI stack I write about here. I needed a way to clone myself. 
 
 Tools like my custom `reelcut` script and `meta-automation` weren't just fun coding exercises. I built them specifically so I could take raw GoPro footage from my son Jäger's race weekend, feed it to a text-driven editor, and have fully cut, sponsor-tagged reels ready for his Instagram without spending six hours in Premiere Pro. 
 
-But it goes deeper than just saving time on weekends. This exact same AI architecture—using autonomous agents to handle the heavy, repetitive lifting—is the backbone of my design agency, [White Space Design Co.](https://whitespace.joshbyberg.com). We use "Overnight Builders" (AI swarms) to write boilerplate code and sort data. This allows our human team to focus strictly on high-level creative direction and quality assurance during their 20-hour workweeks.
+But it goes deeper than just saving time on weekends. This exact same AI architecture—using autonomous agents to handle the heavy, repetitive lifting—is the backbone of my design agency, [White Space Design Co.](https://whitespacedesign.ca). We use "Overnight Builders" (AI swarms) to write boilerplate code and sort data. This allows our human team to focus strictly on high-level creative direction and quality assurance during their 20-hour workweeks.
 
-By letting AI handle the grind in the background, I get to spend my weekends at the track where it matters, rather than chained to a desk. If you want to see the human side of all this automation, check out my trackside adventures at [Race Dad](https://racedad.joshbyberg.com), or see the professional output at [White Space Designs](https://whitespace.joshbyberg.com).
+By letting AI handle the grind in the background, I get to spend my weekends at the track where it matters, rather than chained to a desk. If you want to see the human side of all this automation, check out my trackside adventures at [Race Dad](https://racedad.ca), or see the professional output at [White Space Designs](https://whitespacedesign.ca).
