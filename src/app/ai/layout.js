@@ -35,7 +35,7 @@ export const metadata = {
     locale: 'en_CA',
     images: [
       {
-        url: `${AI_ORIGIN}/images/og-image.png`,
+        url: `${AI_ORIGIN}/images/og-ai.png`,
         width: 1200,
         height: 630,
         alt: 'Whitespace AI',
@@ -46,7 +46,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: aiTitle,
     description: aiDescription,
-    images: [`${AI_ORIGIN}/images/og-image.png`],
+    images: [`${AI_ORIGIN}/images/og-ai.png`],
   },
 }
 
