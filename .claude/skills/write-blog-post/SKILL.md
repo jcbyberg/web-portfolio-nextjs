@@ -22,6 +22,35 @@ it at build time. Nothing has to be registered anywhere.
 Filenames in `whitespace` and `race-dad` carry an ordering prefix (`29-`); the
 slug never does. `ai` and `tracks` use no prefix. The scripts handle this.
 
+## The fast path — one command
+
+If you have the body written, this is the whole job:
+
+```bash
+cd "D:/Projects/web-portfolio-nextjs"
+# draft.md is plain markdown: NO frontmatter, no `# Title` line
+npm run content:post -- ai \
+  --title "The Title Of The Post" \
+  --excerpt "100-250 characters that sell it on the index card and in search." \
+  --tags "ai agents, verification" \
+  --body-file draft.md
+```
+
+It runs all three steps below and then does the one nobody remembers: confirms
+the page came out of the build with the title rendered into it. It prints
+`DONE` only if every step passed, and exits non-zero naming the failing step
+and what to do about it. Add `--no-build` while you are still iterating on the
+body, `--force` to overwrite after fixing a draft, `--json` if a script is
+driving it.
+
+Use this when delegating. The three-step version below is what it calls, and is
+still the right shape when you are writing the body in place over several
+passes.
+
+**Dispatching the post to another agent?** `BRIEF-TEMPLATE.md`, next to this
+file, is a fill-in brief for `agy` or a Sonnet sub-agent, with the lane table
+and the verification rules.
+
 ## Do it in three steps
 
 ### 1. Scaffold the file
@@ -87,6 +116,24 @@ npm run build
 A post is not done because the file exists. It is done when `content:check`
 reports zero errors, `npm run build` succeeds, and you have looked at the page
 (`npm run dev`, then open the URL the scaffold printed).
+
+### Previewing an `ai` post locally
+
+`npm run dev` then opening the URL **does not work for the `ai` collection**.
+`next.config.js` 308-redirects `/blog` and `/blog/*` to `ai.whitespacedesign.ca`
+unless the request carries `x-wsai-proxy` — the header the Cloudflare worker sets
+when it fetches that section, and load-bearing, since without it the worker would
+fetch a redirect back to itself and loop. In dev that means the browser bounces
+you to the live site and it looks like your post failed to build.
+
+To see the local page:
+
+```bash
+curl -H "x-wsai-proxy: 1" http://localhost:3000/blog/<slug>
+```
+
+or put a proxy in front of dev that adds the header. The other three collections
+have no such redirect and open normally.
 
 ## Things that will bite you
 

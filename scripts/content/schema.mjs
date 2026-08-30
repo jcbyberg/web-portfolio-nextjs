@@ -23,6 +23,10 @@ export const COLLECTIONS = {
     label: 'Whitespace Design',
     dir: 'whitespace',
     url: (slug) => `https://whitespacedesign.ca/whitespace/${slug}`,
+    // Where this collection's pages land under .next/server/app. NOT derivable
+    // from `url`: race-dad serves at racedad.ca/<slug> but builds to race-dad/,
+    // and tracks serves at /tracks/<slug> but builds to race-dad/tracks/.
+    buildDir: 'whitespace',
     // Filenames carry an ordering prefix ("07-"); the slug never does.
     numbered: true,
     // Only 'case-study' renders differently ([slug]/page.js); anything else
@@ -39,6 +43,7 @@ export const COLLECTIONS = {
     label: 'Race Dad',
     dir: 'race-dad',
     url: (slug) => `https://racedad.ca/${slug}`,
+    buildDir: 'race-dad',
     numbered: true,
     types: ['post'],
     defaultType: 'post',
@@ -52,6 +57,7 @@ export const COLLECTIONS = {
     label: 'AI blog',
     dir: 'ai',
     url: (slug) => `https://ai.whitespacedesign.ca/blog/${slug}`,
+    buildDir: 'blog',
     numbered: false,
     types: ['post'],
     defaultType: 'post',
@@ -64,6 +70,7 @@ export const COLLECTIONS = {
     label: 'Track guide (racedad.ca)',
     dir: 'tracks',
     url: (slug) => `https://racedad.ca/tracks/${slug}`,
+    buildDir: 'race-dad/tracks',
     numbered: false,
     types: [],
     defaultType: null,
@@ -75,6 +82,16 @@ export const COLLECTIONS = {
     imageDir: 'public/images/race-dad/tracks',
   },
 }
+
+// Authoring flags that take a value. new-post.mjs parses with this, and
+// publish-post.mjs needs the same table to know whether a flag it is forwarding
+// consumes the next argument — two copies drifted apart is how a title ends up
+// swallowed by a flag, so there is one copy and it lives here.
+export const FLAGS_WITH_VALUE = new Set([
+  'slug', 'date', 'type', 'tags', 'excerpt', 'image', 'video', 'author',
+  'client', 'deliverable', 'trim', 'colour', 'location', 'summary',
+  'website', 'website-label', 'image-alt', 'related-tags', 'body-file',
+])
 
 export const COLLECTION_NAMES = Object.keys(COLLECTIONS)
 

@@ -28,18 +28,13 @@ import path from 'node:path'
 import {
   COLLECTION_NAMES,
   DATE_RE,
+  FLAGS_WITH_VALUE,
   collectionDir,
   filenameToSlug,
   getCollection,
   slugify,
   todayISO,
 } from './schema.mjs'
-
-const FLAGS_WITH_VALUE = new Set([
-  'slug', 'date', 'type', 'tags', 'excerpt', 'image', 'video', 'author',
-  'client', 'deliverable', 'trim', 'colour', 'location', 'summary',
-  'website', 'website-label', 'image-alt', 'related-tags', 'body-file',
-])
 
 function fail(message) {
   console.error(`error: ${message}`)
