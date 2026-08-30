@@ -174,6 +174,27 @@
   transition: color 0.2s ease;
 }
 .rd-root .lap:hover .no { color: var(--maple); }
+.rd-root .lap .title { min-width: 0; }
+
+/* Every post carries an excerpt in its frontmatter and the index never showed
+   it, while the whitespace index always has. Two lines, clamped, so a long one
+   cannot push the row out of line with its neighbours. */
+.rd-root .lap .excerpt {
+  margin: 0.3rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--gap);
+  max-width: 52ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* The row is centred on its title; with an excerpt below, the number and the
+   right-hand columns should sit at the top instead. */
+.rd-root .lap:has(.excerpt) { align-items: start; }
+
 .rd-root .lap h2 {
   font-size: clamp(1.15rem, 1rem + 0.7vw, 1.6rem);
   transition: color 0.2s ease;
@@ -194,6 +215,9 @@
   .rd-root .lap .tags, .rd-root .lap .when { grid-column: 2; }
   .rd-root .lap .tags { margin-top: 0.5rem; }
   .rd-root .lap .when { margin-top: 0.35rem; }
+  /* On a phone the row already stacks title, tags and date. A third block makes
+     each row tall enough to lose the at-a-glance index the lap chart exists for. */
+  .rd-root .lap .excerpt { display: none; }
 }
 
 /* --- Article --- */
@@ -331,6 +355,36 @@
   padding: 2.25rem clamp(1.5rem, 4vw, 2.75rem);
   max-width: 46rem;
 }
+.rd-root .cta-id {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+
+.rd-root .cta-face {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--maple);
+  flex: none;
+}
+
+/* The logo artwork is dark; on the curb panel it needs inverting to read, the
+   same treatment the site footer gives it. */
+.rd-root .cta-logo {
+  height: 34px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  flex: none;
+}
+
+@media (max-width: 520px) {
+  .rd-root .cta-logo { height: 26px; }
+}
+
 .rd-root .cta h2 { font-size: clamp(1.5rem, 3.2vw, 2.25rem); max-width: 20ch; margin-bottom: 0.9rem; }
 .rd-root .cta p { color: var(--gap); margin: 0; max-width: var(--measure); }
 .rd-root .cta a.btn {

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import { racedadUrl, RACEDAD_ORIGIN, blogSchema } from '@/lib/seo'
@@ -93,7 +94,10 @@ export default function RaceDadIndexPage() {
           {yearPosts.map((post, i) => (
             <Link className="lap" href={`/race-dad/${post.slug}`} key={post.slug}>
               <span className="no">{String(lapNumbers.get(post.slug)).padStart(2, '0')}</span>
-              <h2>{post.title}</h2>
+              <div className="title">
+                <h2>{post.title}</h2>
+                {post.excerpt ? <p className="excerpt">{post.excerpt}</p> : null}
+              </div>
               <div className="tags">
                 {post.tags.slice(0, 2).map((t) => (
                   <span key={t}>{t}</span>
@@ -106,6 +110,22 @@ export default function RaceDadIndexPage() {
       ))}
 
       <section className="cta">
+        <div className="cta-id">
+          <Image
+            className="cta-face"
+            src="/images/hero-image.jpg"
+            alt="Josh Byberg"
+            width={112}
+            height={112}
+          />
+          <Image
+            className="cta-logo"
+            src="/images/logo.png"
+            alt="JB Creative"
+            width={240}
+            height={96}
+          />
+        </div>
         <p className="data">Off the bike, this is my day job</p>
         <h2>I build websites for people in the paddock</h2>
         <p>
