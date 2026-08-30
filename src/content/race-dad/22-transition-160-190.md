@@ -11,10 +11,13 @@ type: post
 excerpt: >-
   Moving from the Ohvale 160cc to the 190cc GP-2 isn't just twisting the
   throttle harder. It's a whole new riding style.
+image: /images/race-dad/transition-160-190/rider-settling-onto-bigger-bike-shannonville.jpg
 ---
 Moving up a class in motorcycle racing is never just about twisting the throttle a little harder. 
 
 When Jäger transitioned from the Ohvale 160cc to the GP-2 190cc, the learning curve was massive. 
+
+![A rider settling onto a bigger bike in the Shannonville paddock](/images/race-dad/transition-160-190/rider-settling-onto-bigger-bike-shannonville.jpg)
 
 The 160cc is all about carrying momentum. Because it lacks top-end power, if you brake too hard for a corner, it takes forever to get back up to speed. You learn to ride smooth, flowing lines. 
 

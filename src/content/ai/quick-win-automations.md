@@ -8,7 +8,7 @@ tags: ["automation", "business ops", "AI agents"]
 
 If you are a director, founder, or manager, you don't care about API endpoints, webhook payloads, or how an LLM is trained. You care about output. You want your team doing high-value work, not clicking buttons in a spreadsheet.
 
-When we consult with businesses at [White Space Designs](https://whitespacedesign.ca), they often think automation requires a six-month IT overhaul. It doesn't. 
+When we consult with businesses at [Whitespace Design](https://whitespacedesign.ca), they often think automation requires a six-month IT overhaul. It doesn't. 
 
 Here are three high-impact, "quick win" automations you can deploy in a matter of days that instantly look brilliant on a quarterly report.
 

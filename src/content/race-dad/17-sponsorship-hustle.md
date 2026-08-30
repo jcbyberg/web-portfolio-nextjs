@@ -6,11 +6,15 @@ tags:
   - Sponsorship
   - Funding
   - Social Media
+  - Minimoto
 type: post
 excerpt: >-
   Finding sponsors for a junior racer is basically a full-time job, and running
   a design agency turns out to help.
+image: /images/race-dad/sponsorship-hustle/walking-back-super-sonic-transporter-between.jpg
 ---
+![Walking back to the Super Sonic transporter between sessions](/images/race-dad/sponsorship-hustle/walking-back-super-sonic-transporter-between.jpg)
+
 Racing runs on money. That is the unfortunate, unavoidable truth of motorsports. 
 
 Finding sponsors for a junior racer is essentially a full-time job. You are not just asking for a handout; you have to build a brand and prove that you can deliver value to the companies that put their name on the fairings. 

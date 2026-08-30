@@ -10,7 +10,10 @@ type: post
 excerpt: >-
   A track guide to Lombardy Raceway, the tight technical crucible in Smiths
   Falls that separates the smooth riders from the aggressive ones.
+image: /images/race-dad/lombardy-guide/minimoto-riders-running-line-astern-lombardy.jpg
 ---
+![Minimoto riders running line astern at Lombardy Raceway Park](/images/race-dad/lombardy-guide/minimoto-riders-running-line-astern-lombardy.jpg)
+
 If Shannonville is about bravery and top speed, Lombardy Raceway is about pure, unadulterated technical skill. 
 
 Tucked away in Smiths Falls, Lombardy is a kart track that doubles as an absolute crucible for minimoto and supermoto racers. It’s tight. It’s twisty. And it offers zero time to rest. 

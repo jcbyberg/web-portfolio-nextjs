@@ -11,10 +11,13 @@ type: post
 excerpt: >-
   MiniSBK and FIM MotoMini Canada aren't a novelty. They're the most proven
   development pipeline into the Canadian Superbike Championship.
+image: /images/race-dad/pathway-to-csbk/lone-rider-circulating-lombardy-late-season.jpg
 ---
 When people see the Ohvale GP-2s for the first time, they often assume it’s just a hobby. They see the small wheels and think it’s a novelty. 
 
 But MiniSBK and FIM MotoMini Canada aren't just about tiny bikes; they are a deliberate, structured stepping stone. 
+
+![A lone rider circulating at Lombardy late in the season](/images/race-dad/pathway-to-csbk/lone-rider-circulating-lombardy-late-season.jpg)
 
 If you look at the kids running up front in the Canadian Superbike Championship (CSBK) right now—especially in the amateur and lightweight sportbike classes—so many of them started exactly where Jäger is. They started on small wheels, learning racecraft and close-quarters battling before they ever threw a leg over a full-sized Yamaha R3 or Kawasaki Ninja 400. 
 

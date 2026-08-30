@@ -6,7 +6,7 @@ excerpt: "An introduction to the vocabulary of design — white space, the grid,
 tags: ["design terminology", "branding", "fundamentals"]
 ---
 
-Welcome to the White Space Design blog. If you’re going to build a brand, a digital presence, or an automated media workflow, you have to start with the fundamentals. 
+Welcome to the Whitespace Design blog. If you’re going to build a brand, a digital presence, or an automated media workflow, you have to start with the fundamentals. 
 
 Design isn't just about making things look "pretty." It is a precise, calculated language. When you start to understand the vocabulary of design, you stop seeing just a billboard or a website, and you start seeing the invisible rules holding it all together.
 
@@ -38,4 +38,4 @@ Here is a look at the core philosophies that drive our aesthetic at White Space,
 
 ***
 
-At White Space Design Co., we don't just build media and automation; we engineer them from the baseline up. Welcome to the blog. We're going to talk a lot about pixels, automation, and the invisible scaffolding that makes it all work.
+At Whitespace Design, we don't just build media and automation; we engineer them from the baseline up. Welcome to the blog. We're going to talk a lot about pixels, automation, and the invisible scaffolding that makes it all work.

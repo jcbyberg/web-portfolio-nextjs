@@ -6,14 +6,20 @@ tags:
   - Mental Prep
   - Anxiety
   - Race Day
+  - Minimoto
 type: post
 excerpt: >-
   They're athletes, but they're also just kids. On managing nerves on the dummy
   grid before the green flag drops.
+image: /images/race-dad/race-day-anxiety/tire-warmers-nothing-do-but-wait.jpg
 ---
+![Tire warmers on, nothing to do but wait](/images/race-dad/race-day-anxiety/tire-warmers-nothing-do-but-wait.jpg)
+
 They are athletes, but at the end of the day, they are also just kids. 
 
 When they are sitting on the dummy grid waiting for the five-minute horn, the nerves are palpable. You can see it in how they fidget with their gloves or stare blankly at the dash. At that exact moment, the absolute worst thing a dad can do is start talking about apexes, braking markers, or strategy. 
+
+![Watching a session from behind the wall at Shannonville](/images/race-dad/race-day-anxiety/watching-session-behind-wall-shannonville.jpg)
 
 My job on the grid isn't to be a riding coach. My job is to be a dad. 
 

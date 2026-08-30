@@ -11,10 +11,15 @@ type: post
 excerpt: >-
   Stepping up from regional MiniSBK to the national FIM MotoMini Canada grid
   changes everything about a race weekend, for riders and parents alike.
+image: /images/race-dad/jump-to-motomini/minimoto-bikes-lined-up-minisbk-paddock.jpg
 ---
 There is club racing, and then there is the FIM MotoMini Canada series. Making the jump between the two changes the entire atmosphere of a race weekend. 
 
+![Minimoto bikes lined up in the MiniSBK paddock at Shannonville](/images/race-dad/jump-to-motomini/minimoto-bikes-lined-up-minisbk-paddock.jpg)
+
 When Jäger and the other kids step up from the regional MiniSBK rounds to the national FIM MotoMini grid, the pressure cooker gets turned up. This isn't just about collecting a plastic trophy on a Sunday afternoon anymore. This is the direct, sanctioned pipeline to the FIM MotoMini World Finals in Valencia, Spain. 
+
+![A club-round podium at Shannonville earlier in the season](/images/race-dad/jump-to-motomini/club-round-podium-shannonville-earlier-season.jpg)
 
 Everything is stricter. The tech inspection is thorough—safety wire needs to be perfect, gear needs to meet homologation standards. The grid procedure is rigid. 
 

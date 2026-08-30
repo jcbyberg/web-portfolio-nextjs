@@ -11,7 +11,10 @@ type: post
 excerpt: >-
   Nobody wants to race in the rain, but a wet track is the best teacher a young
   racer can have.
+image: /images/race-dad/rain-racing/standing-water-shannonville-circuit-during-wet.jpg
 ---
+![Standing water on the Shannonville circuit during a wet session](/images/race-dad/rain-racing/standing-water-shannonville-circuit-during-wet.jpg)
+
 Let’s be honest: nobody *wants* to race in the rain. 
 
 When you wake up in the camper at Shannonville and hear the drops hitting the roof, the collective groan of the paddock is audible. It means scrambling to swap wheels to grooved rain tires. It means the paddock turns into a muddy mess. It means spending the evening drying leathers with a fan. 

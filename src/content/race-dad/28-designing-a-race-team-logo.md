@@ -7,6 +7,7 @@ tags:
   - Branding
   - Big Berg Racing
   - Day Job
+  - Minimoto
 type: post
 excerpt: >-
   Designing the family race team logo took six versions and a name change, from

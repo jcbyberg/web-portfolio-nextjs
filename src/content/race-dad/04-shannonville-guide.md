@@ -12,8 +12,11 @@ excerpt: >-
   A track guide to Shannonville Motorsport Park, the proving ground of Canadian
   motorcycle racing, where the long straights and heavy braking demand absolute
   respect.
+image: /images/race-dad/shannonville-guide/empty-circuit-shannonville-motorsport-park-before.jpg
 ---
 Shannonville Motorsport Park is the undisputed proving ground of Canadian motorcycle racing, and for the minimoto kids, it’s a track that demands absolute respect. 
+
+![The empty circuit at Shannonville Motorsport Park before a session](/images/race-dad/shannonville-guide/empty-circuit-shannonville-motorsport-park-before.jpg)
 
 Located just off the 401 near Belleville, Shannonville is where raw speed meets heavy braking. For the Ohvale 190s running in the FIM MotoMini Canada series, the long straights allow these bikes to really stretch their legs. But the speed comes with a cost: you have to be fearless on the brakes. 
 

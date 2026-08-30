@@ -11,10 +11,13 @@ type: post
 excerpt: >-
   What does it actually cost to get a kid racing minimoto? The honest answer,
   from the low-risk SSRS entry point to a full season on an Ohvale.
+image: /images/race-dad/true-cost/rider-bringing-minibike-back-through-brechin.jpg
 ---
 "How much does it actually cost to get a kid into racing?" 
 
 It’s the first question every parent asks when they see Jäger's #68 Ohvale on social media. The short answer is: it depends on how deep down the rabbit hole you want to go. 
+
+![A rider bringing a minibike back through the Brechin paddock](/images/race-dad/true-cost/rider-bringing-minibike-back-through-brechin.jpg)
 
 If you are just dipping your toes in the water, the Super Sonic Road Race School (SSRS) "Arrive & Race" program is incredibly accessible. You show up, they provide the bike and the gear, and your kid gets world-class instruction in a safe environment. It’s the perfect, low-risk entry point.
 

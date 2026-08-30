@@ -10,12 +10,15 @@ type: post
 excerpt: >-
   The engine doesn't do all the work. On the core strength and cardio it takes
   to wrestle a 190cc Ohvale through 15 laps in July heat.
+image: /images/race-dad/physical-fitness/young-rider-moving-body-into-corner.jpg
 ---
 People who don't ride motorcycles often assume the engine does all the work. They think you just twist the throttle and hold on. 
 
 I challenge anyone who thinks that to try wrestling a 190cc Ohvale through Lombardy's tight chicanes for 15 laps in 30-degree July heat. 
 
 The physical toll is massive. To ride an Ohvale fast, you are constantly shifting your body weight, pulling yourself across the tank, weighting the pegs, and resisting the G-forces of heavy braking. 
+
+![A young rider moving their body into a corner on a minimoto bike](/images/race-dad/physical-fitness/young-rider-moving-body-into-corner.jpg)
 
 For a 13-year-old, core strength and cardio are absolutely critical. If their core gives out halfway through a race, they start putting weight on their wrists. When there is weight on the wrists, the bike won't turn, and mistakes happen. 
 

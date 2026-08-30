@@ -3,6 +3,11 @@ title: Balancing the Wrench and the Code
 author: Josh Byberg
 date: '2025-12-16'
 type: post
+tags:
+  - MotoMini
+  - FIM
+  - Ohvale
+  - Sponsorship
 excerpt: >-
   How high-efficiency AI automation funds a racing season and buys back the time
   to spend it trackside instead of at a desk.
@@ -11,7 +16,7 @@ Let’s be honest about something: racing isn't cheap. From the tires to the tra
 
 A lot of folks in the paddock at Shannonville or Lombardy ask me how I manage to fund the season and still take the time off to travel to all these rounds. The secret isn't a trust fund; it's high-efficiency automation.
 
-When I’m not changing gearing or tracking tire pressures, I run an agency called [White Space Design Co.](https://whitespacedesign.ca). It’s a specialized, neurodivergent-focused design and tech hub. We don't do the traditional 50-hour agency grind. Instead, we cap our human hours and focus on delivering high-ticket, productized outcomes for our clients.
+When I’m not changing gearing or tracking tire pressures, I run an agency called [Whitespace Design](https://whitespacedesign.ca). It’s a specialized, neurodivergent-focused design and tech hub. We don't do the traditional 50-hour agency grind. Instead, we cap our human hours and focus on delivering high-ticket, productized outcomes for our clients.
 
 To make that math work while I'm out of the office at a track in Quebec, I rely heavily on custom-built AI. I've spent the last few years building autonomous agents and tools that run my business in the background (I actually write about all the nerdy technical details of how I build those AI swarms over on my [AI Tech Blog](https://ai.joshbyberg.com)). 
 

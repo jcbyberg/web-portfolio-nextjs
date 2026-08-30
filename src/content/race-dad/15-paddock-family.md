@@ -6,14 +6,20 @@ tags:
   - Community
   - Paddock
   - Racing Family
+  - Minimoto
 type: post
 excerpt: >-
   Fierce competitors on track, one big family in the paddock. On the community
   that makes minimoto racing what it is.
+image: /images/race-dad/paddock-family/paddock-family-01.jpg
 ---
+![Two young riders still in their leathers, eating snacks in camp chairs under the awning between sessions](/images/race-dad/paddock-family/paddock-family-01.jpg)
+
 If you watch a MiniSBK race, you will see kids aggressively block-passing each other into turn one at Shannonville. It is fierce, uncompromising competition. 
 
 But back in the paddock, the dynamic is completely different. 
+
+![Awnings, bikes and families filling the MiniSBK paddock](/images/race-dad/paddock-family/awnings-bikes-families-filling-minisbk-paddock.jpg)
 
 The kids who were just trading paint on the track are suddenly sharing popsicles, riding scooters through the pits, and playing video games in the back of the toy haulers. 
 

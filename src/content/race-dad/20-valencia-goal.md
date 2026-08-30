@@ -10,7 +10,10 @@ type: post
 excerpt: >-
   Everything in the FIM MotoMini Canada series builds to one date: the World
   Final in Valencia, Spain.
+image: /images/race-dad/valencia-goal/valencia-goal-01.jpg
 ---
+![Young riders holding their trophies on the podium boxes after a club round](/images/race-dad/valencia-goal/valencia-goal-01.jpg)
+
 Everything in the FIM MotoMini Canada series builds to one singular date: November 26th. 
 
 That is when the FIM MotoMini World Final takes place in Valencia, Spain. 

@@ -11,7 +11,10 @@ type: post
 excerpt: >-
   How the 2026 revival of the Canadian Supermoto Championship brought a unified,
   high-level series back to Ontario and Quebec.
+image: /images/race-dad/supermoto-return/supermoto-return-01.jpg
 ---
+![A young rider in Ohvale leathers climbing onto a blue number 913 minimoto beside the Motul awning](/images/race-dad/supermoto-return/supermoto-return-01.jpg)
+
 For a few years, the supermoto scene in Ontario felt a bit like a secret club. If you knew where to look, you could find guys sliding dirt bikes on slick tires around local kart tracks, but the organized, high-level competition was fragmented. 
 
 That changed with the 2026 revival of the Canadian Supermoto Championship (CSM). 

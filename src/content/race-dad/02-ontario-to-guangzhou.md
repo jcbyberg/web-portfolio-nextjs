@@ -7,14 +7,20 @@ tags:
   - Guangzhou
   - Jäger Stockill Racing
   - International
+  - Ohvale
 type: post
 excerpt: >-
   Racing locally is tough enough. Here's what it's like watching your kid race
   the Ohvale Guangzhou Supercup from 12,000 kilometers and 12 time zones away.
+image: /images/race-dad/ontario-to-guangzhou/jager-stockill-racing-68-announcement-graphic.jpg
 ---
+![Jager Stockill Racing #68 announcement graphic - represents Team Canada at the Ohvale Guangzhou Supercup](/images/race-dad/ontario-to-guangzhou/jager-stockill-racing-68-announcement-graphic.jpg)
+
 Racing locally is tough enough. You pack the truck, fight the traffic up to Lombardy or Shannonville, set up the canopy, and wrench all weekend. 
 
 But what happens when your kid is racing 12,000 kilometers away?
+
+![A race weekend at home in Ontario](/images/race-dad/ontario-to-guangzhou/race-weekend-home-ontario.jpg)
 
 This August, Jäger was invited to race the Ohvale Guangzhou Supercup in China. It is an incredible opportunity to line up against some of the fastest mini road racers on that side of the world. 
 

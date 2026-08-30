@@ -11,7 +11,10 @@ type: post
 excerpt: >-
   Getting PMT slick tire pressure right is one of the most contested, most
   consequential calculations in the minimoto paddock.
+image: /images/race-dad/tire-pressures/tire-pressures-01.jpg
 ---
+![Two minimoto riders running nose to tail out of a corner at Shannonville](/images/race-dad/tire-pressures/tire-pressures-01.jpg)
+
 If you want to start a heated argument in a minimoto paddock, just walk up to three different dads and ask them what tire pressure they are running. 
 
 In the MiniSBK and FIM MotoMini series, almost everyone runs PMT slick tires. They are incredibly sticky, but getting them to work perfectly is a dark art. 

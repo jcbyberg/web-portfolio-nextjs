@@ -10,8 +10,11 @@ type: post
 excerpt: >-
   Celebrating Toni Sharpless's Canadian Motorcycle Association Ambassador Award,
   and the grassroots pipeline she built from scratch.
+image: /images/race-dad/toni-sharpless-cma/toni-sharpless-coaching-young-rider-beside.jpg
 ---
 It was amazing to see Toni Sharpless formally recognized recently with the Canadian Motorcycle Association (CMA) Ambassador Award. 
+
+![Toni Sharpless coaching a young rider beside a Super Sonic Road Race School bike](/images/race-dad/toni-sharpless-cma/toni-sharpless-coaching-young-rider-beside.jpg)
 
 If you have spent any time in a Canadian road racing paddock, you know Toni. Between her own Hall of Fame racing career and what she has done building the Super Sonic Road Race School (SSRS), nobody deserves it more. 
 

@@ -8,7 +8,7 @@ tags: ["design fundamentals", "CRAP", "layout", "branding"]
 
 If you want to design something that actually works—whether it's a 4-page brochure, a podcast cover, or a fully automated web deployment—you don't need a degree in fine arts. You just need to know how to give a C.R.A.P.
 
-It’s an industry-classic acronym for a reason. At White Space Design Co., the CRAP philosophy is the foundational checklist we run every single design through before it ships. If a layout feels "off" but you can't quite articulate why, it’s almost always because one of these four pillars is broken.
+It’s an industry-classic acronym for a reason. At Whitespace Design, the CRAP philosophy is the foundational checklist we run every single design through before it ships. If a layout feels "off" but you can't quite articulate why, it’s almost always because one of these four pillars is broken.
 
 Here is how we use **C**olour, **R**epetition, **A**lignment, and **P**roximity to engineer flawless media.
 
