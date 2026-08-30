@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "content:new": "node scripts/content/new-post.mjs",
+    "content:check": "node scripts/content/check-content.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
