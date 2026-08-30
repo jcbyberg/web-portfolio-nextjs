@@ -21,7 +21,7 @@ its own visual identity, all funnelling traffic to one new conversion page.
 
 | Route | Brand | Posts |
 |---|---|---|
-| `/whitespace`, `/whitespace/[slug]` | Whitespace Designs | 7 (5 case studies + 2 essays) |
+| `/whitespace`, `/whitespace/[slug]` | Whitespace Design | 7 (5 case studies + 2 essays) |
 | `/race-dad`, `/race-dad/[slug]` | Race Dad | 24 |
 | `/blog`, `/blog/[slug]` | AI blog | 6 |
 | `/bring-your-idea-to-life` | Landing / CTA target | — |

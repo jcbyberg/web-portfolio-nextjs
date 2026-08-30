@@ -1,7 +1,7 @@
 import BringYourIdeaToLife from "../bring-your-idea-to-life/BringYourIdeaToLife";
 import { byitlFontVars } from "../bring-your-idea-to-life/fonts";
 
-const title = "Hire White Space Designs — Web, Print & Automation";
+const title = "Hire Whitespace Design — Web, Print & Automation";
 const description =
   "Web design, print collateral, trade show graphics, social media and AI automation for small businesses, racing programs and organizations across Ontario. One person, start to finish.";
 

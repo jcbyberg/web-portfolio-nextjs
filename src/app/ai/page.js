@@ -13,7 +13,7 @@ export default function AiPage() {
     <>
       <section className="wsai-hero">
         <p className="wsai-eyebrow">
-          Whitespace Designs <span>/</span> automation
+          Whitespace Design <span>/</span> automation
         </p>
         <h1>
           Your team should not spend Friday doing what a <strong>script</strong>{' '}

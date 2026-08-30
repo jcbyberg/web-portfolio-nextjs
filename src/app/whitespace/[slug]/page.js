@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
       // siteName and locale are restated from the layout on purpose: Next
       // REPLACES a parent's openGraph object rather than merging into it, so
       // anything not repeated here is simply absent from a post's tags.
-      siteName: 'Whitespace Designs',
+      siteName: 'Whitespace Design',
       locale: 'en_CA',
       title: post.title,
       description: post.excerpt,
@@ -73,7 +73,7 @@ export default async function WhitespacePostPage({ params }) {
     organizationId: `${WHITESPACE_ORIGIN}/#organization`,
   })
   const breadcrumb = breadcrumbSchema([
-    { name: 'Whitespace Designs', url: `${WHITESPACE_ORIGIN}/` },
+    { name: 'Whitespace Design', url: `${WHITESPACE_ORIGIN}/` },
     { name: post.title, url },
   ])
 

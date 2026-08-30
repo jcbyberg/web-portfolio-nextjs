@@ -94,7 +94,7 @@ export default function AiLayout({ children }) {
 
         <footer className="wsai-footer">
           <span>Whitespace AI — Josh Byberg</span>
-          <a href={WHITESPACE_ORIGIN}>Whitespace Designs</a>
+          <a href={WHITESPACE_ORIGIN}>Whitespace Design</a>
           <a href={`${WHITESPACE_ORIGIN}/hire-me`}>Get in touch</a>
         </footer>
       </div>

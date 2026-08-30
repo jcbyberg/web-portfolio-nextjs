@@ -124,7 +124,7 @@ Trade show graphics · Social media graphics · Workflow automation and AI
 integration
 
 **Products** — use these to point at the brand domains:
-- *Whitespace Designs — design case studies* → `https://whitespacedesign.ca`
+- *Whitespace Design — design case studies* → `https://whitespacedesign.ca`
 - *Race Dad — Canadian minimoto* → `https://racedad.ca`
 
 ### After it is live

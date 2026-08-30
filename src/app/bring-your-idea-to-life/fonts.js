@@ -1,7 +1,7 @@
 import { byitlDisplay, byitlBody, byitlMono } from "@/app/fonts";
 
 // The press-sheet type system shared by the two landing pages:
-// /bring-your-idea-to-life (Josh Byberg) and /hire-me (White Space Designs).
+// /bring-your-idea-to-life (Josh Byberg) and /hire-me (Whitespace Design).
 //
 // These MUST be instantiated exactly once. Declaring them per-page meant two
 // modules calling next/font for the same families under the same CSS variable

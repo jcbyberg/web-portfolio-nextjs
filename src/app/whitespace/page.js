@@ -20,7 +20,7 @@ export default function WhitespaceIndexPage() {
   const posts = getAllPosts('whitespace')
   const blog = blogSchema({
     origin: WHITESPACE_ORIGIN,
-    name: 'Whitespace Designs',
+    name: 'Whitespace Design',
     description:
       'A design blog by Josh Byberg — print, brand systems and trade show work, shown with the specs.',
     postSlugs: posts.map((p) => p.slug),

@@ -5,7 +5,7 @@
 
 ## Purpose
 
-A one-page marketing site for the AI-automation side of Whitespace Designs. It is
+A one-page marketing site for the AI-automation side of Whitespace Design. It is
 intended to be the primary client-acquisition channel for that work, not a
 portfolio addendum.
 

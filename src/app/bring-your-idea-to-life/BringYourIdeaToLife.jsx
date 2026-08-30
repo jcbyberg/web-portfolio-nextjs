@@ -115,7 +115,7 @@ export default function BringYourIdeaToLife({
           {brand === "whitespace" ? (
             <>
               <Link className="wordmark" href="/whitespace">
-                White<em aria-hidden="true"></em>space Designs
+                White<em aria-hidden="true"></em>space Design
               </Link>
               <nav>
                 <Link className="is-home" href="/whitespace">
@@ -276,7 +276,7 @@ export default function BringYourIdeaToLife({
 
         <footer className="site">
           {brand === "whitespace" ? (
-            <span className="spec">Whitespace Designs &mdash; Josh Byberg</span>
+            <span className="spec">Whitespace Design &mdash; Josh Byberg</span>
           ) : (
             <span className="spec">
               Josh Byberg &mdash; Design, print &amp; automation
