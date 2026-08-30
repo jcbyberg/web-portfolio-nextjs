@@ -117,3 +117,25 @@ export const aiMono = localFont({
   display: 'swap',
   fallback: ['ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
 })
+
+// --- Whitespace AI (src/app/ai/layout.js) -----------------------------------
+// The AI arm inverts the press-sheet identity: emitted light on black instead
+// of ink on stock. It keeps Schibsted Grotesk for display, so the two brands
+// share a voice, and swaps the serif body for JetBrains Mono — the same file
+// the AI blog uses, under its own variable name so the two sections can never
+// reach into each other's scope. No new font files, so the build stays
+// network-free.
+export const wsaiDisplay = localFont({
+  src: './files/schibsted-grotesk-var.woff2',
+  weight: '400 700',
+  variable: '--wsai-font-display',
+  display: 'swap',
+  fallback: ['Helvetica Neue', 'Arial', 'sans-serif'],
+})
+export const wsaiMono = localFont({
+  src: './files/jetbrains-mono-var.woff2',
+  weight: '400 700',
+  variable: '--wsai-font-mono',
+  display: 'swap',
+  fallback: ['ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+})

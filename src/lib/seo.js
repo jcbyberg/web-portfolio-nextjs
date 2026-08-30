@@ -13,6 +13,10 @@
 export const WHITESPACE_ORIGIN = 'https://whitespacedesign.ca'
 export const RACEDAD_ORIGIN = 'https://racedad.ca'
 
+// The AI arm is a SUBDOMAIN, not a prefix-stripped brand domain, but its worker
+// strips /ai the same way, so the same bare-slug rule applies to its canonicals.
+export const AI_ORIGIN = 'https://ai.whitespacedesign.ca'
+
 // '' -> 'https://whitespacedesign.ca/'
 export function whitespaceUrl(slug = '') {
   return slug ? `${WHITESPACE_ORIGIN}/${slug}` : `${WHITESPACE_ORIGIN}/`
@@ -21,6 +25,11 @@ export function whitespaceUrl(slug = '') {
 // 'x' -> 'https://racedad.ca/x'
 export function racedadUrl(slug = '') {
   return slug ? `${RACEDAD_ORIGIN}/${slug}` : `${RACEDAD_ORIGIN}/`
+}
+
+// '' -> 'https://ai.whitespacedesign.ca/'
+export function aiUrl(slug = '') {
+  return slug ? `${AI_ORIGIN}/${slug}` : `${AI_ORIGIN}/`
 }
 
 // ---------------------------------------------------------------------------
@@ -126,5 +135,23 @@ export function breadcrumbSchema(items) {
       name: item.name,
       ...(item.url ? { item: item.url } : {}),
     })),
+  }
+}
+
+// A services page needs a Service entity to be eligible for service-intent
+// results; the blog-shaped schemas above do not cover it. `areaServed` is what
+// ties the page to the local market it is actually selling into.
+export function serviceSchema({ origin, name, description, serviceType, areaServed = [] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${origin}/#service`,
+    name,
+    description,
+    serviceType,
+    provider: { '@id': `${origin}/#organization` },
+    ...(areaServed.length
+      ? { areaServed: areaServed.map((n) => ({ '@type': 'Place', name: n })) }
+      : {}),
   }
 }
