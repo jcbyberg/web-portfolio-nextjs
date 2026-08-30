@@ -23,8 +23,8 @@ It involves rider swaps, frantic pit stops (or as close to frantic refueling as 
 
 It teaches them the golden rule of endurance racing: to finish first, first you must finish. 
 
-The pits are hilarious to watch. Dads are screaming with stopwatches, kids are practically throwing the transponders at each other during rider swaps, and everyone is trying to shake off the winter rust. 
+![A rider paused at the edge of the Brechin circuit beside the tyre barriers, an adult standing behind him](/images/race-dad/endurance-racing/holding-steady-pace-through-brechin-infield.jpg)
 
-![Holding a steady pace through the Brechin infield](/images/race-dad/endurance-racing/holding-steady-pace-through-brechin-infield.jpg)
+The pits are hilarious to watch. Dads are screaming with stopwatches, kids are practically throwing the transponders at each other during rider swaps, and everyone is trying to shake off the winter rust. 
 
 It is a fantastic team-building exercise before the high-pressure individual FIM MotoMini rounds begin. Plus, nothing builds fitness faster than a 45-minute stint on a tight kart track in early spring.
