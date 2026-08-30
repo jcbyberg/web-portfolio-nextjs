@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostSlugs, getPost } from '@/lib/posts'
+import { AI_ORIGIN, postOpenGraphImage } from '@/lib/seo'
 import Masthead from '../_components/Masthead'
 import Footer from '../_components/Footer'
 import Cta from '../_components/Cta'
@@ -19,10 +20,34 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const post = await getPost('ai', params.slug)
   if (!post) return {}
+  const url = `${AI_ORIGIN}/blog/${post.slug}`
+  // A post with no image of its own falls back to the site card rather than
+  // inheriting the root layout's joshbyberg.com one.
+  const images = postOpenGraphImage(post, AI_ORIGIN) ?? [
+    { url: `${AI_ORIGIN}/images/og-ai.png`, alt: 'Whitespace AI' },
+  ]
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      // Restated from the layout on purpose: Next REPLACES a parent's
+      // openGraph object rather than merging into it.
+      siteName: 'Whitespace AI',
+      locale: 'en_CA',
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date ?? undefined,
+      images,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: images.map((img) => img.url),
+    },
   }
 }
 

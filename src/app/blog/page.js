@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
+import { AI_ORIGIN } from '@/lib/seo'
 import Masthead from './_components/Masthead'
 import Footer from './_components/Footer'
 import Cta from './_components/Cta'
 
 export const metadata = {
   title: 'AI Blog',
-  alternates: { canonical: '/blog' },
+  // Absolute, not '/blog': a relative canonical resolves against metadataBase,
+  // which is joshbyberg.com, and this index lives on the AI subdomain.
+  alternates: { canonical: `${AI_ORIGIN}/blog` },
 }
 
 function formatDate(iso) {
