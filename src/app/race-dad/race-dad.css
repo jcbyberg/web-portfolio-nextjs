@@ -174,7 +174,44 @@
   transition: color 0.2s ease;
 }
 .rd-root .lap:hover .no { color: var(--maple); }
-.rd-root .lap .title { min-width: 0; }
+/* The thumbnail lives INSIDE the title column rather than in a column of its
+   own. A fifth grid column would need a matching spacer in .sheet-head, whose
+   four labels (Lap / Post / Topic / Date) would otherwise stop lining up with
+   the rows beneath them. */
+.rd-root .lap .title {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.rd-root .lap .title-text { min-width: 0; }
+
+.rd-root .lap .thumb {
+  width: 5.5rem;
+  height: 3.6rem;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--curb);
+  flex: none;
+  filter: saturate(0.9);
+  transition: filter 0.2s ease;
+}
+
+.rd-root .lap:hover .thumb { filter: saturate(1.15); }
+
+/* The kerb stripe stands in for a photograph on the posts that have none.
+   Muted well below the real --maple so a row of them never competes with an
+   actual photo two rows down. */
+.rd-root .lap .thumb.kerb {
+  display: block;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--curb) 0 8px,
+    var(--curb-hi) 8px 16px
+  );
+  border: 1px solid var(--curb-hi);
+}
 
 /* Every post carries an excerpt in its frontmatter and the index never showed
    it, while the whitespace index always has. Two lines, clamped, so a long one
@@ -212,6 +249,8 @@
 @media (max-width: 820px) {
   .rd-root .sheet-head { display: none; }
   .rd-root .lap { grid-template-columns: 3rem 1fr; }
+  /* No room for a thumbnail once the row stacks; the title has the width. */
+  .rd-root .lap .thumb { display: none; }
   .rd-root .lap .tags, .rd-root .lap .when { grid-column: 2; }
   .rd-root .lap .tags { margin-top: 0.5rem; }
   .rd-root .lap .when { margin-top: 0.35rem; }

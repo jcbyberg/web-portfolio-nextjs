@@ -95,8 +95,25 @@ export default function RaceDadIndexPage() {
             <Link className="lap" href={`/race-dad/${post.slug}`} key={post.slug}>
               <span className="no">{String(lapNumbers.get(post.slug)).padStart(2, '0')}</span>
               <div className="title">
-                <h2>{post.title}</h2>
-                {post.excerpt ? <p className="excerpt">{post.excerpt}</p> : null}
+                {post.image ? (
+                  <Image
+                    className="thumb"
+                    src={post.image}
+                    alt=""
+                    width={176}
+                    height={116}
+                  />
+                ) : (
+                  // Only the recent race reports carry photographs. Rather than
+                  // leave 24 rows with a hole in them, the imageless ones get a
+                  // kerb stripe — track furniture, so it reads as part of the
+                  // design rather than as an image that failed to load.
+                  <span className="thumb kerb" aria-hidden="true" />
+                )}
+                <div className="title-text">
+                  <h2>{post.title}</h2>
+                  {post.excerpt ? <p className="excerpt">{post.excerpt}</p> : null}
+                </div>
               </div>
               <div className="tags">
                 {post.tags.slice(0, 2).map((t) => (
