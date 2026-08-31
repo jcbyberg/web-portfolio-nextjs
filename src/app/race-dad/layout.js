@@ -64,6 +64,7 @@ export default function RaceDadLayout({ children }) {
           <nav>
             <Link href="/race-dad">Posts</Link>
             <Link href="/race-dad/about">About</Link>
+            <a href={AI_ORIGIN}>Automation</a>
             <Link href="/bring-your-idea-to-life">Bring Your Idea to Life</Link>
           </nav>
         </header>

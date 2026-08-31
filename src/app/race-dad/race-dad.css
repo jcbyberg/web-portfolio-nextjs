@@ -89,11 +89,15 @@
 @media (max-width: 520px) {
   .rd-root .footer-mark { height: 2.5rem; }
 }
-.rd-root .masthead nav { display: flex; gap: 1.5rem; }
+/* Wraps as whole items. A fourth link pushed the row past a phone's width,
+   and without nowrap the break lands INSIDE "Bring Your Idea to Life",
+   stacking it three ragged lines deep. Break between links instead. */
+.rd-root .masthead nav { display: flex; gap: 1.5rem; flex-wrap: wrap; row-gap: 0.5rem; }
 .rd-root .masthead nav a {
   font-family: var(--mono); font-size: 0.625rem;
   letter-spacing: 0.14em; text-transform: uppercase;
   text-decoration: none; color: var(--gap);
+  white-space: nowrap;
 }
 .rd-root .masthead nav a:hover { color: var(--flag); }
 

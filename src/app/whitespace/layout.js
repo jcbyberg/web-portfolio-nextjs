@@ -70,6 +70,7 @@ export default function WhitespaceLayout({ children }) {
           <nav>
             <Link href="/whitespace">Work</Link>
             <Link href="/whitespace/about">About</Link>
+            <a href={AI_ORIGIN}>Automation</a>
             <Link href="/hire-me">Hire me</Link>
           </nav>
         </header>

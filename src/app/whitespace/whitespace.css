@@ -157,8 +157,12 @@
   transition: width 0.35s cubic-bezier(.2,.8,.2,1);
 }
 .ws-root .wordmark:hover em { width: 3rem; }
-.ws-root .masthead nav { display: flex; gap: 1.75rem; }
+/* Same rule as the race-dad masthead: with four links the row can exceed a
+   phone's width, and a break inside a label reads as broken rather than
+   wrapped. Break between links. */
+.ws-root .masthead nav { display: flex; gap: 1.75rem; flex-wrap: wrap; row-gap: 0.5rem; }
 .ws-root .masthead nav a {
+  white-space: nowrap;
   font-family: var(--mono); font-size: 0.6875rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   text-decoration: none; color: var(--ink-60);

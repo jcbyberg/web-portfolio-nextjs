@@ -4,6 +4,7 @@ import './ai.css'
 import {
   AI_ORIGIN,
   WHITESPACE_ORIGIN,
+  RACEDAD_ORIGIN,
   aiUrl,
   organizationSchema,
   serviceSchema,
@@ -87,6 +88,7 @@ export default function AiLayout({ children }) {
           <nav>
             <Link href="/blog">Writing</Link>
             <a href={WHITESPACE_ORIGIN}>Design studio</a>
+            <a href={RACEDAD_ORIGIN}>Racing</a>
             <a href={`${WHITESPACE_ORIGIN}/hire-me`}>Get in touch</a>
           </nav>
         </header>
