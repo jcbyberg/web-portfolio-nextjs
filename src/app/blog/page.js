@@ -29,7 +29,9 @@ export default function BlogIndexPage() {
         <Masthead />
 
         <section className="ai-hero">
-          <p className="ai-mono-label">[LOG] /blog — 06 entries</p>
+          <p className="ai-mono-label">
+            [LOG] /blog — {String(posts.length).padStart(2, '0')} entries
+          </p>
           <h1>
             Building with AI, <span className="ai-accent-text">in production.</span>
           </h1>

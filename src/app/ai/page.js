@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { getAllPosts } from '@/lib/posts'
 import ContactForm from './ContactForm'
 
 // The section now has its own form, so nothing here links to the apex contact
@@ -8,7 +10,19 @@ import ContactForm from './ContactForm'
 // statements of what the pipelines do rather than claimed savings. Do not add
 // an hours-saved or dollars-saved number here without a real one to back it.
 
+function formatDate(iso) {
+  return new Date(`${iso}T00:00:00`).toLocaleDateString('en-CA', {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  })
+}
+
 export default function AiPage() {
+  // Three most recent only. /blog is the index; this is the doorway to it.
+  const allPosts = getAllPosts('ai')
+  const posts = allPosts.slice(0, 3)
+
   return (
     <>
       <section className="wsai-hero">
@@ -140,6 +154,32 @@ export default function AiPage() {
             you rent back from me.
           </strong>
         </p>
+      </section>
+
+      <section className="wsai-section" id="writing">
+        <div className="wsai-section-head">
+          <span className="wsai-index">04</span>
+          <h2>Notes from the work itself</h2>
+        </div>
+        <p>
+          What the tools actually cost, where they break, and what the
+          automation looks like once it is running on real client work. Written
+          for people who buy this stuff, not just people who build it.
+        </p>
+        <div className="wsai-writing">
+          {posts.map((post) => (
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="wsai-post">
+              <span className="wsai-post-date">{formatDate(post.date)}</span>
+              <div>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <Link className="wsai-more" href="/blog">
+          Read all {allPosts.length} entries &rarr;
+        </Link>
       </section>
 
       <section className="wsai-close" id="contact">
