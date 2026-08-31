@@ -73,18 +73,30 @@ export function postOpenGraphImage(post, origin) {
 // Structured data (JSON-LD) builders
 // ---------------------------------------------------------------------------
 
+const BRAND_ORIGINS = [WHITESPACE_ORIGIN, RACEDAD_ORIGIN, AI_ORIGIN]
+
 // Per-brand Organization. The explicit `@id` keeps it distinct from the root
 // layout's ProfessionalService (which carries its own @id) even when both render
-// on the same page. `sameAs` deliberately lists the OTHER brand domain and
-// joshbyberg.com so crawlers read the trio as one operator's properties.
-export function organizationSchema({ origin, name, otherBrandOrigin }) {
+// on the same page. `sameAs` lists the OTHER brand domains and joshbyberg.com so
+// crawlers read the properties as one operator's.
+//
+// The siblings are derived from BRAND_ORIGINS rather than passed in per caller.
+// They used to be passed, and each caller named exactly one — so whitespace and
+// race-dad both claimed each other and neither claimed the AI subdomain, which
+// silently withheld the structured-data half of the link graph from the newest
+// and weakest property. Deriving it means adding a fourth brand updates all
+// three schemas at once instead of depending on three call sites agreeing.
+export function organizationSchema({ origin, name }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${origin}/#organization`,
     name,
     url: origin,
-    sameAs: [otherBrandOrigin, 'https://joshbyberg.com'],
+    sameAs: [
+      ...BRAND_ORIGINS.filter((o) => o !== origin),
+      'https://joshbyberg.com',
+    ],
   }
 }
 

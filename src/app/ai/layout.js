@@ -50,13 +50,13 @@ export const metadata = {
   },
 }
 
-// sameAs points at the sibling properties so crawlers read the subdomain, the
-// apex and joshbyberg.com as one operator. This is the available mitigation for
-// a subdomain starting with none of the apex's inherited authority.
+// sameAs points at the sibling properties (both brand domains plus the apex) so
+// crawlers read them as one operator. This is the available mitigation for a
+// subdomain starting with none of the apex's inherited authority. The list is
+// derived inside organizationSchema, not passed in here.
 const aiOrganization = organizationSchema({
   origin: AI_ORIGIN,
   name: 'Whitespace AI',
-  otherBrandOrigin: WHITESPACE_ORIGIN,
 })
 
 const aiService = serviceSchema({

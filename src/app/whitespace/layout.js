@@ -3,7 +3,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import './whitespace.css'
 import Punct from '@/app/whitespace/punct'
-import { WHITESPACE_ORIGIN, RACEDAD_ORIGIN, organizationSchema } from '@/lib/seo'
+import {
+  WHITESPACE_ORIGIN,
+  RACEDAD_ORIGIN,
+  AI_ORIGIN,
+  organizationSchema,
+} from '@/lib/seo'
 
 const wsTitle = 'Whitespace Design — Josh Byberg'
 const wsDescription =
@@ -43,7 +48,6 @@ export const metadata = {
 const wsOrganization = organizationSchema({
   origin: WHITESPACE_ORIGIN,
   name: 'Whitespace Design',
-  otherBrandOrigin: RACEDAD_ORIGIN,
 })
 
 export default function WhitespaceLayout({ children }) {
@@ -86,6 +90,11 @@ export default function WhitespaceLayout({ children }) {
           <span className="spec">
             <Punct>
               <a href={RACEDAD_ORIGIN}>Race Dad</a>
+            </Punct>
+          </span>
+          <span className="spec">
+            <Punct>
+              <a href={AI_ORIGIN}>Whitespace AI</a>
             </Punct>
           </span>
           <span className="spec">

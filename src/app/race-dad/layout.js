@@ -2,7 +2,12 @@ import './race-dad.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { rdDisplay, rdBody, rdMono } from '@/app/fonts'
-import { RACEDAD_ORIGIN, WHITESPACE_ORIGIN, organizationSchema } from '@/lib/seo'
+import {
+  RACEDAD_ORIGIN,
+  WHITESPACE_ORIGIN,
+  AI_ORIGIN,
+  organizationSchema,
+} from '@/lib/seo'
 
 const rdTitle = 'Race Dad — Canadian minimoto from the pit wall'
 const rdDescription =
@@ -41,7 +46,6 @@ export const metadata = {
 const rdOrganization = organizationSchema({
   origin: RACEDAD_ORIGIN,
   name: 'Race Dad',
-  otherBrandOrigin: WHITESPACE_ORIGIN,
 })
 
 export default function RaceDadLayout({ children }) {
@@ -76,6 +80,7 @@ export default function RaceDadLayout({ children }) {
           />
           <span className="data">Race Dad &mdash; Josh Byberg &middot; Ontario</span>
           <span className="data"><a href={WHITESPACE_ORIGIN}>Whitespace Design</a></span>
+          <span className="data"><a href={AI_ORIGIN}>Whitespace AI</a></span>
           <span className="data">Abel &middot; Crosby &middot; Cohen</span>
         </footer>
 
