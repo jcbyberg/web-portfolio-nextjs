@@ -239,6 +239,47 @@
 .ws-root .article-body strong { font-weight: 600; }
 .ws-root .article-body em { color: var(--ink-60); }
 
+/* --- Prose links -----------------------------------------------------------
+   `.ws-root a { color: inherit }` at whitespace.css:129 is right for the
+   masthead, cards and CTAs, where position and surrounding type already say
+   the thing is clickable. Inside .article-body it was wrong: a markdown link
+   inherited --ink with no underline, no weight change and no colour shift,
+   leaving it pixel-identical to the sentence around it. Ten links across nine
+   posts were invisible, including the only call to action in a post written
+   to sell a package.
+
+   Marked with a registration-magenta rule rather than coloured text. Running
+   prose keeps its ink so the colour rhythm of the page is undisturbed, and the
+   underline — not colour — carries the affordance, which is what keeps it
+   readable for colour-blind readers (WCAG 1.4.1). --reg is used only as the
+   decoration here, honouring the palette note that it fails contrast for small
+   text; the hover state switches to --accent-dim, which is text-safe at
+   5.12:1. */
+.ws-root .article-body a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--reg);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.ws-root .article-body a:hover,
+.ws-root .article-body a:focus-visible {
+  color: var(--accent-dim);
+  text-decoration-color: var(--accent-dim);
+}
+/* An image wrapped in a link would otherwise get a magenta rule slung under
+   the artwork. No post does this today; the guard is here because the next one
+   might, and the failure is silent.
+
+   Progressive enhancement, not a guarantee: there is no browserslist in this
+   project, and the installed default query still includes Firefox 102 and
+   Opera Mini, which do not support :has() — PostCSS cannot polyfill a
+   relational selector. Those browsers drop THIS rule only; the block above
+   still applies, so the fallback is a linked image keeping its underline.
+   Cosmetic, and unreachable until a post actually links an image. */
+.ws-root .article-body a:has(> img) { text-decoration: none; }
+
 /* --- Pink punctuation ------------------------------------------------------
    Punctuation in display and UI type is set in the accent. Body copy is
    excluded on purpose: .article-body is rendered from markdown and never passes
