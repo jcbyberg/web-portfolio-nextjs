@@ -7,7 +7,10 @@ tags:
   - "local seo"
   - "trades"
   - "durham region"
+image: "/images/joshbyberg/service-area-mistake.png"
 ---
+
+![A title card reading "Say the towns. Not “the GTA.”" on a dark background, over the line: the cheapest edit on a trade website, and the one most often skipped.](/images/joshbyberg/service-area-mistake.png)
 
 ## A phrase that sounds bigger and works smaller
 
