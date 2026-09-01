@@ -16,6 +16,9 @@ export const RACEDAD_ORIGIN = 'https://racedad.ca'
 // The AI arm is a SUBDOMAIN, not a prefix-stripped brand domain, but its worker
 // strips /ai the same way, so the same bare-slug rule applies to its canonicals.
 export const AI_ORIGIN = 'https://ai.whitespacedesign.ca'
+// joshbyberg.com is the apex this app is deployed on; the guides collection
+// lives there rather than on a brand subdomain.
+export const JOSHBYBERG_ORIGIN = 'https://joshbyberg.com'
 
 // '' -> 'https://whitespacedesign.ca/'
 export function whitespaceUrl(slug = '') {

@@ -6,11 +6,11 @@ import remarkGfm from 'remark-gfm'
 import remarkHtml from 'remark-html'
 import { imageSizeFromFile } from 'image-size/fromFile'
 
-// brand: 'whitespace' | 'race-dad' | 'ai'
+// brand: 'whitespace' | 'race-dad' | 'ai' | 'joshbyberg'
 const CONTENT_ROOT = path.join(process.cwd(), 'src', 'content')
 const PUBLIC_ROOT = path.join(process.cwd(), 'public')
 
-const VALID_BRANDS = ['whitespace', 'race-dad', 'ai']
+const VALID_BRANDS = ['whitespace', 'race-dad', 'ai', 'joshbyberg']
 
 function brandDir(brand) {
   if (!VALID_BRANDS.includes(brand)) {
