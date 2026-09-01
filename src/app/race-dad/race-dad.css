@@ -460,7 +460,131 @@
   gap: 1rem; flex-wrap: wrap;
 }
 
+/* --- Rider hero: the race number is the strongest asset any rider has, so it
+   anchors the layout whether or not a photo exists. Built as a flex row that
+   wraps, rather than a fixed grid, so the photo (present for two riders,
+   absent for the third) drops out cleanly instead of leaving a hole. */
+.rd-root .rider-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  padding: clamp(2.5rem, 8vh, 5rem) 0 clamp(2rem, 6vh, 3.5rem);
+  border-bottom: 2px solid var(--curb-hi);
+}
+.rd-root .rider-plate {
+  order: 1;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: clamp(6rem, 16vw, 9rem);
+  aspect-ratio: 1;
+  background: var(--flag);
+  color: var(--asphalt);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  line-height: 1;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+.rd-root .rider-id { order: 2; flex: 1 1 16rem; min-width: 0; }
+.rd-root .rider-id p.data { margin: 0 0 0.6rem; }
+.rd-root .rider-id h1 { font-size: clamp(2.25rem, 6.5vw, 4rem); max-width: 14ch; }
+.rd-root .rider-id .rider-tagline {
+  margin: 1rem 0 0;
+  max-width: var(--measure);
+  color: var(--gap);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+}
+.rd-root .rider-photo {
+  order: 3;
+  flex: none;
+  margin-left: auto;
+  width: 11rem;
+  height: 13.5rem;
+  object-fit: cover;
+  border: 3px solid var(--curb-hi);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+@media (max-width: 700px) {
+  .rd-root .rider-photo { order: 4; margin-left: 0; width: 100%; max-width: 18rem; height: 15rem; }
+}
+
+/* Below the hero, rider pages reuse .article-body typography for verified
+   facts and source links, and this small pit-board-style sheet for the
+   plain, unglamorous record — number, series, class. No section that a rider
+   lacks data for is rendered, rather than showing an empty stat tile. */
+.rd-root .rider-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 clamp(2rem, 6vw, 4rem);
+  margin: clamp(2rem, 5vh, 3rem) 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--curb-hi);
+  border-bottom: 1px solid var(--curb-hi);
+}
+.rd-root .rider-sheet .fact { padding: 0.4rem 0; }
+.rd-root .rider-sheet .fact .k {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gap);
+}
+.rd-root .rider-sheet .fact .v {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--flag);
+}
+
+.rd-root .rider-sources { margin: 2rem 0 0; }
+.rd-root .rider-sources .data { display: block; margin-bottom: 0.75rem; }
+.rd-root .rider-sources ul { list-style: none; margin: 0; padding: 0; }
+.rd-root .rider-sources li { margin: 0 0 0.5rem; }
+.rd-root .rider-sources a {
+  text-decoration: none;
+  color: var(--paint);
+  border-bottom: 1px solid var(--curb-hi);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.rd-root .rider-sources a:hover { color: var(--flag); border-color: var(--flag); }
+
+.rd-root .rider-card-image {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  margin: 2rem 0;
+  border: 3px solid var(--curb-hi);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rd-root *, .rd-root *::before, .rd-root *::after { transition: none !important; animation: none !important; }
   .rd-root .pitboard .row { opacity: 1; transform: none; }
+}
+
+/* --- Rider action band -------------------------------------------------
+   A wide photograph of the rider actually riding, sitting between the hero
+   and the fact sheet. Separate from .rider-photo on purpose: that slot is
+   portrait and holds the MotoMini rider card, and forcing a 16:9 action
+   frame into it crops the bike out. Crosby has no rider card, so on his page
+   this band is the only photograph — which is why it is a band on all three
+   rather than a special case on one. */
+.rd-root .rider-action {
+  margin: 2rem 0 0;
+}
+.rd-root .rider-action img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+.rd-root .rider-action figcaption {
+  margin-top: 0.6rem;
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--gap);
 }
