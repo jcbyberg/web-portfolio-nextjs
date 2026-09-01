@@ -4,7 +4,10 @@ date: "2026-08-30"
 type: post
 excerpt: "Loading a supplier catalogue into Magento is the data-entry job everyone wants to throw an LLM at. Here is what actually did the work across 16 catalogues and 102,000 rows — and the one place the AI earned its keep."
 tags: ["automation", "magento", "data extraction", "ecommerce", "workflow"]
+image: "/images/ai/automating-data-entry-with-ai.jpg"
 ---
+
+![A 1940s telephone company stockroom: rows of numbered pigeonholes and shelves of boxed parts, with a clock on the wall.](/images/ai/automating-data-entry-with-ai.jpg)
 
 A powersports dealer sells parts from five distributors. Each distributor publishes a catalogue once a year — several hundred pages of part numbers, sizes, prices and fitment charts. To sell any of it online, somebody has to get all of that into Magento.
 

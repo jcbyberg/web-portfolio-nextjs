@@ -4,7 +4,10 @@ date: "2026-07-29"
 type: post
 excerpt: "The future of AI isn't one omnipotent chatbot — it's a fleet of specialized models, each doing exactly what it does best. Here's the current lineup and what's actually being built with it."
 tags: ["AI stack", "multi-agent", "orchestration"]
+image: "/images/ai/my-ai-stack.jpg"
 ---
+
+![A workshop bench against a brick wall, with a drill press, clamps and hand tools laid out within reach.](/images/ai/my-ai-stack.jpg)
 
 If you’ve been following the AI space recently, it’s easy to get caught up in the "model wars." Everyone is looking for the *one* tool that does it all. But after spending countless hours building autonomous systems, I've realized something important: the future of AI isn't a single omnipotent chatbot. It's a localized, customized fleet of models and agents, each doing exactly what they do best.
 

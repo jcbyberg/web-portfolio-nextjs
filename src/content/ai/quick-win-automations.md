@@ -4,7 +4,10 @@ date: "2026-08-08"
 type: post
 excerpt: "Automation doesn't require a six-month IT overhaul. Three high-impact automations — lead capture, email triage, invoice parsing — you can ship in days."
 tags: ["automation", "business ops", "AI agents"]
+image: "/images/ai/quick-win-automations.jpg"
 ---
+
+![A desk covered in printed paperwork, a calculator, pens, paperclips and a cup of coffee.](/images/ai/quick-win-automations.jpg)
 
 If you are a director, founder, or manager, you don't care about API endpoints, webhook payloads, or how an LLM is trained. You care about output. You want your team doing high-value work, not clicking buttons in a spreadsheet.
 

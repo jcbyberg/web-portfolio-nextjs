@@ -4,7 +4,10 @@ date: "2026-08-12"
 type: post
 excerpt: "Zero time for busywork when you're spending half the summer trackside — why the AI stack behind this blog exists to clone the founder and buy back weekends."
 tags: ["automation", "AI agents", "reelcut", "productivity"]
+image: "/images/ai/automating-the-paddock.jpg"
 ---
+
+![A road racer cranked over mid-corner on a Yamaha, knee out, on a circuit.](/images/ai/automating-the-paddock.jpg)
 
 When you spend half your summer in a paddock at Shannonville or Lombardy Raceway wrenching on an Ohvale minimoto, you quickly realize you have zero time for busywork. 
 

@@ -9,7 +9,10 @@ tags:
   - "data entry"
   - "cost"
   - "ROI"
+image: "/images/ai/you-are-paying-salary-rates-to-type.jpg"
 ---
+
+![Two hands typing on a laptop keyboard at a white desk.](/images/ai/you-are-paying-salary-rates-to-type.jpg)
 
 Nobody has "data entry" in their job title. That is exactly why it costs so much.
 

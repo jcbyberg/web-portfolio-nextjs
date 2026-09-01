@@ -4,7 +4,10 @@ date: "2026-08-15"
 type: post
 excerpt: "Generic AI chatbots hallucinate safety ratings and sizing. Umisaiah is a purpose-built shopping assistant for powersports gear that separates expert knowledge from live inventory and refuses to guess."
 tags: ["AI agents", "powersports", "e-commerce", "tool-calling"]
+image: "/images/ai/umisaiah-post.jpg"
 ---
+
+![A gloved hand resting on the handlebar of a chromed cruiser motorcycle.](/images/ai/umisaiah-post.jpg)
 
 If you run a motorcycle dealership or gear shop, you know that selling apparel isn't like selling t-shirts. It requires deep, specialized knowledge. Your customers are trusting you with their safety and comfort at 70 mph. They ask questions about CE EN 17092 abrasion ratings, ECE 22.06 helmet standards, and whether a specific European brand runs a size small. 
 

@@ -4,7 +4,10 @@ date: "2026-08-19"
 type: post
 excerpt: "A PostToolUse hook for Claude Code that catches its own mistakes with Ruff and Pytest, then forces a fix loop before the agent is allowed to call anything done."
 tags: ["Claude Code", "automation", "tooling", "AI agents"]
+image: "/images/ai/clawwatch-post.jpg"
 ---
+
+![A wall-mounted fire alarm annunciator panel showing a building's floor plans and a legend of the zones it monitors.](/images/ai/clawwatch-post.jpg)
 
 If you use AI coding agents long enough, you'll run into a familiar, frustrating loop: The AI writes a script, runs it, gets an error, and then just... stops. Or worse, it hallucinates a "fix" that breaks something else, and you have to manually step in, read the traceback, and prompt it to try again.
 

@@ -4,7 +4,10 @@ date: "2026-08-30"
 type: post
 excerpt: "A security review came back clean, confident and well-structured. It would have satisfied my commit gate. It had never run anything at all."
 tags: ["ai agents", "security", "verification"]
+image: "/images/ai/no-escapes-found.jpg"
 ---
+
+![A passbook covered edge to edge in overlapping rubber-stamp imprints.](/images/ai/no-escapes-found.jpg)
 
 ## The commit was blocked before I even asked
 

@@ -8,7 +8,10 @@ tags:
   - "qwen"
   - "claude"
   - "cost management"
+image: "/images/ai/the-qwen-pro-plan-mistake.jpg"
 ---
+
+![A car dashboard fuel gauge with the needle below empty and a trip counter reading 476.6 miles.](/images/ai/the-qwen-pro-plan-mistake.jpg)
 
 I got the Qwen Pro plan to save some money on Claude credits. It was a mistake — and I want to be precise about what kind of mistake, because the two easy conclusions people jump to are both wrong.
 
