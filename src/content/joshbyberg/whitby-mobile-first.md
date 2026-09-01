@@ -7,6 +7,7 @@ tags:
   - "mobile"
   - "trades"
   - "durham region"
+image: "/images/projects/bourne-to-climb.jpg"
 ---
 
 ## Picture the person who is actually looking at your website
@@ -30,6 +31,10 @@ A homeowner searching for a tree service or an electrician is not browsing. They
 - The pages are light, because a phone on cell data in a driveway is not a fibre connection in an office.
 
 That is roughly the shape of the site I built for [Bourne To Climb](https://bournetoclimb.ca/), an owner-operated tree service here in Oshawa. One page, built for the phone, because that is where people look for a tree service. There is no 10-page "About Us" on it, because nobody with a branch on their roof has ever wanted one.
+
+![The Bourne To Climb homepage: the phone number sits in the header and a "Tap to call 905-449-9019" button sits in the first screenful, beside the towns served.](/images/projects/bourne-to-climb.jpg)
+
+Everything a homeowner needs to act is in the first screenful — what the business does, the towns it covers, and two separate ways to start the call without hunting for a menu.
 
 ## Where the weight comes from
 
