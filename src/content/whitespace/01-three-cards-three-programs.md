@@ -17,7 +17,7 @@ type: case-study
 image: "/images/whitespace/01-three-cards-three-programs/title-card.png"
 ---
 
-![Title card reading "Three cards. Three programs. One table." — case study for Road Race Canada](/images/whitespace/01-three-cards-three-programs/title-card.png)
+![Title card reading "Get a phone open before they forget you." — case study for Road Race Canada](/images/whitespace/01-three-cards-three-programs/title-card.png)
 
 Three double-sided cards for Road Race Canada — one each for Super Sonic Road Race School, MiniSBK, and the FIM MotoMini Canada Series.
 

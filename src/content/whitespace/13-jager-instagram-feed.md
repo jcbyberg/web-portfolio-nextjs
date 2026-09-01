@@ -11,7 +11,7 @@ tags: ["web", "integration", "instagram", "racing", "cloudflare"]
 image: "/images/whitespace/13-jager-instagram-feed/title-card.png"
 ---
 
-![Title card reading "A feed that keeps the site alive between rounds." — case study for Jäger Stockill Racing](/images/whitespace/13-jager-instagram-feed/title-card.png)
+![Title card reading "Stale goes unnoticed. Blank doesn't." — case study for Jäger Stockill Racing](/images/whitespace/13-jager-instagram-feed/title-card.png)
 
 A racing website has a specific problem that most small sites don't. It is judged in the gap.
 

@@ -16,7 +16,7 @@ type: case-study
 image: "/images/whitespace/05-french-card-set/title-card.png"
 ---
 
-![Title card reading "Setting the whole card set again — in French." — case study for Road Race Canada](/images/whitespace/05-french-card-set/title-card.png)
+![Title card reading "A francophone family can tell in one second." — case study for Road Race Canada](/images/whitespace/05-french-card-set/title-card.png)
 
 After the English cards went to print, we did the whole set again in French.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Circuit Mécaglisse: The Quebec Gem'
+title: 'Circuit Mécaglisse: The Round We Have Not Made Yet'
 date: '2026-06-28'
 author: Josh Byberg
 tags:
@@ -9,21 +9,31 @@ tags:
   - SMQ
 type: post
 excerpt: >-
-  Round 2 of the 2026 Canadian Supermoto Championship took the Ontario paddock
-  to Circuit Mécaglisse in Quebec, a purpose-built track with an electric
-  atmosphere.
+  Circuit Mécaglisse is on the Canadian Supermoto Championship calendar and has
+  never been on ours. Why a Quebec round stays theoretical for an Ontario
+  family, and what would make the drive worth it.
 image: /images/race-dad/circuit-mecaglisse/circuit-mecaglisse-01.png
 ---
-![Title card reading "Grippy asphalt. Relentless dirt." for Race Dad, Round 2 of the Canadian Supermoto Championship, Notre-Dame-de-la-Merci, Quebec](/images/race-dad/circuit-mecaglisse/circuit-mecaglisse-01.png)
+![Title card reading "Still on the list. Not yet driven." for Race Dad, over the line: a Canadian Supermoto Championship venue in Notre-Dame-de-la-Merci, Quebec](/images/race-dad/circuit-mecaglisse/circuit-mecaglisse-01.png)
 
-Round 2 of the 2026 Canadian Supermoto Championship took the Ontario paddock east to Circuit Mécaglisse, and it is an experience that every racer needs to have. 
+Every other track on this site has been written from the fence or the paddock. This one has not. We have never been to Mécaglisse.
 
-Tucked away in the Laurentian Mountains of Quebec, Mécaglisse feels less like a local Canadian track and more like a purpose-built European facility dropped into the woods. 
+It stays on the site because it stays on the list. Circuit Mécaglisse sits in Quebec's Laurentians and hosts rounds of the Canadian Supermoto Championship, which means it is part of the map for an Ontario family whether or not they have made the drive east yet.
 
-For the Supermoto Québec (SMQ) and CSM riders, this track is the holy grail. The asphalt is incredibly grippy, the elevation changes are dramatic, and the dirt sections are relentless. You are constantly transitioning from high-speed sweeps to aggressive, rutted jumps. 
+## Why it keeps not happening
 
-But it’s not just the track layout that makes racing in Quebec special—it’s the atmosphere. The motorsport culture in Quebec is intense. The fans are loud, the local riders like Nelson Jr. Moreau are ridiculously fast, and the paddock energy is electric. 
+Nothing dramatic. A season has a finite number of weekends, and the ones closest to home get spent first — the local round you can leave for on Saturday morning, the club day that does not need a hotel. A Quebec round is a different kind of commitment: a long haul with a bike, a kid, and everything that supports both, for a weekend that could be rained out like any other.
 
-The mid-June X-Fight weekend at Mécaglisse was a massive test for the Ontario riders crossing the border. You have to adapt quickly to the elevation and the aggressive riding style of the local heroes. 
+That maths is not unique to us. It is the quiet reason a lot of tracks stay theoretical for a lot of families. Nobody decides never to go. They just decide not to go this year, and then again the next one.
 
-As a Race Dad, the road trip to Mécaglisse is long, but completely worth it. Surviving the black flies in the paddock, watching the kids battle it out on a world-class circuit, and finding a local diner for a massive plate of post-race poutine makes it one of the best weekends on the calendar.
+## What makes it worth the drive anyway
+
+The thing Mécaglisse is known for is the combination Ontario cannot really offer: elevation on top of surface change. Supermoto already asks a rider to move between asphalt and dirt without a lap to prepare. Adding real vertical change means crests that hide what comes next and sightlines that keep moving, so a rider cannot lean on a memorised line the way they can on flat ground.
+
+That is the part worth travelling for. Not a faster lap — a different demand. Reading what is under the tires and changing your inputs before the next corner asks for it is a skill you cannot practise on a track that never surprises you.
+
+## Until then
+
+I am not going to describe the paddock, the atmosphere or the local riders, because I have not stood in it. There is a version of this post that does exactly that, and it would read well, and none of it would be true.
+
+The [track guide](/tracks/circuit-mecaglisse) has what is actually known about the circuit, clearly marked as second-hand. When we make the trip, both pages get rewritten by someone who was there.
