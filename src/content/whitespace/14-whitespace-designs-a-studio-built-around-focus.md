@@ -7,7 +7,10 @@ tags:
   - "studio philosophy"
   - "automation"
   - "value-based pricing"
+image: "/images/whitespace/14-whitespace-designs-a-studio-built-around-focus/title-card.png"
 ---
+
+![Title card reading "A studio built around focus." — Whitespace Design studio philosophy](/images/whitespace/14-whitespace-designs-a-studio-built-around-focus/title-card.png)
 
 When you look at the traditional creative agency model, it's a grind. 50-hour weeks, constant Slack pings, impromptu Zoom meetings, and the pressure of billable hours.
 

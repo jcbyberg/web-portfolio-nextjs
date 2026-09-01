@@ -5,6 +5,8 @@ summary: "The Quebec supermoto venue on the championship calendar that we have n
 website: "https://www.mecaglisse.com/en/"
 websiteLabel: "Visit Circuit Mécaglisse"
 relatedTags: ["Mecaglisse"]
+image: "/images/race-dad/tracks/circuit-mecaglisse.jpg"
+imageAlt: "Title card reading \"On the calendar. Not yet raced.\" for the Circuit Mécaglisse track guide"
 ---
 
 One note before anything else: we have not been to Mécaglisse. Every other

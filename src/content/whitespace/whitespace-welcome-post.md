@@ -4,7 +4,10 @@ date: "2026-07-27"
 type: essay
 excerpt: "An introduction to the vocabulary of design — white space, the grid, kerning, hierarchy, bleed and contrast — and the invisible rules shaping the media you consume every day."
 tags: ["design terminology", "branding", "fundamentals"]
+image: "/images/whitespace/whitespace-welcome-post/title-card.png"
 ---
+
+![Title card reading "The invisible rules of design." — Welcome to the Whitespace Design blog](/images/whitespace/whitespace-welcome-post/title-card.png)
 
 Welcome to the Whitespace Design blog. If you’re going to build a brand, a digital presence, or an automated media workflow, you have to start with the fundamentals. 
 

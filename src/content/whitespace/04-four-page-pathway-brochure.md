@@ -13,7 +13,10 @@ excerpt: >-
   It needed four pages instead of one because it's a story with five chapters,
   and they only work in order.
 type: case-study
+image: "/images/whitespace/04-four-page-pathway-brochure/title-card.png"
 ---
+
+![Title card reading "Four pages to explain an entire pathway." — case study for Road Race Canada](/images/whitespace/04-four-page-pathway-brochure/title-card.png)
 
 The largest print piece in the set: a four-page 17 × 11 brochure, laid out with proper bleed lines for the printer.
 

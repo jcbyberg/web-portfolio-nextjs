@@ -14,7 +14,10 @@ excerpt: >-
   nobody walked past the track at 12:45 not knowing something was about to
   happen.
 type: case-study
+image: "/images/whitespace/03-supershow-race-poster/title-card.png"
 ---
+
+![Title card reading "A poster built for a crowded hall." — case study for Road Race Canada](/images/whitespace/03-supershow-race-poster/title-card.png)
 
 The Road Race Canada Cup, at the 50th Anniversary International Motorcycle Super Show — January 9th, 10th and 11th.
 

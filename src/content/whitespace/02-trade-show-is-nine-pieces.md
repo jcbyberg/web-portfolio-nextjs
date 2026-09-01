@@ -11,7 +11,10 @@ tags:
   - brand system
 excerpt: Everyone thinks of the backwall. The backwall is about a third of it.
 type: case-study
+image: "/images/whitespace/02-trade-show-is-nine-pieces/title-card.png"
 ---
+
+![Title card reading "A trade show booth is nine pieces, not one." — case study for Road Race Canada](/images/whitespace/02-trade-show-is-nine-pieces/title-card.png)
 
 Everyone thinks of the backwall. The backwall is about a third of it.
 

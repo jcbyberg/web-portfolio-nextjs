@@ -8,7 +8,10 @@ trim: "Responsive embed, full width"
 colour: "RGB, static build refreshed every six hours"
 excerpt: "A racing site is judged in the gap between rounds, which is exactly when sponsors go looking. This one pulls the rider's Instagram in and rebuilds itself every six hours, so the homepage keeps up with the season on its own."
 tags: ["web", "integration", "instagram", "racing", "cloudflare"]
+image: "/images/whitespace/13-jager-instagram-feed/title-card.png"
 ---
+
+![Title card reading "A feed that keeps the site alive between rounds." — case study for Jäger Stockill Racing](/images/whitespace/13-jager-instagram-feed/title-card.png)
 
 A racing website has a specific problem that most small sites don't. It is judged in the gap.
 

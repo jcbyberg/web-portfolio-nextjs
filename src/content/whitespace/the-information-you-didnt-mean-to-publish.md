@@ -4,7 +4,10 @@ date: "2026-08-28"
 type: essay
 excerpt: "Social platforms hand you a form built for a shop, then a charity fills it in. One question sorts what belongs on a public page from what quietly should not be there."
 tags: ["privacy", "social media", "non-profits", "safety"]
+image: "/images/whitespace/the-information-you-didnt-mean-to-publish/title-card.png"
 ---
+
+![Title card reading "The information you didn't mean to publish." — Whitespace Design essay](/images/whitespace/the-information-you-didnt-mean-to-publish/title-card.png)
 
 Every social platform hands you a form. Name, category, description, phone, address, hours.
 

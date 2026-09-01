@@ -4,7 +4,10 @@ date: "2026-08-03"
 type: essay
 excerpt: "You don't need a fine arts degree to design something that works — you need to know how to give a C.R.A.P. The four-pillar checklist White Space runs every layout through before it ships."
 tags: ["design fundamentals", "CRAP", "layout", "branding"]
+image: "/images/whitespace/whitespace-crap-philosophy/title-card.png"
 ---
+
+![Title card reading "Give a C.R.A.P." — Whitespace Design fundamentals](/images/whitespace/whitespace-crap-philosophy/title-card.png)
 
 If you want to design something that actually works—whether it's a 4-page brochure, a podcast cover, or a fully automated web deployment—you don't need a degree in fine arts. You just need to know how to give a C.R.A.P.
 

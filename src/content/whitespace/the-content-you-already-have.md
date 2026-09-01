@@ -4,7 +4,10 @@ date: "2026-08-28"
 type: essay
 excerpt: "Most small organizations are sitting on years of photos they have never posted. The bottleneck was never the camera, it is three things nobody has been put in charge of."
 tags: ["social media", "content", "non-profits"]
+image: "/images/whitespace/the-content-you-already-have/title-card.png"
 ---
+
+![Title card reading "The content you already have." — Whitespace Design essay](/images/whitespace/the-content-you-already-have/title-card.png)
 
 I found something while researching an organization recently and I keep thinking about it.
 

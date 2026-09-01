@@ -4,7 +4,10 @@ date: "2026-08-28"
 type: essay
 excerpt: "An organization's website that would not open, and nobody inside knew. The five-minute check that catches it, and why the people who could fix a broken site are the only ones who never see it."
 tags: ["websites", "maintenance", "non-profits", "hosting"]
+image: "/images/whitespace/the-front-door-nobody-checks/title-card.png"
 ---
+
+![Title card reading "The front door nobody checks." — Whitespace Design essay](/images/whitespace/the-front-door-nobody-checks/title-card.png)
 
 I went to look at an organization's website last month. I typed in the address and my browser blocked it. Full-page security warning, red text, the works.
 

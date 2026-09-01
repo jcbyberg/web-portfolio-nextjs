@@ -11,7 +11,10 @@ tags:
 excerpt: >-
   How high-efficiency AI automation funds a racing season and buys back the time
   to spend it trackside instead of at a desk.
+image: /images/race-dad/balancing-the-wrench-and-the-code/engine-block-01.jpg
 ---
+![Close-up of an engine's valve springs and rocker arms, oily and disassembled](/images/race-dad/balancing-the-wrench-and-the-code/engine-block-01.jpg)
+
 Let’s be honest about something: racing isn't cheap. From the tires to the travel, the entry fees, and keeping the Ohvale GP-2 running perfectly for the FIM MotoMini Canada rounds, the "Checkbook to Checkered Flag" pipeline is very real.
 
 A lot of folks in the paddock at Shannonville or Lombardy ask me how I manage to fund the season and still take the time off to travel to all these rounds. The secret isn't a trust fund; it's high-efficiency automation.

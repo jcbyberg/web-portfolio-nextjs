@@ -12,7 +12,10 @@ excerpt: >-
   Round 2 of the 2026 Canadian Supermoto Championship took the Ontario paddock
   to Circuit Mécaglisse in Quebec, a purpose-built track with an electric
   atmosphere.
+image: /images/race-dad/circuit-mecaglisse/circuit-mecaglisse-01.png
 ---
+![Title card reading "Grippy asphalt. Relentless dirt." for Race Dad, Round 2 of the Canadian Supermoto Championship, Notre-Dame-de-la-Merci, Quebec](/images/race-dad/circuit-mecaglisse/circuit-mecaglisse-01.png)
+
 Round 2 of the 2026 Canadian Supermoto Championship took the Ontario paddock east to Circuit Mécaglisse, and it is an experience that every racer needs to have. 
 
 Tucked away in the Laurentian Mountains of Quebec, Mécaglisse feels less like a local Canadian track and more like a purpose-built European facility dropped into the woods. 
