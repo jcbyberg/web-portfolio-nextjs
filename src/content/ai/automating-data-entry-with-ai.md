@@ -7,7 +7,7 @@ tags: ["automation", "magento", "data extraction", "ecommerce", "workflow"]
 image: "/images/ai/automating-data-entry-with-ai.jpg"
 ---
 
-![A 1940s telephone company stockroom: rows of numbered pigeonholes and shelves of boxed parts, with a clock on the wall.](/images/ai/automating-data-entry-with-ai.jpg)
+![A close-up of a motorcycle engine — cooling fins, cylinder head and cabling.](/images/ai/automating-data-entry-with-ai.jpg)
 
 A powersports dealer sells parts from five distributors. Each distributor publishes a catalogue once a year — several hundred pages of part numbers, sizes, prices and fitment charts. To sell any of it online, somebody has to get all of that into Magento.
 

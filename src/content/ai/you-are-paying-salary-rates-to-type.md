@@ -12,7 +12,7 @@ tags:
 image: "/images/ai/you-are-paying-salary-rates-to-type.jpg"
 ---
 
-![Two hands typing on a laptop keyboard at a white desk.](/images/ai/you-are-paying-salary-rates-to-type.jpg)
+![A close-up of the round metal keys of a vintage manual typewriter.](/images/ai/you-are-paying-salary-rates-to-type.jpg)
 
 Nobody has "data entry" in their job title. That is exactly why it costs so much.
 

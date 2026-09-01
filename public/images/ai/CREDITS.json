@@ -1,13 +1,14 @@
 {
   "automating-data-entry-with-ai": {
-    "title": "C & P Tel. Co",
-    "creator": "libraryofcongress",
+    "title": "Free close engine image",
+    "creator": null,
     "license": "cc0",
     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "source": "rawpixel",
-    "landing": "https://www.rawpixel.com/image/7002893/tel-co",
-    "term": "warehouse shelves boxes",
-    "bytes": 186222
+    "source": "openverse",
+    "landing": "https://www.rawpixel.com/image/5908380/image-background-public-domain-free",
+    "term": "motorcycle parts shop",
+    "bytes": 149347,
+    "replaced": "2026-09-01 — first pick was a poor subject match"
   },
   "automating-the-paddock": {
     "title": "Motorcycle racing Italy",
@@ -40,24 +41,26 @@
     "bytes": 265368
   },
   "no-escapes-found": {
-    "title": "Rubber stamp imprints Czechia GDR 1984",
-    "creator": "Jan Pešula",
+    "title": "Blue Abstract",
+    "creator": "HD Wallpapers",
     "license": "cc0",
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
-    "source": "wikimedia",
-    "landing": "https://commons.wikimedia.org/w/index.php?curid=114327335",
-    "term": "rubber stamp",
-    "bytes": 244697
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "openverse",
+    "landing": "https://stocksnap.io/photo/blue-abstract-S6YF6QRKIR",
+    "term": "fog abstract",
+    "bytes": 38022,
+    "replaced": "2026-09-01 — first pick was a poor subject match"
   },
   "quick-win-automations": {
-    "title": "(untitled)",
+    "title": "Free carton boxes factory photo",
     "creator": null,
     "license": "cc0",
     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "source": "rawpixel",
-    "landing": "https://www.rawpixel.com/image/5958827/free-public-domain-cc0-photo",
-    "term": "invoices paperwork",
-    "bytes": 208859
+    "source": "openverse",
+    "landing": "https://www.rawpixel.com/image/5924919/photo-image-public-domain-free-box",
+    "term": "conveyor belt factory",
+    "bytes": 280894,
+    "replaced": "2026-09-01 — first pick was a poor subject match"
   },
   "the-qwen-pro-plan-mistake": {
     "title": "Empty fuel gauge, car dashboard",
@@ -80,13 +83,14 @@
     "bytes": 122613
   },
   "you-are-paying-salary-rates-to-type": {
-    "title": "Keyboard Typing",
-    "creator": "Design by Matt",
+    "title": "Free typewriter keys close",
+    "creator": null,
     "license": "cc0",
     "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "source": "stocksnap",
-    "landing": "https://stocksnap.io/photo/keyboard-typing-UATQGKPFOH",
-    "term": "keyboard typing",
-    "bytes": 101309
+    "source": "openverse",
+    "landing": "https://www.rawpixel.com/image/5906736/photo-image-public-domain-vintage-free",
+    "term": "typewriter keys",
+    "bytes": 100942,
+    "replaced": "2026-09-01 — first pick was a poor subject match"
   }
 }

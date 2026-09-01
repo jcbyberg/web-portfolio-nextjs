@@ -207,6 +207,52 @@
 .ai-entry .ai-node {
   margin-top: 0.15rem;
 }
+
+/* The thumbnail lives inside the title column, beside .ai-title-text, rather
+   than in a column of its own — a fifth grid column would need a matching
+   spacer in .ai-index-head, whose four labels (No. / Entry / Tags / Date)
+   would otherwise stop lining up with the rows beneath them. */
+.ai-entry-title {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.ai-title-text {
+  min-width: 0;
+}
+
+.ai-thumb {
+  width: 4.5rem;
+  height: 2.9rem;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid var(--ai-rule-hi);
+  background: var(--ai-panel);
+  flex: none;
+  filter: saturate(0.9);
+  transition: filter 0.2s ease;
+}
+.ai-entry:hover .ai-thumb {
+  filter: saturate(1.15);
+}
+
+/* Imageless-post placeholder, in the blog's own terminal idiom rather than
+   race-dad's kerb stripe: a bracketed null-frame instead of a hole in the
+   row. Every AI post carries an image today; this is the fallback for the
+   day one doesn't. */
+.ai-thumb-empty {
+  display: grid;
+  place-items: center;
+  font-family: var(--ai-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ai-ink-40);
+  background: var(--ai-panel);
+  border: 1px dashed var(--ai-rule-hi);
+}
+
 .ai-entry h2 {
   font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.65rem);
   color: var(--ai-ink);
@@ -252,6 +298,19 @@
   .ai-entry .ai-date { grid-column: 2; text-align: left; }
   .ai-entry .ai-tags { margin-top: 0.6rem; }
   .ai-entry .ai-date { margin-top: 0.35rem; }
+}
+
+/* At phone widths the row is already tight (node + stacked title/tags/date).
+   Shrinking the thumbnail keeps it from squashing the title text against the
+   node column; a thumbnail that crowds the title is worse than no thumbnail. */
+@media (max-width: 480px) {
+  .ai-thumb {
+    width: 3.25rem;
+    height: 2.15rem;
+  }
+  .ai-thumb-empty {
+    font-size: 0.625rem;
+  }
 }
 
 /* --- Article --- */

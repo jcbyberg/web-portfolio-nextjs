@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import { AI_ORIGIN } from '@/lib/seo'
@@ -53,9 +54,28 @@ export default function BlogIndexPage() {
           {posts.map((post, index) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="ai-entry">
               <span className="ai-node">{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <h2>{post.title}</h2>
-                <p>{post.excerpt}</p>
+              <div className="ai-entry-title">
+                {post.image ? (
+                  <Image
+                    className="ai-thumb"
+                    src={post.image}
+                    alt=""
+                    width={112}
+                    height={72}
+                  />
+                ) : (
+                  // Every post carries an image today, but this stays for the
+                  // day one doesn't — a placeholder in the blog's own terminal
+                  // aesthetic (a bracketed null-frame) rather than a hole in
+                  // the row.
+                  <span className="ai-thumb ai-thumb-empty" aria-hidden="true">
+                    [ ]
+                  </span>
+                )}
+                <div className="ai-title-text">
+                  <h2>{post.title}</h2>
+                  <p>{post.excerpt}</p>
+                </div>
               </div>
               <div className="ai-tags">
                 {post.tags.slice(0, 3).map((tag) => (

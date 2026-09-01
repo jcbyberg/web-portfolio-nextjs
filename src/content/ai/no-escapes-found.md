@@ -7,7 +7,7 @@ tags: ["ai agents", "security", "verification"]
 image: "/images/ai/no-escapes-found.jpg"
 ---
 
-![A passbook covered edge to edge in overlapping rubber-stamp imprints.](/images/ai/no-escapes-found.jpg)
+![A dark blue abstract field, almost entirely empty, with a single soft smear of lighter blue.](/images/ai/no-escapes-found.jpg)
 
 ## The commit was blocked before I even asked
 
