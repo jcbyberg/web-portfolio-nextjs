@@ -486,6 +486,39 @@
   padding: 2.25rem clamp(1.5rem, 4vw, 2.75rem);
   max-width: 46rem;
 }
+/* Identity block at the head of the CTA — mirrors .cta-id on the Race Dad
+   index, retuned to this palette. Sizes are the rendered ones; the Image
+   width/height props stay at the assets' larger intrinsic size so Next serves a
+   sharp source on a 2x screen. */
+.ai-cta-id {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+}
+.ai-cta-face {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ai-accent);
+  flex: none;
+}
+/* The mark ships as dark artwork; knocking it out to white is what makes it
+   legible on --ai-panel. Slightly under full opacity so it sits behind the
+   headline rather than competing with it. */
+.ai-cta-logo {
+  height: 34px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  flex: none;
+}
+@media (max-width: 520px) {
+  .ai-cta-logo { height: 26px; }
+  .ai-cta-face { width: 48px; height: 48px; }
+}
+
 .ai-cta h2 {
   font-size: clamp(1.4rem, 3vw, 2rem);
   max-width: 24ch;
