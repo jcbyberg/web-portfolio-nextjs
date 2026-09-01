@@ -6,10 +6,16 @@ import "./aurora.css";
 const SETTLE_THRESHOLD = 0.0005;
 const EASING = 0.055;
 
+// Each name here needs a matching `.aurora[data-palette="…"]` block in
+// aurora.css. An unknown name silently falls back to "aurora", whose blobs are
+// tuned with `screen` for a dark ground and wash out to nothing on a light one
+// — so a typo reads as "the effect stopped working" rather than as an error.
+const PALETTES = new Set(["aurora", "ember", "rose"]);
+
 export default function Aurora({ intensity = "full", palette = "aurora" }) {
   const containerRef = useRef(null);
   const preset = intensity === "subtle" ? "subtle" : "full";
-  const paletteName = palette === "ember" ? "ember" : "aurora";
+  const paletteName = PALETTES.has(palette) ? palette : "aurora";
 
   useEffect(() => {
     const container = containerRef.current;

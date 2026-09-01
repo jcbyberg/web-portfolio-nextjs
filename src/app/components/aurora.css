@@ -89,6 +89,51 @@
 }
 
 /*
+  Rose palette: pale pink over the same near-white press sheet, drawn from the
+  Whitespace registration magenta rather than ember orange.
+
+  Two deliberate differences from ember, both asked for on 2026-09-01:
+
+  1. It is dialled further back. Ember at "subtle" still tinted the body copy
+     enough to read as haze behind the text. Rose keeps the tints pale (nothing
+     near full-strength magenta), widens the blur and drops the opacity, so it
+     registers as paper stock rather than as a layer over the words. If it ever
+     competes with the text again, opacity is the dial to turn — leave the type
+     colours alone.
+  2. It travels further with the pointer. The motion was always there, eased at
+     46px, which is small enough on a wide page to be missed entirely. Rose
+     roughly doubles the travel so the field visibly answers the cursor.
+     Aurora.jsx already skips tracking for coarse pointers and for
+     prefers-reduced-motion, so this costs neither touch users nor anyone who
+     has asked for less motion.
+*/
+.aurora[data-palette="rose"] {
+  --aurora-blend: multiply;
+  --aurora-opacity: 0.34;
+  --aurora-blur: 92px;
+  --aurora-travel: 120px;
+  background: #fdfbfc;
+}
+
+.aurora[data-palette="rose"][data-intensity="subtle"] {
+  --aurora-opacity: 0.2;
+  --aurora-blur: 118px;
+  --aurora-travel: 88px;
+}
+
+.aurora[data-palette="rose"] .aurora__blob--a {
+  background: radial-gradient(circle at center, #ff7ab8 0%, transparent 70%);
+}
+
+.aurora[data-palette="rose"] .aurora__blob--b {
+  background: radial-gradient(circle at center, #ffb3d4 0%, transparent 70%);
+}
+
+.aurora[data-palette="rose"] .aurora__blob--c {
+  background: radial-gradient(circle at center, #ffdcea 0%, transparent 70%);
+}
+
+/*
   Blob sizing is a composition decision, not an arbitrary one. Larger fields
   (70vmax+) at this blur all overlap the centre and merge into a single flat
   wash — the dark gaps between colour zones are what make it read as aurora

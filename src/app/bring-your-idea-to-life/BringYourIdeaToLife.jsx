@@ -3,7 +3,13 @@
 import Link from "next/link";
 import Aurora from "../components/Aurora";
 import EmailSection from "../components/EmailSection";
+import { BOURNE_QUOTE_APPROVED } from "../oshawa/offer-config";
 import "./landing.css";
+
+// One switch governs every published use of Dustin Bourne's site, exactly as
+// offer-config.js says it must: flipping BOURNE_QUOTE_APPROVED to false removes
+// the screenshot from /oshawa, from the projects section AND from here, rather
+// than leaving this page to be found by hand later.
 
 // What Josh does, as five concrete service lines rather than a single vague
 // "web design" bucket — this page has to land for three different audiences
@@ -62,32 +68,45 @@ const audiences = [
   },
 ];
 
-// Josh's own live, verified properties — safe to link without third-party
-// permission, and concrete evidence the work ships rather than a claim about
-// it.
-const proof = [
-  {
-    name: "Guitar Vault",
-    blurb:
-      "Next.js storefront for guitars, parts and accessories, with search, sorting and a full product catalogue.",
-    url: "https://guitars.joshbyberg.com/",
-    host: "guitars.joshbyberg.com",
-  },
-  {
-    name: "Bourne To Climb",
-    blurb:
-      "Site for an Oshawa tree service — owner-operated, mobile-first, built to be found in local search.",
-    url: "https://bournetoclimb.ca/",
-    host: "bournetoclimb.ca",
-  },
-  {
-    name: "Emet Bible",
-    blurb:
-      "A Hebrew and Greek interlinear Bible reader with an interactive verse graph — the biggest thing I've built, on a Python FastAPI and Postgres backend.",
-    url: "https://emet-bible.com/",
-    host: "emet-bible.com",
-  },
-];
+// The one build shown as proof. This section says "live, not mockups", so
+// every entry has to actually be live — that is the whole claim, and a visitor
+// checks it with one click.
+//
+// Guitar Vault and Emet Bible were removed on 2026-09-01 because they were not:
+// guitars.joshbyberg.com returned 502 Bad Gateway, and emet-bible.com served its
+// shell while every API call (/v1/verses/…, the graph and galaxy endpoints)
+// returned 500, so the interactive verse graph it advertised did nothing.
+// Put either back only after confirming a real request succeeds — loading the
+// homepage is not sufficient for Emet, whose shell renders fine while broken.
+//
+// Bourne To Climb usage — the name, the link, the screenshot and the
+// client-reported outcome — is bounded by the permission register at
+// D:/moneymaker/data/permissions/bourne-to-climb.md. Read it before changing a
+// word here. Two limits that are easy to trip:
+//   - No ranking or SEO-outcome language anywhere (oshawa-outreach.md §11), and
+//     no causation claims. Describe the deliverable, never the result.
+//   - The outcome is a client's paraphrased report and must carry the
+//     client-reported + not-independently-verified marking on EVERY use.
+//     Dustin's verbatim quote is scoped to /oshawa and is deliberately not
+//     reused here; his plans for the business are private and stay off the site.
+const proof = {
+  name: "Bourne To Climb",
+  blurb:
+    "Site for an Oshawa tree service — owner-operated, mobile-first, built so the phone number is the easiest thing on the page.",
+  url: "https://bournetoclimb.ca/",
+  host: "bournetoclimb.ca",
+  // The same approved 2026-08-14 homepage capture, with the browser scrollbar
+  // cropped off the right edge — at this size the original's scrollbar reads as
+  // a grey stripe inside the keyline. A derivative rather than an edit in place,
+  // because /oshawa and the projects section share the original file.
+  shot: "/images/projects/bourne-to-climb-proof.jpg",
+  // Names the link's destination, not the picture — see the note at the <img>.
+  shotAlt: "Bourne To Climb — open the live site",
+  report:
+    "Dustin Bourne reports the business now takes more work than his crew can get through.",
+  caveat:
+    "His account, told to me directly. I have not audited his call volume, and no result here is promised to anyone else.",
+};
 
 export default function BringYourIdeaToLife({
   fontVars = "",
@@ -95,7 +114,12 @@ export default function BringYourIdeaToLife({
 }) {
   return (
     <div className={`byitl-root ${fontVars}`}>
-      <Aurora palette="ember" intensity="subtle" />
+      {/* Rose rather than ember: the orange wash sat too close to the body
+          copy to read comfortably. Rose is paler, blurred wider and tracks the
+          pointer further, so it reads as tinted stock behind the type instead
+          of a layer on top of it. The ember accent (--accent) stays — it is
+          the page's one accent colour and is unrelated to the background. */}
+      <Aurora palette="rose" intensity="subtle" />
 
       <div className="sheet-marks" aria-hidden="true">
         <span className="tl"></span>
@@ -237,34 +261,75 @@ export default function BringYourIdeaToLife({
           </section>
 
           {/* -------------------------------------------------------- PROOF */}
-          <section className="index-block" id="proof">
-            <p className="spec section-label">03 &mdash; Proof</p>
-            <h2>Work that&rsquo;s live, not mockups.</h2>
+          {/* In print, a proof is the sheet you pull off the press and check
+              before committing to the run — so the one live build on this page
+              is presented as exactly that, rather than as a card in a grid.
+              The numbered index rhythm used by the two sections above is
+              deliberately dropped here: a number encodes a sequence, and one
+              item is not a sequence. */}
+          <section className="proof-block" id="proof">
+            <p className="spec section-label">
+              03 &mdash; Proof &middot; live, not mockups
+            </p>
+            <h2>{proof.name}</h2>
+            <p className="proof-lede">{proof.blurb}</p>
 
-            <div className="index-head">
-              <span className="spec">No.</span>
-              <span className="spec">Project</span>
-              <span className="spec">Visit</span>
-            </div>
+            {/* Two structures rather than one with a hole in it. With the
+                screenshot present this is a figure captioned by the report;
+                with it withdrawn there is nothing left to caption, and a
+                <figure> holding only a <figcaption> is neither valid nor
+                laid out correctly — the caption would inherit the plate's
+                60% grid column and sit beside empty space. The gated-off
+                branch is a plain block that owns its own link. */}
+            {BOURNE_QUOTE_APPROVED ? (
+              <figure className="press-proof">
+                <a
+                  className="press-proof-plate"
+                  href={proof.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {/* The image IS the link, so its alt names the destination
+                      rather than describing the picture: alt text and the
+                      visible host label concatenate into one accessible name,
+                      and a 40-word description of the screenshot made that
+                      name unusable. What the site looks like is carried by the
+                      lede above, which every reader gets.
+                      Width/height are the capture's real intrinsic size, so
+                      the space is reserved before it loads. */}
+                  <img
+                    src={proof.shot}
+                    alt={proof.shotAlt}
+                    width="1264"
+                    height="720"
+                    decoding="async"
+                  />
+                  <span className="press-proof-visit">
+                    {proof.host} &#8599;
+                  </span>
+                </a>
 
-            {proof.map(({ name, blurb, url, host }, i) => (
-              <a
-                key={name}
-                className="entry"
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="entry-no">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3>{name}</h3>
-                  <p>{blurb}</p>
-                </div>
-                <span className="entry-link">{host} &#8599;</span>
-              </a>
-            ))}
+                <figcaption>
+                  <p className="spec">Client-reported</p>
+                  <p className="proof-report">{proof.report}</p>
+                  <p className="proof-caveat">{proof.caveat}</p>
+                </figcaption>
+              </figure>
+            ) : (
+              <div className="proof-note">
+                <p className="spec">Client-reported</p>
+                <p className="proof-report">{proof.report}</p>
+                <p className="proof-caveat">{proof.caveat}</p>
+                <a
+                  className="proof-fallback-link"
+                  href={proof.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {proof.host} &#8599;
+                </a>
+              </div>
+            )}
           </section>
 
           {/* ------------------------------------------------------ CONTACT */}

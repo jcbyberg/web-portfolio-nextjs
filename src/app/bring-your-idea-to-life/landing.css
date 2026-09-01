@@ -164,7 +164,9 @@
 }
 .byitl-root .hero .cta a.btn:hover { color: var(--accent-dim); }
 
-/* --- Index rhythm: shared by audiences / services / proof --- */
+/* --- Index rhythm: shared by audiences / services ---------------------
+   Proof no longer uses this: it is one item, not a numbered list. See the
+   press-proof block at the end of this file. */
 .byitl-root .section-label {
   margin: 0 0 0.75rem;
 }
@@ -347,4 +349,120 @@
   color: #A7222A;
   font-size: 0.875rem;
   margin-top: 0.5rem;
+}
+
+/* --- Proof: one live build, shown as a press proof ---------------------
+   A proof is the sheet pulled off the press and checked before the run, so
+   the plate sits on the page like a print laid on the sheet — a hairline
+   keyline, a registration tick in the corner, and the caption set in the
+   margin the way an annotation is written beside a proof. No card, no
+   shadow, no radius; this identity is flat stock and rules.
+   The numbered index rhythm above deliberately does not apply here. */
+.byitl-root .proof-block { margin-top: clamp(2.5rem, 6vh, 4rem); }
+.byitl-root .proof-block h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+  max-width: 24ch;
+  margin-bottom: 0.75rem;
+}
+.byitl-root .proof-lede {
+  margin: 0 0 2rem;
+  color: var(--ink-60);
+  max-width: 52ch;
+}
+
+.byitl-root .press-proof {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  border-top: 1px solid var(--ink);
+  padding-top: 1.75rem;
+}
+
+.byitl-root .press-proof-plate {
+  position: relative;
+  display: block;
+  border: 1px solid var(--rule);
+  background: var(--sheet);
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+.byitl-root .press-proof-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Registration tick — the mark a printer lines the plates up against. Sits
+   outside the keyline at the top-right so it reads as press furniture and
+   not as a badge stuck on the image. */
+.byitl-root .press-proof-plate::before {
+  content: '';
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 0.85rem; height: 0.85rem;
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+}
+.byitl-root .press-proof-plate:hover,
+.byitl-root .press-proof-plate:focus-visible { border-color: var(--ink); }
+
+.byitl-root .press-proof-visit {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-dim);
+}
+
+.byitl-root .press-proof figcaption {
+  border-left: 1px solid var(--rule);
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+}
+.byitl-root .proof-report {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.3125rem);
+  line-height: 1.45;
+  text-wrap: balance;
+}
+/* The caveat is a condition of the permission to publish the report at all,
+   so it is quiet but never hidden — no display:none, no truncation. */
+.byitl-root .proof-caveat {
+  margin: 1rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--ink-60);
+}
+
+/* Gated-off state: no screenshot to caption, so this is a plain block rather
+   than a figure. It takes the same left rule as the figcaption but sits on a
+   readable measure instead of inheriting the plate's 60% grid column. */
+.byitl-root .proof-note {
+  border-top: 1px solid var(--ink);
+  padding-top: 1.75rem;
+  max-width: 46ch;
+}
+.byitl-root .proof-fallback-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--accent-dim);
+}
+
+@media (max-width: 46rem) {
+  .byitl-root .press-proof { grid-template-columns: 1fr; }
+  .byitl-root .press-proof figcaption {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .byitl-root .press-proof-plate { transition: none; }
 }
