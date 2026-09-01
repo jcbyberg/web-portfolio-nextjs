@@ -83,13 +83,6 @@ const packageIncludes = [
 // applies to naming or linking them.
 const otherSites = [
   {
-    name: "Guitar Vault",
-    blurb:
-      "Next.js storefront for guitars, parts, and accessories, with search, sorting, and a full product catalogue.",
-    url: "https://guitars.joshbyberg.com/",
-    host: "guitars.joshbyberg.com",
-  },
-  {
     name: "Small Business Blog",
     blurb:
       "A blog for a small business with no CMS behind it — nothing to log into, nothing to pay for monthly, and articles that are quick to publish.",

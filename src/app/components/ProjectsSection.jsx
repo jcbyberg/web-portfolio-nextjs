@@ -34,23 +34,6 @@ const projectsData = [
     previewUrl: "https://bournetoclimb.ca/",
   },
   {
-    id: 1,
-    title: "Guitar Vault",
-    description:
-      "A full online guitar shop — electric, acoustic, parts and accessories — with search and sorting across the whole catalogue.",
-    features: [
-      "Full product catalogue with search and sorting",
-      "Structured product data for search engines",
-      "Fast page loads on a large catalogue",
-      "Mobile-first storefront",
-      "Automated product data pipeline",
-    ],
-    image: "/images/projects/guitar-vault.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/jcbyberg/aliexpress-store",
-    previewUrl: "https://guitars.joshbyberg.com/",
-  },
-  {
     id: 2,
     title: "Shopify Demo Store",
     description:
@@ -93,25 +76,12 @@ const projectsData = [
     ],
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/jcbyberg/nextjs-portfolio",
-    previewUrl: "https://nextjs-portfolio-woad-iota.vercel.app/",
-  },
-  {
-    id: 5,
-    title: "Emet Bible",
-    description:
-      "A Hebrew and Greek interlinear Bible reader with an interactive verse graph. The biggest thing I've built.",
-    features: [
-      "Hebrew and Greek text word by word, with transliteration and gloss",
-      "Interactive verse graph built with Sigma.js",
-      "Trace a single word everywhere it appears",
-      "Python FastAPI and Postgres backend",
-      "Mobile-first reading layout",
-    ],
-    image: "/images/projects/emet-bible.jpg",
-    tag: ["All", "Web"],
+    // Was https://github.com/jcbyberg/nextjs-portfolio — 404 as of 2026-09-01
+    // (repo renamed, made private, or deleted). Empty hides the source button,
+    // the same way the Bourne To Climb entry does; the live preview below still
+    // works. Restore only with a URL that actually resolves.
     gitUrl: "",
-    previewUrl: "https://emet-bible.com/",
+    previewUrl: "https://nextjs-portfolio-woad-iota.vercel.app/",
   },
 ];
 
@@ -140,11 +110,18 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4 md:mb-6">
         Websites and apps I&apos;ve built
       </h2>
+      {/* The count and the named examples must match projectsData above. This
+          read "all six" and named a guitar shop and a Bible study app after
+          both were removed on 2026-09-01 for being down — a claim a visitor
+          disproves by counting the cards. If you add or remove a project, fix
+          this sentence in the same edit, and re-check that every previewUrl
+          still returns 200 before leaving "live right now" standing. All four
+          were checked on 2026-09-01. */}
       <p className="mx-auto mb-8 md:mb-12 max-w-3xl text-center text-[#ADB7BE]">
-        All six of these are live right now, and you can go click around in
-        them — a tree service here in Oshawa, a guitar shop with a full
-        catalogue, a Shopify store you can walk through, and a Bible study app
-        that reads the Greek and Hebrew word by word. Each one lists what went into it.
+        All four of these are live right now, and you can go click around in
+        them — a tree service here in Oshawa, a Shopify store you can walk
+        through, and two front-end builds you can poke at end to end. Each one
+        lists what went into it.
       </p>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
