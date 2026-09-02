@@ -1,9 +1,15 @@
 // The race-dad tag hubs worth rebuilding as real pages. racedad.ca carries 68
 // tag archives, but 46 of them held a single post each — thin content — so only
-// these ten reach-y tags get rebuilt here. The worker 301s every other
+// the reach-y tags get rebuilt here. The worker 301s every other
 // /tags/<slug> to the nearest rebuilt page. This list is the single source of
 // truth: generateStaticParams derives from it, and any tag value outside it is
 // a 404.
+//
+// 'supermoto' was added after the initial ten: it reached three posts, the same
+// bar 'ssrs' clears, and without it the two supermoto posts sat on no tag page
+// at all. Adding a hub here is only half the job — the slug must also go into
+// KEPT_TAGS in the racedad-domain-worker, or the worker 301s the new page to
+// the homepage before Next ever serves it.
 
 export const RACEDAD_TAGS = [
   {
@@ -56,6 +62,12 @@ export const RACEDAD_TAGS = [
     slug: '190cc',
     label: '190cc',
     description: 'The Ohvale 190 class — and the step up from 160.',
+  },
+  {
+    slug: 'supermoto',
+    label: 'Supermoto',
+    description:
+      'The Canadian Supermoto Championship — asphalt, dirt and the crossover skills it builds.',
   },
 ]
 
