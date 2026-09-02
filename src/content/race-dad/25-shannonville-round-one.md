@@ -7,6 +7,7 @@ tags:
   - MotoMini
   - FIM
   - Race Report
+  - Big Berg Racing
 type: post
 excerpt: >-
   The 2026 MotoMini Canada season opened at Shannonville, where the red flag in

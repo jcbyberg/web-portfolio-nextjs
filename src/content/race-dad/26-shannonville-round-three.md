@@ -8,6 +8,7 @@ tags:
   - FIM
   - Race Report
   - 190cc
+  - Big Berg Racing
 type: post
 excerpt: >-
   Round three at Shannonville brought two podiums in the Ohvale 190 class,

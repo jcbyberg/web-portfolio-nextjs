@@ -588,3 +588,105 @@
   letter-spacing: 0.04em;
   color: var(--gap);
 }
+
+/* --- Big Berg Racing team page ---------------------------------
+   The logo art is black-on-white; the PNG used here is a recoloured
+   copy (ink -> --paint, brand red kept) so it sits on --asphalt.
+   ---------------------------------------------------------------- */
+.rd-root .bbr-hero {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  flex-wrap: wrap;
+  margin-bottom: clamp(2.5rem, 7vh, 4rem);
+}
+.rd-root .bbr-logo {
+  flex: none;
+  width: clamp(5.5rem, 14vw, 8rem);
+  height: auto;
+}
+.rd-root .bbr-intro {
+  flex: 1 1 20rem;
+  min-width: 0;
+}
+.rd-root .bbr-intro h1 {
+  font-size: clamp(2.5rem, 7.5vw, 5rem);
+  margin: 0.15em 0 0.4em;
+}
+.rd-root .bbr-intro p:last-child {
+  max-width: var(--measure);
+  margin: 0;
+}
+
+.rd-root .bbr-riders {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: clamp(2.5rem, 7vh, 4rem);
+}
+.rd-root .bbr-rider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: var(--curb);
+  outline: 1px solid var(--curb-hi);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+.rd-root .bbr-rider:hover,
+.rd-root .bbr-rider:focus-visible {
+  background: var(--curb-hi);
+}
+/* The photograph leads; the number rides alongside the name as a small
+   plate rather than competing with the face for the same corner. */
+.rd-root .bbr-face {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 2px;
+  outline: 1px solid var(--curb-hi);
+}
+.rd-root .bbr-plate {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.65rem;
+  padding: 0.1rem 0.3rem 0.16rem;
+  margin-right: 0.5rem;
+  background: var(--flag);
+  color: var(--asphalt);
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+  clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+  vertical-align: 0.06em;
+}
+.rd-root .bbr-rider-id {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.rd-root .bbr-rider-name {
+  display: block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.15rem;
+}
+
+@media (max-width: 48rem) {
+  .rd-root .bbr-riders { grid-template-columns: 1fr; }
+  .rd-root .bbr-hero { gap: 1.25rem; }
+}
+
+/* Masthead mark on the team page. The lockup is a stacked three-line block,
+   so it is sized off its height like .footer-mark rather than its width. */
+.rd-root .bbr-wordmark img {
+  height: 2.35rem;
+  width: auto;
+  display: block;
+}

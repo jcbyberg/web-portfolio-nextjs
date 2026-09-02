@@ -1,13 +1,7 @@
 import './race-dad.css'
-import Link from 'next/link'
-import Image from 'next/image'
 import { rdDisplay, rdBody, rdMono } from '@/app/fonts'
-import {
-  RACEDAD_ORIGIN,
-  WHITESPACE_ORIGIN,
-  AI_ORIGIN,
-  organizationSchema,
-} from '@/lib/seo'
+import { Masthead, SiteFooter } from './BrandChrome'
+import { RACEDAD_ORIGIN, organizationSchema } from '@/lib/seo'
 
 const rdTitle = 'Race Dad — Canadian minimoto from the pit wall'
 const rdDescription =
@@ -54,36 +48,11 @@ export default function RaceDadLayout({ children }) {
       className={`rd-root ${rdDisplay.variable} ${rdBody.variable} ${rdMono.variable}`}
     >
       <div className="wrap">
-        <header className="masthead">
-          <Link className="wordmark" href="/race-dad">
-            <span className="plate" aria-hidden="true">
-              RD
-            </span>
-            <b>Race Dad</b>
-          </Link>
-          <nav>
-            <Link href="/race-dad">Posts</Link>
-            <Link href="/race-dad/about">About</Link>
-            <a href={AI_ORIGIN}>Automation</a>
-            <Link href="/bring-your-idea-to-life">Bring Your Idea to Life</Link>
-          </nav>
-        </header>
+        <Masthead />
 
         <main>{children}</main>
 
-        <footer className="site">
-          <Image
-            className="footer-mark"
-            src="/images/race-dad/brand/race-dad-logo.png"
-            alt="Race Dad"
-            width={273}
-            height={351}
-          />
-          <span className="data">Race Dad &mdash; Josh Byberg &middot; Ontario</span>
-          <span className="data"><a href={WHITESPACE_ORIGIN}>Whitespace Design</a></span>
-          <span className="data"><a href={AI_ORIGIN}>Whitespace AI</a></span>
-          <span className="data">Abel &middot; Crosby &middot; Cohen</span>
-        </footer>
+        <SiteFooter />
 
         <script
           type="application/ld+json"

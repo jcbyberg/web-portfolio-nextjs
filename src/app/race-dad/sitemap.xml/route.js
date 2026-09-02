@@ -15,6 +15,7 @@ export function GET() {
   const entries = [
     { loc: racedadUrl(), lastmod: null },
     { loc: racedadUrl('about'), lastmod: null },
+    { loc: racedadUrl('big-berg-racing'), lastmod: null },
     ...posts.map((post) => ({ loc: racedadUrl(post.slug), lastmod: post.date })),
     { loc: racedadUrl('tracks'), lastmod: null },
     ...tracks.map((track) => ({

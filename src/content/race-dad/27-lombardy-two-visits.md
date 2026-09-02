@@ -7,6 +7,7 @@ tags:
   - MotoMini
   - Race Report
   - 190cc
+  - Big Berg Racing
 type: post
 excerpt: >-
   Two trips to Lombardy Raceway — a cold October season-ender with the leaves

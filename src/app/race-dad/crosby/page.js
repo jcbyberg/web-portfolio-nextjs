@@ -8,11 +8,14 @@ import { racedadUrl, RACEDAD_ORIGIN } from '@/lib/seo'
 // future post slugged "crosby" would be silently shadowed by this file and
 // would need a different slug instead.
 
-// There is no photo of Crosby and no post about him yet, so this page is
-// number-led. The action photo below is his own; no borrowed sibling photo, no generated
-// stand-in. It does not claim series results or class membership, because
-// neither is established for him. The .rider-hero component is built to
-// work with or without a photo; this page is the case with none.
+// This page is number-led: there is no rider card for Crosby the way there is
+// for Abel and Cohen. The action photo below is his own; no borrowed sibling
+// photo, no generated stand-in. The .rider-hero component is built to work
+// with or without a card, and this page is the case without one.
+//
+// Every result stated here traces to a race report in src/content/race-dad/
+// and is linked from .rider-sources below. Nothing about a child goes on this
+// page that is not written up somewhere that says where it came from.
 
 const description =
   'Crosby Byberg, #7 — rides a Honda CRF50 modified for the track.'
@@ -93,10 +96,43 @@ export default function CrosbyRiderPage() {
       <div className="article-body">
         <p>
           Crosby is 8, running #7 on a Honda CRF50 modified for the track.
-          There&apos;s no post about him here yet &mdash; when there is,
-          it&apos;ll be added to the timing sheet like everything else.
+          He is the youngest of the three and races the smallest bikes, and
+          he is the one who most obviously wants the position rather than the
+          lap time.
+        </p>
+        <p>
+          The 2026 season gave him a win in the rain at Brechin, second in
+          class at the MiniSBK opener at Shannonville, third in the Canadian
+          Supermoto opening round, and a race-one win at MiniSBK round four
+          before a mechanical ended his second race.
         </p>
       </div>
+
+      <nav className="rider-sources" aria-label="Posts about Crosby">
+        <span className="data">Read the posts</span>
+        <ul>
+          <li>
+            <Link href="/race-dad/brechin-season-opener-2026">
+              Race Season Started in the Rain at Brechin
+            </Link>
+          </li>
+          <li>
+            <Link href="/race-dad/minisbk-opener-shannonville">
+              Cohen Wins the Opener at Shannonville
+            </Link>
+          </li>
+          <li>
+            <Link href="/race-dad/racing-supermoto-shannonville">
+              All Three of Them, Same Race
+            </Link>
+          </li>
+          <li>
+            <Link href="/race-dad/minisbk-round-four">
+              One Win, One Broken Bike
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
       <section className="cta">
         <p className="data">Off the bike, this is my day job</p>
