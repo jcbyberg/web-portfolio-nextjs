@@ -8,5 +8,40 @@
     "landing": "https://stocksnap.io/photo/engine-block-739D74EEB8",
     "term": "engine parts",
     "bytes": 153158
+  },
+  "ohvale-gp0": {
+    "title": "Ohvale GP-0 110",
+    "creator": "Ohvale S.r.l.",
+    "license": "manufacturer press image - no written web-use permission on record",
+    "source": "ohvale.com",
+    "landing": "https://ohvale.com/gp0-gp2-bikes/",
+    "original": "https://ohvale.com/wp-content/uploads/2025/10/GP_0_110_WHITE.png",
+    "bytes": 238823
+  },
+  "ohvale-gp2": {
+    "title": "Ohvale GP-2 190 Race",
+    "creator": "Ohvale S.r.l.",
+    "license": "manufacturer press image - no written web-use permission on record",
+    "source": "ohvale.com",
+    "landing": "https://ohvale.com/gp0-gp2-bikes/",
+    "original": "https://ohvale.com/wp-content/uploads/2025/10/GP2_190-RACE_26_RED.png",
+    "bytes": 234172
+  },
+  "ohvale-gp7": {
+    "title": "Ohvale GP-7 250 Powered by Honda",
+    "creator": "Ohvale S.r.l.",
+    "license": "manufacturer press image - no written web-use permission on record",
+    "source": "ohvale.com",
+    "landing": "https://ohvale.com/gp7-bikes/",
+    "original": "https://ohvale.com/wp-content/uploads/2025/11/GP-7-v.-Powered-by-Honda_lat.jpg",
+    "bytes": 189163
+  },
+  "ohvale-gp5": {
+    "title": "Ohvale GP-5 250",
+    "creator": "Ohvale S.r.l. (supplied by Josh)",
+    "license": "manufacturer press image - no written web-use permission on record",
+    "source": "supplied",
+    "landing": "https://ohvale.com/gp5/",
+    "bytes": 305686
   }
 }

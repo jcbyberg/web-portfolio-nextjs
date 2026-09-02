@@ -9,9 +9,12 @@ tags:
   - "Minimoto"
   - "Progression"
   - "Pathway"
+image: "/images/race-dad/ohvale-gp7/gp7-250-honda-side.jpg"
 ---
 
 At the top of the Ohvale range is a bike that has stopped pretending to be small.
+
+![An Ohvale GP-7 250 Powered by Honda in side profile: blue and orange bodywork over an aluminium perimeter frame, on 17-inch wheels with Pirelli slicks](/images/race-dad/ohvale-gp7/gp7-250-honda-side.jpg)
 
 The GP-7 runs 17-inch wheels — 2.50 at the front, 3.50 at the rear. Those are full-size road racing dimensions. Whatever else this machine is, it is not a minimoto, and the spec sheet does not really let you argue otherwise.
 

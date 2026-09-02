@@ -8,9 +8,12 @@ tags:
   - "Ohvale"
   - "Minimoto"
   - "Progression"
+image: "/images/race-dad/ohvale-gp0/gp0-110-side.jpg"
 ---
 
 The GP-0 is the smallest thing Ohvale makes, and it is the one that decides whether a kid stays in this sport or quietly drifts out of it.
+
+![An Ohvale GP-0 110 in side profile: white, black and orange bodywork over a yellow tubular frame, on 10-inch wheels with an Arrow silencer](/images/race-dad/ohvale-gp0/gp0-110-side.jpg)
 
 It rolls on 10-inch wheels. Claimed weight is about 150 pounds, the seat sits around 27 inches, and the wheelbase is roughly 42 inches. Those are the numbers that matter, and none of them are about speed. They are about whether a child can hold the thing up at a standstill, paddle it out of a pit box, and pick it up off the ground without an adult running over.
 

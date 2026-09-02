@@ -9,9 +9,12 @@ tags:
   - "Minimoto"
   - "190cc"
   - "MiniSBK"
+image: "/images/race-dad/ohvale-gp2/gp2-190-race-side.jpg"
 ---
 
 Walk down a MiniSBK grid and you are mostly looking at GP-2s. It is the bike the Canadian classes are built around, and if you are budgeting a season here, it is almost certainly the one you are budgeting for.
+
+![An Ohvale GP-2 190 Race in side profile, in red, white and black, on 12-inch wheels with a full fairing and an Arrow silencer](/images/race-dad/ohvale-gp2/gp2-190-race-side.jpg)
 
 The headline difference from the [GP-0](/ohvale-gp0) is the wheels: 12 inches instead of 10. That is the number everyone quotes. It is not the number that matters.
 
