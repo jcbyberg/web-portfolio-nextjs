@@ -12,7 +12,7 @@ tags: ["race suit", "team kit", "racing", "identity"]
 
 A club suit gets looked at by the people in the paddock. A national team suit gets looked at by everyone else — on a grid in another country, in a series photographer's images, next to fifteen other countries' kits.
 
-These are the suits the Canadian riders wore at the Supercup in China. Same design, seven riders, and the whole job was making one layout work for all of them without it turning into seven separate designs.
+These are the suits the Canadian riders wore at the Supercup in China. Same design, seven riders, and the whole job was making one layout work for all of them without it turning into a suit each.
 
 ![#68 Stockill — Team Canada suit, front and back](/images/whitespace/team-canada-suits/suit-68-stockill.png)
 
@@ -30,11 +30,13 @@ White base with red and black. There is no cleverness in that choice and there s
 
 ![#22 O'Brien](/images/whitespace/team-canada-suits/suit-22-obrien.png)
 
+Three of the seven are shown here.
+
 Everything structural is frozen. Panel shapes, sponsor positions, the leaf, the belt, the pixel-camo shins, the Road Race Canada mark on the chest, KYT at the collar, Motul and Pirelli down the forearms, Gryphon on the hump and both outer legs.
 
 What changes is a name and a number, in three fixed places: both shoulders, the centre back, and the surname band.
 
-That is what makes it a team. Seven riders walking down pit lane in kit that is obviously the same kit — that reads as a national programme. Seven riders in seven "personalised" suits reads as seven kids who happen to be from the same country.
+That is what makes it a team. Seven riders walking down pit lane in kit that is obviously the same kit — that reads as a national programme. Put those same riders in seven "personalised" suits and it reads as seven kids who happen to be from the same country.
 
 O'Brien's back panel runs CANADA above the number and the surname below the hump, rather than the surname on top — the one variant in the set, to fit a shorter number and a longer name without shrinking either.
 
