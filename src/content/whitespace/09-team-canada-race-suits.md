@@ -1,5 +1,5 @@
 ---
-title: "One Suit, Three Riders, One Flight to China"
+title: "One Suit, Seven Riders, One Flight to China"
 date: "2026-08-29"
 type: case-study
 client: "Road Race Canada"
@@ -12,7 +12,7 @@ tags: ["race suit", "team kit", "racing", "identity"]
 
 A club suit gets looked at by the people in the paddock. A national team suit gets looked at by everyone else — on a grid in another country, in a series photographer's images, next to fifteen other countries' kits.
 
-These are the suits the Canadian riders wore at the Supercup in China. Same design, three riders, and the whole job was making one layout work for all of them without it turning into three separate designs.
+These are the suits the Canadian riders wore at the Supercup in China. Same design, seven riders, and the whole job was making one layout work for all of them without it turning into seven separate designs.
 
 ![#68 Stockill — Team Canada suit, front and back](/images/whitespace/team-canada-suits/suit-68-stockill.png)
 
@@ -24,7 +24,7 @@ So the hierarchy is deliberate and slightly counterintuitive for a race suit: **
 
 White base with red and black. There is no cleverness in that choice and there shouldn't be — a national kit that needs explaining has failed. From the outside of a corner at any distance, the read is: that one's Canada.
 
-## The same suit, three names
+## The same suit, seven names
 
 ![#91 Reardon](/images/whitespace/team-canada-suits/suit-91-reardon.png)
 
@@ -34,7 +34,7 @@ Everything structural is frozen. Panel shapes, sponsor positions, the leaf, the 
 
 What changes is a name and a number, in three fixed places: both shoulders, the centre back, and the surname band.
 
-That is what makes it a team. Three riders walking down pit lane in kit that is obviously the same kit — that reads as a national programme. Three riders in three "personalised" suits reads as three kids who happen to be from the same country.
+That is what makes it a team. Seven riders walking down pit lane in kit that is obviously the same kit — that reads as a national programme. Seven riders in seven "personalised" suits reads as seven kids who happen to be from the same country.
 
 O'Brien's back panel runs CANADA above the number and the surname below the hump, rather than the surname on top — the one variant in the set, to fit a shorter number and a longer name without shrinking either.
 
