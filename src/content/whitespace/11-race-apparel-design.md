@@ -8,6 +8,7 @@ trim: "Flat panel artwork, 14.2\" x 9\""
 colour: "RGB, dye sublimation"
 excerpt: "Print sits still. A shirt does not. Sublimation makes colour free, and that single fact changes what the design should be."
 tags: ["apparel", "sublimation", "team kit", "identity system"]
+image: "/images/whitespace/race-apparel/polo-team-canada-rider.jpg"
 ---
 
 Print sits still. A shirt does not.

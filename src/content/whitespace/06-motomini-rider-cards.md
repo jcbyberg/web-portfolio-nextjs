@@ -8,6 +8,7 @@ trim: "1:1 square and 4:5 vertical"
 colour: "RGB, class-coded"
 excerpt: "Every rider on the grid needs a card, every session produces results, and it happens again next round. That is a production problem wearing a design problem's clothes."
 tags: ["social media", "identity system", "racing", "templates"]
+image: "/images/whitespace/motomini-rider-cards/rider-card-190-cohen-byberg.jpg"
 ---
 
 MotoMini Canada runs the national mini road racing championship — the Road to MotoGP ladder in this country — and a race weekend at Shannonville Motorsport Park generates a lot of graphics. Every rider on the grid needs an announcement card. Every session produces results. It happens again at the next round, and the round after that.
