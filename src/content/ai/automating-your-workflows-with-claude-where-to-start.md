@@ -8,7 +8,10 @@ tags:
   - "automation"
   - "workflow"
   - "business ops"
+image: "/images/ai/automating-your-workflows-with-claude-where-to-start.jpg"
 ---
+
+![A mechanical tide-predicting machine with Day, Hour and Minute dials, an open logbook of tabulated readings resting on the table in front of it.](/images/ai/automating-your-workflows-with-claude-where-to-start.jpg)
 
 Most people's relationship with Claude starts and ends in a chat window. You open a tab, type a question, get an answer, close the tab. That is genuinely useful, and it is also the smallest possible use of the tool — the equivalent of buying a delivery van and only ever using it to pop out for milk.
 
