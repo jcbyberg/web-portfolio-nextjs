@@ -11,36 +11,34 @@
     "replaced": "2026-09-01 — first pick was a poor subject match"
   },
   "automating-your-workflows-with-claude-where-to-start": {
-    "title": "Tide Predicting Machine No. 2 (\"Old Brass Brains\")",
-    "creator": "Steven Fine",
-    "license": "cc0",
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "source": "wikimedia",
-    "landing": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tide_Predicting_Machine_No._2_%28%22Old_Brass_Brains%22%29.jpg",
-    "term": "brass gears mechanism",
-    "bytes": 293904,
-    "note": "cropped to a landscape frame focused on the dial and logbook"
+    "title": "A single thread pulled from a tangle",
+    "creator": null,
+    "license": "generated",
+    "source": "adobe-firefly-photoshop",
+    "landing": null,
+    "term": "abstract art, a single luminous thread being pulled taut and bright out of a loose chaotic tangle of dim gray threads",
+    "bytes": 782000,
+    "replaced": "2026-09-13 — real CC0 photo (tide-predicting machine) replaced with generated abstract art per user direction"
   },
   "give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task": {
-    "title": "Emilie Haspels index card file",
-    "creator": "Jane023",
-    "license": "cc0",
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "source": "wikimedia",
-    "landing": "https://commons.wikimedia.org/w/index.php?curid=56798490",
-    "term": "index cards",
-    "bytes": 75783
+    "title": "A vessel of light",
+    "creator": null,
+    "license": "generated",
+    "source": "adobe-firefly-photoshop",
+    "landing": null,
+    "term": "abstract art, a glowing crystalline vessel fully absorbing scattered light then radiating it back outward",
+    "bytes": 636000,
+    "replaced": "2026-09-13 — real CC0 photo (archive index card box) replaced with generated abstract art per user direction"
   },
   "when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you": {
-    "title": "Billingshurst Railway Station (Semaphore Signal BT12)",
-    "creator": "Hassocks5489",
-    "license": "cc0",
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
-    "source": "wikimedia",
-    "landing": "https://commons.wikimedia.org/wiki/File:Billingshurst_Railway_Station_(July_2007)_(Semaphore_Signal_BT12).JPG",
-    "term": "railway signal semaphore",
-    "bytes": 235000,
-    "note": "cropped tighter on the signal and warning signage"
+    "title": "A threshold, guarded",
+    "creator": null,
+    "license": "generated",
+    "source": "adobe-firefly-photoshop",
+    "landing": null,
+    "term": "surreal abstract art, a glowing glass threshold with a single watching point of light hovering before it",
+    "bytes": 287000,
+    "replaced": "2026-09-13 — real CC0 photo (railway semaphore signal) replaced with generated abstract art per user direction"
   },
   "automating-the-paddock": {
     "title": "Motorcycle racing Italy",
