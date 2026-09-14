@@ -10,6 +10,16 @@
     "bytes": 149347,
     "replaced": "2026-09-01 — first pick was a poor subject match"
   },
+  "one-workflow-one-job": {
+    "title": "Root network",
+    "creator": null,
+    "license": "generated",
+    "source": "adobe-firefly-photoshop",
+    "landing": null,
+    "term": "abstract art, an organic web of fine glowing threads branching separately through deep dimensional space",
+    "bytes": 629404,
+    "note": "picked from the bank in public/images/ai/bank/ (see MANIFEST.json)"
+  },
   "automating-your-workflows-with-claude-where-to-start-v2": {
     "title": "A single thread pulled from a tangle",
     "creator": null,
