@@ -8,10 +8,10 @@ tags:
   - "automation"
   - "workflow"
   - "business ops"
-image: "/images/ai/when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you.jpg"
+image: "/images/ai/when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you-v2.jpg"
 ---
 
-![Abstract art of a glowing glass threshold standing in deep space, with a single steady point of light hovering before it.](/images/ai/when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you.jpg)
+![Abstract art of a glowing glass threshold standing in deep space, with a single steady point of light hovering before it.](/images/ai/when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you-v2.jpg)
 
 Once a Claude workflow is actually working — the task is picked well, the context is [set up once instead of re-explained every time](/blog/give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task), the first several runs came out usable — there's a decision waiting that has nothing to do with whether the tool works. Does the output go straight out the door, or land in a queue for a person to look at first?
 

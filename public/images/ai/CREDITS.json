@@ -10,7 +10,7 @@
     "bytes": 149347,
     "replaced": "2026-09-01 — first pick was a poor subject match"
   },
-  "automating-your-workflows-with-claude-where-to-start": {
+  "automating-your-workflows-with-claude-where-to-start-v2": {
     "title": "A single thread pulled from a tangle",
     "creator": null,
     "license": "generated",
@@ -18,9 +18,9 @@
     "landing": null,
     "term": "abstract art, a single luminous thread being pulled taut and bright out of a loose chaotic tangle of dim gray threads",
     "bytes": 782000,
-    "replaced": "2026-09-13 — real CC0 photo (tide-predicting machine) replaced with generated abstract art per user direction"
+    "replaced": "2026-09-13 — real CC0 photo (tide-predicting machine) replaced with generated abstract art per user direction; renamed with -v2 suffix to bust Facebook's CDN image cache"
   },
-  "give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task": {
+  "give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task-v2": {
     "title": "A vessel of light",
     "creator": null,
     "license": "generated",
@@ -28,9 +28,9 @@
     "landing": null,
     "term": "abstract art, a glowing crystalline vessel fully absorbing scattered light then radiating it back outward",
     "bytes": 636000,
-    "replaced": "2026-09-13 — real CC0 photo (archive index card box) replaced with generated abstract art per user direction"
+    "replaced": "2026-09-13 — real CC0 photo (archive index card box) replaced with generated abstract art per user direction; renamed with -v2 suffix to bust Facebook's CDN image cache"
   },
-  "when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you": {
+  "when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you-v2": {
     "title": "A threshold, guarded",
     "creator": null,
     "license": "generated",
@@ -38,7 +38,7 @@
     "landing": null,
     "term": "surreal abstract art, a glowing glass threshold with a single watching point of light hovering before it",
     "bytes": 287000,
-    "replaced": "2026-09-13 — real CC0 photo (railway semaphore signal) replaced with generated abstract art per user direction"
+    "replaced": "2026-09-13 — real CC0 photo (railway semaphore signal) replaced with generated abstract art per user direction; renamed with -v2 suffix to bust Facebook's CDN image cache"
   },
   "automating-the-paddock": {
     "title": "Motorcycle racing Italy",

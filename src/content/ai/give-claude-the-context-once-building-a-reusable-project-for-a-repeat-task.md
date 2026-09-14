@@ -8,10 +8,10 @@ tags:
   - "automation"
   - "workflow"
   - "productivity"
-image: "/images/ai/give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task.jpg"
+image: "/images/ai/give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task-v2.jpg"
 ---
 
-![Abstract art of a glowing blue crystalline form radiating light outward in calm concentric waves.](/images/ai/give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task.jpg)
+![Abstract art of a glowing blue crystalline form radiating light outward in calm concentric waves.](/images/ai/give-claude-the-context-once-building-a-reusable-project-for-a-repeat-task-v2.jpg)
 
 The companion piece to this post, [Automating Your Workflows With Claude: Where to Start](/blog/automating-your-workflows-with-claude-where-to-start), is about picking the right task and getting into the habit of front-loading context instead of re-explaining it every time. This one is about the setup itself — what actually goes into it, walked through on one task, so you can build your own rather than guess at the shape of it.
 
