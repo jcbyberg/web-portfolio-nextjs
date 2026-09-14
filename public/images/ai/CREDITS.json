@@ -31,6 +31,17 @@
     "term": "index cards",
     "bytes": 75783
   },
+  "when-to-let-claude-just-do-it-and-when-to-make-it-wait-for-you": {
+    "title": "Billingshurst Railway Station (Semaphore Signal BT12)",
+    "creator": "Hassocks5489",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/wiki/File:Billingshurst_Railway_Station_(July_2007)_(Semaphore_Signal_BT12).JPG",
+    "term": "railway signal semaphore",
+    "bytes": 235000,
+    "note": "cropped tighter on the signal and warning signage"
+  },
   "automating-the-paddock": {
     "title": "Motorcycle racing Italy",
     "creator": null,
