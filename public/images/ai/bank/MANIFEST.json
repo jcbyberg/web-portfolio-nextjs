@@ -1,0 +1,81 @@
+{
+  "_note": "A reusable bank of Photoshop/Firefly-generated abstract art for ai.whitespacedesign.ca body images. All generated 2026-09-13, license: generated (not stock/CC0), source: adobe-firefly-photoshop, at 1600x900. Pick one, move/copy it out to public/images/ai/<slug>.jpg, then wire it into the post per the blog-post-image skill (body markdown image + frontmatter image: field). Palette matches src/app/blog/blog.css: dark navy (#0a0c10) ground, periwinkle blue (#7c9cff) and mint green (#3ddc97) accents.",
+  "images": {
+    "flow-split": {
+      "theme": "a path diverging — one direction fading, one growing brighter",
+      "good_for": "decision points, branching workflows, choosing between options"
+    },
+    "converging-particles": {
+      "theme": "thousands of particles swirling into one bright core",
+      "good_for": "consolidation, gathering context, many inputs becoming one output"
+    },
+    "glass-barrier": {
+      "theme": "a vertical shaft of light interrupted by a translucent glass plane",
+      "good_for": "approval gates, checkpoints, a pause before something proceeds"
+    },
+    "root-network": {
+      "theme": "an organic web of branching glowing threads",
+      "good_for": "interconnected systems, multi-agent setups, dependencies"
+    },
+    "floating-glass-panels": {
+      "theme": "translucent panels floating and overlapping in depth",
+      "good_for": "layered systems, staged pipelines, abstraction layers"
+    },
+    "crystalline-order": {
+      "theme": "chaos on one side resolving into a precise lattice on the other",
+      "good_for": "going from messy input to structured output, data extraction"
+    },
+    "aurora-pulse": {
+      "theme": "slow aurora waves with one steady pulse of light at center",
+      "good_for": "monitoring, steady-state systems, calm/ongoing processes"
+    },
+    "comet-loop": {
+      "theme": "a single trail of light looping in an infinite orbit",
+      "good_for": "repeating/scheduled workflows, automation loops, recurring tasks"
+    },
+    "seam-of-light": {
+      "theme": "two contrasting forms meeting along one luminous seam",
+      "good_for": "human+AI collaboration, handoffs, where two things meet"
+    },
+    "dawn-break": {
+      "theme": "a warm light burst breaking through fragmented dark shapes",
+      "good_for": "breakthroughs, time savings, a new capability unlocking"
+    },
+    "digital-brain": {
+      "theme": "a glowing circuit-pattern brain",
+      "good_for": "posts about reasoning/intelligence directly — a fairly literal/common AI-blog image, use sparingly"
+    },
+    "fractal-mind": {
+      "theme": "an infinite fractal explosion radiating from a bright core",
+      "good_for": "scale, complexity, systems that branch out from one decision"
+    },
+    "data-storm": {
+      "theme": "a swirling vortex of light fragments pulled into a singularity",
+      "good_for": "data processing, information overload resolving into clarity"
+    },
+    "singularity-core": {
+      "theme": "a blinding core surrounded by orbiting rings of data",
+      "good_for": "a central system with many dependent parts, orchestration"
+    },
+    "circuit-galaxy": {
+      "theme": "a spiral galaxy where stars are circuit nodes",
+      "good_for": "large interconnected systems, scale, network effects"
+    },
+    "shattering-matrix": {
+      "theme": "a wall of falling glyphs shattering into light fragments",
+      "good_for": "breaking down a problem, parsing/processing raw input"
+    },
+    "neural-bloom": {
+      "theme": "a neural network blooming outward like a flower",
+      "good_for": "growth, a system maturing, learning/improvement over time"
+    },
+    "quantum-lattice": {
+      "theme": "an impossible geometric lattice folding through dimensions",
+      "good_for": "abstract/conceptual posts, complexity, multi-dimensional problems"
+    },
+    "ai-eye-awakening": {
+      "theme": "a large glowing eye-like aperture amid circuitry",
+      "good_for": "posts about AI oversight, monitoring, or being watched/watching — reads as slightly ominous/surveillance-coded, pick deliberately not by default"
+    }
+  }
+}
