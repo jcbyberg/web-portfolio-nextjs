@@ -36,7 +36,9 @@ export const COLLECTIONS = {
     required: ['title', 'date', 'type', 'excerpt', 'tags'],
     // Required only for a given type.
     requiredByType: { 'case-study': ['client', 'deliverable'] },
-    optional: ['client', 'deliverable', 'trim', 'colour', 'image', 'author'],
+    // video: site-absolute path into public/ (recorded by record.mjs) or an
+    // https URL — the checker validates both forms.
+    optional: ['client', 'deliverable', 'trim', 'colour', 'image', 'video', 'author'],
     imageDir: 'public/images/whitespace',
   },
   'race-dad': {

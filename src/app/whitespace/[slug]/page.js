@@ -122,6 +122,12 @@ export default async function WhitespacePostPage({ params }) {
         </Punct>
       </div>
 
+      {post.video ? (
+        <div className="article-body">
+          <video autoPlay loop muted playsInline preload="metadata" src={post.video} />
+        </div>
+      ) : null}
+
       <div
         className="article-body"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}

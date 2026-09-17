@@ -90,7 +90,7 @@ function checkLocalAsset(file, label, src) {
     return
   }
   if (!stat.isFile()) {
-    report('error', file, `${label} points at a directory, not an image file: ${src}`)
+    report('error', file, `${label} points at a directory, not a file: ${src}`)
   }
 }
 
@@ -224,9 +224,14 @@ function checkFile(collectionName, collection, filename) {
 
     checkTags(file, collectionName, data.tags)
 
+    // Video is either a remote https URL or a site-absolute path into
+    // public/ (recorded by record.mjs) — checkLocalAsset verifies the local
+    // form exists on disk, exactly as it does for images.
     if (data.video !== undefined && data.video !== null) {
-      if (!/^https:\/\//.test(String(data.video))) {
-        report('error', file, 'video must be an https URL')
+      if (/^http:\/\//i.test(String(data.video))) {
+        report('error', file, 'video must be an https URL or a site-absolute path ("/images/...")')
+      } else {
+        checkLocalAsset(file, 'video', data.video)
       }
     }
   } else {

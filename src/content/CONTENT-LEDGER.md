@@ -48,6 +48,14 @@ pages, cited to a named source, or left as arithmetic the reader does — never 
 - Why "Referrals Only" is a Dangerous Business Strategy (Drafted)
 
 ## 🎨 whitespacedesign.ca (Growth/E-Commerce)
+- Mixed Typographic Pairs in Modern Web Design (Drafted)
+- Gamification UX in Modern Web Design (Drafted)
+- Freeform Canvas UIs in Modern Web Design (Drafted)
+- Endless Kinetic Marquees in Modern Web Design (Drafted)
+- Interactive WebGL/Three.js Heroes in Modern Web Design (Drafted)
+- Contextual AI Orbs in Modern Web Design (Drafted)
+- Dynamic Favicons in Modern Web Design (Drafted)
+- Pixel Art & 8-Bit Accents in Modern Web Design (Drafted)
 - Speed is Revenue: Why We Build with Next.js (Drafted)
 - Does Your Digital Storefront Look Like a 2018 Template? (Drafted)
 - You Don't Have a Traffic Problem; You Have a Trust Problem (Drafted)
@@ -126,3 +134,4 @@ pages, cited to a named source, or left as arithmetic the reader does — never 
 - Stop Trying to Sell "Exposure" to Sponsors (Drafted)
 - The Difference Between a Racer and a Racing Brand (Drafted)
 - Your Paddock Presence is Elite, But Your Website is 15 Years Old (Drafted)\n- Why Dealerships Lose Service Revenue to Independent Shops (Drafted)\n- The ,000 Typo: Why Track Operators Keep Losing Weekend Entries (Drafted)\n- Why Your Powersports E-Commerce Store is Leaking Abandoned Carts (Drafted)\n- The Hidden Cost of Relying Only on Instagram for Team Updates (Drafted)\n- Why Sponsors Care More About Your First-Party Data Than Your Podium Finishes (Drafted)\n- How Track Operators Can Stop Relying on Third-Party Ticketing Fees (Drafted)\n- The Off-Season Myth: Why Motorsports Brands Die in December (Drafted)\n- Why Your Powersports Dealership Needs to Stop Selling Vehicles and Start Selling Lifestyles (Drafted)\n- The Family Run Excuse: Why Small Race Teams Fail to Secure Corporate Backing (Drafted)\n- Stop Paying 20 Percent to Powersports Listing Sites: Own Your Inventory (Drafted)\n- The I Only Need a Facebook Page Fallacy for Local Tracks (Drafted)\n- Why B2B Sponsors Ignore Your Racing Program (Drafted)\n- The True Cost of a Slow Website When Buying Race Fuel Online (Drafted)\n- Why You Are Wasting Money on Facebook Ads for Your Dealership (Drafted)\n- The Problem with Built-In Track Software (Drafted)\n- How to Turn Weekend Spectators into Recurring Members (Drafted)\n- Why Race Teams Should Not Trust WordPress for Their Digital HQ (Drafted)\n- The Build It And They Will Come Delusion in New Track Construction (Drafted)\n- Why Your Rider Roster Page is Hurting Your Merchandise Sales (Drafted)\n- The Secret to High-Converting Powersports Service Booking Pages (Drafted)\n- Why Good Enough Photography is Killing Your Sponsorship Value (Drafted)\n- How to Use Automation to Manage Race Entries (Drafted)\n- Why Your Track Rules Page Needs a UX Overhaul Before Next Season (Drafted)\n- The Legacy Software Trap Strangling Powersports Dealerships (Drafted)\n
+
