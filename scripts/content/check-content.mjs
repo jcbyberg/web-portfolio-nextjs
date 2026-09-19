@@ -128,7 +128,10 @@ function checkBody(file, body, { expectHeadings = true } = {}) {
   }
 
   // remark-html sanitizes, so raw HTML is dropped from the output entirely.
-  const html = trimmed.match(/<\/?(div|span|img|br|p|a|iframe|section|figure|table)\b[^>]*>/i)
+  // Checked against `prose` (code-stripped), not `trimmed` — a fenced code
+  // sample showing real HTML/CSS/JS (e.g. a component demo) is not live HTML
+  // in the rendered page and must not be flagged as if it were.
+  const html = prose.match(/<\/?(div|span|img|br|p|a|iframe|section|figure|table)\b[^>]*>/i)
   if (html) {
     report('error', file, `raw HTML is stripped by the renderer and will not appear: ${html[0]}`)
   }
