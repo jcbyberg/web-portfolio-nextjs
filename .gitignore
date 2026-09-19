@@ -44,3 +44,4 @@ next-env.d.ts
 # backup of .env.local would otherwise be committable — with live secrets in it.
 .env*.local.bak-*
 .env.local.bak-*
+daily_publish.log
