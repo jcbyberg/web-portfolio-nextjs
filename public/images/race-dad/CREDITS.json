@@ -11,12 +11,35 @@
   },
   "ohvale-gp0": {
     "title": "Ohvale GP-0 110",
-    "creator": "Ohvale S.r.l.",
+    "creator": "Ohvale S.r.l. (supplied by Josh)",
     "license": "manufacturer press image - no written web-use permission on record",
-    "source": "ohvale.com",
+    "source": "supplied",
     "landing": "https://ohvale.com/gp0-gp2-bikes/",
-    "original": "https://ohvale.com/wp-content/uploads/2025/10/GP_0_110_WHITE.png",
-    "bytes": 238823
+    "bytes": 224815
+  },
+  "ohvale-160-class-guide": {
+    "title": "MiniSBK grid on paddock stands",
+    "creator": "Josh Byberg",
+    "license": "supplied by Josh",
+    "source": "supplied",
+    "landing": null,
+    "bytes": 496459
+  },
+  "ohvale-190-top-of-mini": {
+    "title": "MotoMini FIM World Series grid",
+    "creator": null,
+    "license": "supplied by Josh, source unconfirmed",
+    "source": "supplied",
+    "landing": null,
+    "bytes": 78408
+  },
+  "ohvale-110-first-road-racer": {
+    "title": "MiniSBK grid on paddock stands",
+    "creator": "Josh Byberg",
+    "license": "supplied by Josh",
+    "source": "supplied",
+    "landing": null,
+    "bytes": 496459
   },
   "ohvale-gp2": {
     "title": "Ohvale GP-2 190 Race",
@@ -42,6 +65,114 @@
     "license": "manufacturer press image - no written web-use permission on record",
     "source": "supplied",
     "landing": "https://ohvale.com/gp5/",
-    "bytes": 305686
+    "bytes": 274164
+  },
+  "ohvale-gp5-three-quarter": {
+    "title": "Ohvale GP-5 250 (three-quarter angle, inline image)",
+    "creator": "Ohvale S.r.l. (supplied by Josh)",
+    "license": "manufacturer press image - no written web-use permission on record",
+    "source": "supplied",
+    "landing": "https://ohvale.com/gp5/",
+    "bytes": 198486
+  },
+  "motul-oil-mini-moto": {
+    "title": "Motorcycle engine",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "rawpixel",
+    "landing": "https://www.rawpixel.com/image/6021179/motorcycle-engine-free-public-domain-cc0-photo",
+    "term": "motorcycle engine oil change workshop",
+    "bytes": 284168
+  },
+  "road-to-motogp-path": {
+    "title": "Loris Baz Kawasaki MotoGP race",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "rawpixel",
+    "landing": "https://www.rawpixel.com/image/6111764/photo-image-public-domain-person-free",
+    "term": "motogp motorcycle racing speed",
+    "bytes": 153837
+  },
+  "budgeting-a-mini-race-season": {
+    "title": "Free coins image",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "rawpixel",
+    "landing": "https://www.rawpixel.com/image/5904375/photo-image-public-domain-money-free",
+    "term": "wallet budget planning money",
+    "bytes": 78295
+  },
+  "pit-lane-parent-etiquette": {
+    "title": "23XI pit equipment",
+    "creator": "sarahstierch",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "flickr",
+    "landing": "https://www.flickr.com/photos/7633518@N08/54084657936",
+    "term": "motorsport pit lane paddock",
+    "bytes": 203286
+  },
+  "chain-and-sprocket-care": {
+    "title": "Motorcycle Chain Cleaning 1",
+    "creator": "mpcllc2017",
+    "license": "pdm",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "flickr",
+    "landing": "https://www.flickr.com/photos/187743687@N04/49729679902",
+    "term": "motorcycle chain sprocket closeup",
+    "bytes": 200629
+  },
+  "brake-pads-mini-moto": {
+    "title": "Brembo motorcycle brake",
+    "creator": "Hu Nhu",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+    "source": "wikimedia",
+    "landing": "https://commons.wikimedia.org/w/index.php?curid=142380555",
+    "term": "motorcycle brake disc caliper",
+    "bytes": 204344
+  },
+  "confidence-after-a-crash": {
+    "title": "People Man",
+    "creator": "Cameron Kirby",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "stocksnap",
+    "landing": "https://stocksnap.io/photo/people-man-2AZFE6DBH0",
+    "term": "motorcycle helmet grass trackside",
+    "bytes": 153011
+  },
+  "travelling-out-of-province": {
+    "title": "Car Road",
+    "creator": "Bernard Spragg",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "stocksnap",
+    "landing": "https://stocksnap.io/photo/car-road-NGWA6GGQNM",
+    "term": "road trip highway car loading",
+    "bytes": 234578
+  },
+  "tyre-warmers-worth-it": {
+    "title": "close-up motorcycle tire muddy track",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source": "rawpixel",
+    "landing": "https://www.rawpixel.com/image/3303488/free-photo-image-alloy-wheel-brake-car",
+    "term": "motorcycle tire warmer racing",
+    "bytes": 155941
+  },
+  "rm85-two-stroke-mini": {
+    "title": "motocross - jump",
+    "creator": "motolafrancesco",
+    "license": "pdm",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "source": "flickr",
+    "landing": "https://www.flickr.com/photos/94449825@N02/17427146213",
+    "term": "motocross jump",
+    "bytes": 202215
   }
 }

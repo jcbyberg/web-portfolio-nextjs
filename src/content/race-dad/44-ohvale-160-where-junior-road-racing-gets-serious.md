@@ -7,12 +7,12 @@ excerpt: "The 160 is where junior road racing gets serious: closer racing, real 
 tags:
   - "ohvale"
   - "minimoto"
-image: "/images/race-dad/ohvale-160-class-guide/ohvale-160-class-guide-01.png"
+image: "/images/race-dad/ohvale-160-class-guide/minisbk-grid-paddock-stands.jpg"
 ---
 
 The 160 is where junior road racing stops being adorable. The bikes are quicker, the grids are tighter, the racing is genuinely close — and the riders who figure out the 160 arrive at the 190 conversation with real skills. This is what changes in the class, for the rider and for the parent watching.
 
-![A title card reading "The class where it clicks." for Race Dad](/images/race-dad/ohvale-160-class-guide/ohvale-160-class-guide-01.png)
+![A row of MiniSBK Ohvale bikes on paddock stands at the track, ready for a race weekend](/images/race-dad/ohvale-160-class-guide/minisbk-grid-paddock-stands.jpg)
 
 ## What the class is
 

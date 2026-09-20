@@ -8,12 +8,12 @@ tags:
   - "Ohvale"
   - "Minimoto"
   - "Progression"
-image: "/images/race-dad/ohvale-gp5/gp5-three-quarter-front.jpg"
+image: "/images/race-dad/ohvale-gp5/gp5-official-side-profile.jpg"
 ---
 
 Ohvale announced the GP-5 in late August, and the interesting thing about it is not the bike. It is the hole it was built to fill.
 
-![The Ohvale GP-5 250 from the front three-quarter, in blue and orange Ohvale livery on 15-inch wheels with Pirelli slicks and a Brembo front end](/images/race-dad/ohvale-gp5/gp5-three-quarter-front.jpg)
+![The Ohvale GP-5 250 in left-side profile, official manufacturer photo showing the blue and orange livery, Akrapovic exhaust and aluminium perimeter frame](/images/race-dad/ohvale-gp5/gp5-official-side-profile.jpg)
 
 Anyone whose kid has spent a couple of seasons on 12-inch wheels knows the shape of the problem. The 160 teaches momentum. The 190 teaches respect for the throttle. And then the ladder runs out, and the next rung is a full-size machine on 17-inch wheels — a bike that is taller, heavier, faster and a completely different animal to load into a trailer, let alone to ride.
 
@@ -25,7 +25,7 @@ The GP-5 is a 250 on 15-inch wheels, and Ohvale has been plain about where it si
 
 There are two engine options. The one in these photos is the Honda CRF250R unit — 249.4 cc, liquid-cooled DOHC four-valve single, 44 mm throttle body, five-speed, electric start, with an upshift quickshifter standard and a cable-operated wet clutch. The alternative is a ZS RR250 at 249.8 cc with a 46 mm Dell'Orto throttle body and a hydraulic clutch. Both can be ordered with a racing or a restricted ECU, which matters more than it sounds like it does for a bike aimed partly at kids.
 
-![The GP-5 250 in left-side profile, showing the aluminium perimeter frame, Ohvale swingarm, Honda engine cases and Akrapovic silencer](/images/race-dad/ohvale-gp5/gp5-side-profile.jpg)
+![The Ohvale GP-5 250 from a three-quarter front angle, showing the Brembo front brake, Pirelli tyre and Honda-powered engine bay](/images/race-dad/ohvale-gp5/gp5-official-three-quarter.jpg)
 
 The rest reads like a small Moto3 bike rather than a scaled-up pit bike. Aluminium perimeter frame, Ohvale's own aluminium swingarm and wheels, 35 mm fully adjustable upside-down forks, a linkage monoshock with an Öhlins TTX on the options list. The brakes are a proper Brembo system — twin 240 mm front discs, GP4-Mini radial four-piston calipers, a 15 RCS radial master cylinder, 190 mm at the back. Pirelli has made dedicated 100/70 R15 and 120/70 R15 tyres for it, in slick and wet.
 

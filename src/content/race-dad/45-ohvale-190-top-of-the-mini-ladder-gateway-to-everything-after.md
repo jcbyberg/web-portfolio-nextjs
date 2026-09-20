@@ -8,12 +8,12 @@ tags:
   - "ohvale"
   - "190cc"
   - "minimoto"
-image: "/images/race-dad/ohvale-190-top-of-mini/ohvale-190-top-of-mini-01.png"
+image: "/images/race-dad/ohvale-190-top-of-mini/motomini-fim-world-series-grid.webp"
 ---
 
 The 190 is the top of the mini ladder, and everything about it is a dress rehearsal for what comes after: pace approaching small full-size bikes, setup that actually matters, and results that get noticed beyond the club. This is racing the class, day to day — the decision to move up is its own post.
 
-![A title card reading "Top of the mini ladder." for Race Dad](/images/race-dad/ohvale-190-top-of-mini/ohvale-190-top-of-mini-01.png)
+![A row of race bikes on the grid beneath the MotoMini FIM World Series banner](/images/race-dad/ohvale-190-top-of-mini/motomini-fim-world-series-grid.webp)
 
 ## The pace problem
 
