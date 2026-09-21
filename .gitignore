@@ -45,3 +45,7 @@ next-env.d.ts
 .env*.local.bak-*
 .env.local.bak-*
 daily_publish.log
+
+# whitespace -> Facebook cross-post idempotency ledger (per-host state, not content)
+.whitespace-facebook-ledger.json
+.whitespace-facebook-ledger.json.tmp-*

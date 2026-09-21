@@ -57,12 +57,32 @@
 //        success while the new post was stranded on the wrong branch. Fixed:
 //        the script now asserts it is actually on `main` before doing
 //        anything, and pushes `HEAD:refs/heads/main` explicitly.
+//
+// Facebook cross-post (2026-09-21):
+//   After a successful site publish (commit + push), the same post is
+//   cross-posted to the "Whitespace Design" Facebook Page, via
+//   scripts/content/facebook-publish.mjs — the same poll/scrape/post/verify
+//   pattern already trusted unattended for ai.whitespacedesign.ca. Two rules
+//   this must never violate, both enforced by where the call sits below:
+//     - it runs ONLY after the git push has already succeeded, and its own
+//       failure never rolls back or re-does that push — the site content is
+//       the more important side effect;
+//     - it is idempotent across re-runs via its own ledger file
+//       (.whitespace-facebook-ledger.json, gitignored), keyed by slug and
+//       checked BEFORE any Graph API call — not by the site-publish state,
+//       since the draft file (the only prior "not yet published" signal) is
+//       deleted the moment the site publish succeeds.
+//   The caption is never generated here — it is pulled verbatim from the
+//   draft's own "## 4. Facebook hooks" / "Hook A (for Option A)" line
+//   (this script always publishes Option A's body), and a draft missing
+//   that line fails the Facebook step loudly rather than inventing one.
 
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import { extractFacebookHook, postDraftToFacebook } from './facebook-publish.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -169,6 +189,19 @@ function processWhitespaceDraft(filename) {
     return false;
   }
 
+  // Early, non-blocking check (Opus review MEDIUM-2, 2026-09-21): surface a
+  // missing Facebook hook now, before the several-minute build below, not
+  // only after a successful commit+push. This does NOT gate the site
+  // publish — it always proceeds regardless — it only makes the eventual
+  // Facebook-step failure predictable instead of a surprise several
+  // minutes later. The real enforcement is extractFacebookHook() being
+  // called again, for real, after the push (see run()).
+  try {
+    extractFacebookHook(content, filename, 'A');
+  } catch (e) {
+    console.error(`NOTE (Facebook step will fail after this publishes): ${e.message}`);
+  }
+
   // Written outside the repo (os.tmpdir()) rather than into drafts/whitespace/
   // itself, so a hard kill can't leave a stray .md file in the directory this
   // script scans for the next draft to publish.
@@ -190,25 +223,59 @@ function processWhitespaceDraft(filename) {
     '--excerpt', excerpt,
     '--tags', tags,
     '--body-file', tempBodyPath,
+    // --json so the caller can recover the slug/url publish-post.mjs
+    // derived (needed for the Facebook step below) without re-deriving
+    // slugify() logic here. Human-readable logs still stream live: in
+    // --json mode publish-post.mjs sends them to stderr, which stays
+    // 'inherit'; only stdout (the final JSON payload) is captured.
+    '--json',
   ];
   if (DRY_RUN) args.push('--no-build');
 
   try {
     const result = spawnSync(process.execPath, args, {
       cwd: REPO_ROOT,
-      stdio: 'inherit',
+      encoding: 'utf8',
+      stdio: ['inherit', 'pipe', 'inherit'],
       shell: false,
     });
     if (result.error) {
       throw result.error;
     }
     if (result.status !== 0) {
-      console.error(`Failed to publish ${filename}: publish-post.mjs exited with code ${result.status}`);
+      // Opus review MEDIUM-1 (2026-09-21): in --json mode, publish-post.mjs's
+      // die() writes the failure payload to STDOUT (see publish-post.mjs:61-68),
+      // and stdout is now piped (captured), not inherited — so without this,
+      // the only thing that reached the log on failure was a bare exit code.
+      const raw = (result.stdout || '').trim();
+      let reason = raw;
+      try {
+        const failed = JSON.parse(raw);
+        if (failed?.error) reason = `[${failed.step}] ${failed.error}`;
+      } catch {
+        // raw wasn't JSON (e.g. a crash before die() could run) — fall back
+        // to printing it verbatim below.
+      }
+      console.error(`Failed to publish ${filename}: publish-post.mjs exited with code ${result.status}${reason ? `\n${reason}` : ''}`);
       process.exitCode = 1;
       return false;
     }
+    let payload;
+    try {
+      payload = JSON.parse(result.stdout);
+    } catch {
+      console.error(`Failed to publish ${filename}: could not parse publish-post.mjs JSON output:\n${result.stdout}`);
+      process.exitCode = 1;
+      return false;
+    }
+    console.log(`      wrote ${payload.file}`);
+    console.log(`      url   ${payload.url}`);
     if (!DRY_RUN) fs.unlinkSync(filePath); // Delete draft after successful publish
-    return true;
+    // content is returned alongside the publish-post.mjs payload so the
+    // caller can pull the Facebook hook out of it after this function
+    // returns — filePath is gone by then (deleted above), so this is the
+    // only copy of the draft's own text left in memory.
+    return { title, content, slug: payload.slug, url: payload.url };
   } catch (e) {
     console.error(`Failed to publish ${filename}`, e.message);
     process.exitCode = 1;
@@ -218,7 +285,7 @@ function processWhitespaceDraft(filename) {
   }
 }
 
-function run() {
+async function run() {
   console.log(`--- Starting Daily Publish: whitespacedesign.ca${DRY_RUN ? ' (DRY RUN, no git)' : ''} ---`);
 
   if (!DRY_RUN) {
@@ -294,8 +361,8 @@ function run() {
     return;
   }
 
-  const ok = processWhitespaceDraft(draft);
-  if (!ok) {
+  const published = processWhitespaceDraft(draft);
+  if (!published) {
     console.error('Publish step failed; not committing.');
     process.exitCode = 1;
     return;
@@ -307,6 +374,7 @@ function run() {
   }
 
   console.log('--- Committing to Git ---');
+  let pushed = false;
   try {
     runGit(['add', 'src/content/whitespace', 'drafts/whitespace']);
     const status = runGit(['status', '--porcelain', '--', 'src/content/whitespace', 'drafts/whitespace']);
@@ -321,10 +389,44 @@ function run() {
     // HEAD is main, so this is belt-and-suspenders.
     runGit(['push', 'origin', `HEAD:refs/heads/${PUBLISH_BRANCH}`]);
     console.log('Successfully pushed to Git.');
+    pushed = true;
   } catch (e) {
     console.error('Git commit/push failed.', e.message);
+    process.exitCode = 1;
+    return;
+  }
+
+  if (!pushed) return;
+
+  // --- Facebook cross-post. Runs ONLY after the push above has already
+  // succeeded. The site content is live (or on its way live) the moment
+  // that push lands, and is by far the more important side effect — a
+  // failure anywhere below must be visible (non-zero exit, clear log) but
+  // must never attempt to undo or repeat the git commit/push.
+  console.log('--- Posting to Facebook (Whitespace Design Page) ---');
+  try {
+    const hook = extractFacebookHook(published.content, draft, 'A');
+    const result = await postDraftToFacebook({
+      slug: published.slug,
+      url: published.url,
+      title: published.title,
+      hook,
+    });
+    if (result.skipped) {
+      console.log(`Facebook: "${published.slug}" was already posted (id=${result.postId}); nothing to do.`);
+    } else {
+      console.log(`Facebook: posted, id=${result.postId}`);
+    }
+  } catch (e) {
+    console.error(
+      'Facebook post step failed (the site publish above already succeeded and is NOT being rolled back):',
+      e.message
+    );
     process.exitCode = 1;
   }
 }
 
-run();
+run().catch((e) => {
+  console.error('Unhandled error in publish-daily-whitespace.mjs:', e);
+  process.exitCode = 1;
+});
