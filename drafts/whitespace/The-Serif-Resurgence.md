@@ -1,14 +1,28 @@
-## 1. Post Metadata & Strategy
+# Draft: The Serif Resurgence
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** The Serif Resurgence
+- **Excerpt:** Exploring the the serif resurgence design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 - **Target Audience:** Growth-stage SMBs, founders, and marketing directors.
 - **Goal:** Educate on the business value of serif typography in modern web design, demonstrating technical expertise and establishing authority.
 - **Required Action:** Deploy to `drafts/whitespace/The-Serif-Resurgence.md`.
 
-## 2. Image Ideas
+## 2. Image ideas
 - Split-screen UI showing a generic sans-serif SaaS landing page next to a high-end serif-driven landing page.
 - A close-up typography specimen showing the contrast between a modern serif heading and a clean sans-serif body copy.
 - A dark-mode code editor displaying Next.js and Tailwind CSS utility classes used to implement a custom serif font.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Hidden Cost (The Math Angle)
 *Shift the focus from subjective aesthetics to measurable brand perception and conversion rates, arguing that "safe" typography is costing high-ticket brands money.*
@@ -166,6 +180,6 @@ export default function ValueProposition() {
 
 Stop designing for limitations that no longer exist. If your brand demands respect, your typography should demand it too. Embracing the serif is how you stop looking like everyone else and start looking like the definitive choice in your market.
 
-## 4. Facebook Cross-Post Ideas
-- **Hook 1:** If you removed your logo, would your website look exactly like your three biggest competitors? We are seeing a massive shift back to serif typography in modern web design. Here is why premium brands are ditching the "startup look" and the exact Next.js code to build it. [Link in comments]
-- **Hook 2:** The rule that "serif fonts don't work on screens" was written 15 years ago for low-res monitors. It is dead. Today, blending in with the commodity market is the real risk. Here is how to strategically deploy serif typography to instantly elevate your brand's authority. [Link in comments]
+## 4. Facebook hooks
+- **Hook 1:** If you removed your logo, would your website look exactly like your three biggest competitors? We are seeing a massive shift back to serif typography in modern web design. Here is why premium brands are ditching the "startup look" and the exact Next.js code to build it. (Assumes link in body)
+- **Hook 2:** The rule that "serif fonts don't work on screens" was written 15 years ago for low-res monitors. It is dead. Today, blending in with the commodity market is the real risk. Here is how to strategically deploy serif typography to instantly elevate your brand's authority. (Assumes link in body)

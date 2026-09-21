@@ -1,16 +1,31 @@
+# Draft: Speed Is Revenue
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Speed Is Revenue
+- **Excerpt:** Exploring the speed is revenue design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: Speed is Revenue: Why We Build with Next.js
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** Founders, Marketing Directors, and E-commerce store owners scaling their brands.
 - **Goal:** Position custom Next.js/React builds as an investment in conversion rate optimization (CRO) rather than just an aesthetic redesign. 
 - **Required Action:** Ensure this post is saved to `D:\Projects\web-portfolio-nextjs\src\content\whitespace\` using the `npm run content:post -- whitespace --type essay` command.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A side-by-side comparison of a Lighthouse performance score. Left: WordPress/Shopify template scoring 40 (red). Right: A custom Next.js build scoring 99+ (green).
 - **Idea 2:** A graph showing the direct correlation between page load times and bounce rates/abandoned carts.
 - **Idea 3:** A sleek, high-contrast mockup of a clean React component rendering instantly on a mobile screen.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Data-Driven / Analytical Angle
 *Use this if the intent is to appeal to CMOs and operators who care strictly about metrics, ROI, and technical superiority.*
@@ -37,7 +52,7 @@ That is why we build with Next.js. Next.js is a modern framework that allows us 
 
 When your website loads instantly, your bounce rate drops, your customers stay engaged, and your revenue goes up. It is that simple.
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1 (Analytical):**
 "Your product is high-quality, but your website takes 6 seconds to load. You aren't just losing patience—you are losing revenue. Here is why we engineer sites with Next.js to be blazing fast, and exactly how it impacts your bottom line."

@@ -1,15 +1,30 @@
+# Draft: 2018 Digital Storefront Template
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** 2018 Digital Storefront Template
+- **Excerpt:** Exploring the 2018 digital storefront template design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: Does Your Digital Storefront Look Like a 2018 Template?
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** E-commerce store owners, Founders, and Marketing Directors.
 - **Goal:** Position Whitespace Design as the premium upgrade for brands outgrowing standard Shopify/WordPress themes.
 - **Required Action:** Ensure this is routed to the `whitespace` collection as an essay using `npm run content:post`.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** Split-screen comparison. Left: Cluttered, generic stock template (messy nav, competing CTA buttons). Right: Custom brand identity with clean typography and modern UI.
 - **Idea 2:** A visual hierarchy diagram showing where the eye naturally falls on a well-designed page.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Conversion Optimization Angle
 *Use this if the intent is to tie visual design directly to checkout metrics.*
@@ -32,7 +47,7 @@ Many e-commerce brands outgrow their initial templates but delay the redesign. T
 
 Design is the silent ambassador of your brand. Cluttered navigation, inconsistent typography, and generic layouts instantly degrade perceived value. A custom-engineered digital storefront signals authority, trust, and permanence. We help growth-stage companies bridge the gap between a great product and a world-class digital experience.
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "A pretty website won't fix a broken conversion flow. Here are 3 subtle UI mistakes that are costing your e-commerce brand sales right now."

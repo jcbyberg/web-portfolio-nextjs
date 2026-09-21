@@ -1,15 +1,30 @@
+# Draft: Trust Problem Not Traffic
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Trust Problem Not Traffic
+- **Excerpt:** Exploring the trust problem not traffic design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: You Don't Have a Traffic Problem; You Have a Trust Problem
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** E-commerce Founders and Marketing Directors running paid ads.
 - **Goal:** Shift the blame for poor sales from "bad ads" to "bad web design," selling custom Whitespace UI/UX redesigns.
 - **Required Action:** Post to the `whitespace` collection as an essay.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A graphic showing a funnel: Top is a high-quality Facebook Ad (High Trust), middle is a broken/cluttered website (Trust Drop), bottom is an abandoned cart.
 - **Idea 2:** Side-by-side comparison of a standard WooCommerce checkout vs. a frictionless, high-trust custom checkout flow.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The CPA / Ad Spend Math Angle (Analytical)
 *Use this if the intent is to speak directly to media buyers and founders burning cash on ads.*
@@ -29,7 +44,7 @@ The internet is crowded, and consumers are highly skeptical. They make a subcons
 
 At Whitespace Design, we align your digital storefront with the quality of your actual product. A custom, meticulously engineered website builds immediate, subconscious trust. It tells the customer, "This is a real, established brand." Stop letting a subpar website devalue your life's work.
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "Stop increasing your ad budget. If you are sending $5-a-click traffic to a website that looks like it was built in an afternoon, you don't have a traffic problem. You have a trust problem."

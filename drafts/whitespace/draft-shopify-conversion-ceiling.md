@@ -1,15 +1,30 @@
+# Draft: Shopify Conversion Ceiling
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Shopify Conversion Ceiling
+- **Excerpt:** Exploring the shopify conversion ceiling design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: The Conversion Rate Ceiling of Shopify Themes
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** Growth-stage E-commerce Founders and Marketing Directors.
 - **Goal:** Educate successful e-commerce brands on "Headless Commerce" and sell custom Next.js builds.
 - **Required Action:** Post to the `whitespace` collection as an essay.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A graph showing revenue growth plateauing (hitting the ceiling) on a standard theme, then breaking through with a Headless Next.js architecture.
 - **Idea 2:** A technical diagram showing the separation of the Frontend (Next.js) from the Backend (Shopify/Stripe).
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Headless Commerce Angle (Technical/Scale Focus)
 *Use this if the intent is to sell high-end engineering to established 7-8 figure brands.*
@@ -31,7 +46,7 @@ Standard themes create mobile friction. The menus are hard to tap, the images ta
 
 Breaking through this conversion ceiling requires an architectural shift. Instead of relying on a responsive template, we engineer Headless Next.js applications that function exactly like native iOS apps. Transitions are instant, data is pre-fetched before the user even clicks, and the UI is designed specifically for thumbs, not mice. When you remove the friction of a standard theme, your mobile conversion rate skyrockets. 
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "Shopify is an incredible backend, but if you are using a standard theme, you will eventually hit a conversion ceiling. Here is why scaling brands migrate to Headless Commerce."

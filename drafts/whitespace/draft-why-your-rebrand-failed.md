@@ -1,15 +1,30 @@
+# Draft: Why Your Rebrand Failed
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Why Your Rebrand Failed
+- **Excerpt:** Exploring the why your rebrand failed design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: Why Your Rebrand Failed (And How to Fix It)
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** Growth-stage SMBs, E-Commerce Founders, Marketing Directors.
 - **Goal:** Position Whitespace as a full-stack design partner (Identity + UI/UX), not just a logo shop.
 - **Required Action:** Post to the `whitespace` collection as an essay.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A graphic showing a beautiful new logo slapped onto an outdated, clunky checkout flow.
 - **Idea 2:** A holistic brand system diagram (Logo -> Typography -> UI Components -> Checkout Flow).
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Systemic UI/UX Angle
 *Use this if the intent is to focus on digital product design and conversion rates.*
@@ -31,7 +46,7 @@ Many companies treat rebranding as a marketing task, completely ignoring the eng
 
 If your recent rebrand didn't elevate your perceived market value, it's because the digital execution fell short. We help growth-stage companies bridge the gap between world-class brand identity and elite web engineering. 
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "A new logo won't fix a broken user experience. If your recent rebrand didn't increase online sales, here is what you missed."

@@ -1,13 +1,23 @@
-## 1. Post Metadata & Strategy
+# Draft: Endless Kinetic Marquees: Motion Without the Performance Tax
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Endless Kinetic Marquees: Motion Without the Performance Tax
+- **Excerpt:** Scrolling marquees add perpetual motion to a brand's visual language while staying performant. Here is how to build them with pure CSS.
+- **Tags:** animation, ui, design trends, ux, performance
+
+Strategy:
 - **Target Audience:** Growth-stage SMBs, founders, and marketing directors.
 - **Goal:** Educate founders on the business value of kinetic marquees (trust density without performance hit) and provide the technical implementation.
 - **Required Action:** Deploy using Next.js/CSS modules for zero-JS performance.
 
-## 2. Image Ideas
+## 2. Image ideas
 - A split-screen UI graphic: On the left, a massive, vertically scrolling logo wall taking up the whole viewport. On the right, a sleek, horizontal endless marquee taking up just 10% of the screen.
 - A Lighthouse performance score comparison showing a 100/100 score on a page using CSS-only marquees vs. a heavy JavaScript carousel loading a spinner.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Feature-to-Business Translation
 *[Focuses on converting vertical space into horizontal trust signals. Explains how kinetic marquees condense social proof without demanding user interaction, followed by the CSS implementation.]*
@@ -149,6 +159,6 @@ The underlying trick to an infinite marquee is duplication. You create a contain
 
 This CSS is incredibly lightweight, completely responsive, and mathematically precise. It is how you build trust and density without sacrificing a single millisecond of speed. Stop building static brochures and start engineering momentum.
 
-## 4. Facebook Cross-Post Ideas
-1. Most founders strip animations from their site because they think "boring equals fast." But a static logo wall takes up 300px of vertical space on mobile and forces users to scroll past your pitch. Here is why the Endless Kinetic Marquee is the ultimate performance-free trust builder (and the pure CSS to build it yourself). [Link in comments]
-2. The old HTML marquee tag is dead, but the spatial design principle behind it is taking over modern web design. If your competitors are using heavy JavaScript sliders that ruin their Core Web Vitals, here is how you can use pure CSS to build a buttery-smooth trust ticker that costs zero performance. [Link in comments]
+## 4. Facebook hooks
+- **Hook A (for Option A):** Most founders strip animations from their site because they think "boring equals fast." But a static logo wall takes up 300px of vertical space on mobile and forces users to scroll past your pitch. Here is why the Endless Kinetic Marquee is the ultimate performance-free trust builder (and the pure CSS to build it yourself). (Assumes link in body)
+- **Hook B (for Option B):** The old HTML marquee tag is dead, but the spatial design principle behind it is taking over modern web design. If your competitors are using heavy JavaScript sliders that ruin their Core Web Vitals, here is how you can use pure CSS to build a buttery-smooth trust ticker that costs zero performance. (Assumes link in body)

@@ -1,15 +1,30 @@
+# Draft: Tech Stack Dictating Brand
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Tech Stack Dictating Brand
+- **Excerpt:** Exploring the tech stack dictating brand design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: Your Tech Stack is Dictating Your Brand (And Not in a Good Way)
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** Growth-stage E-commerce Founders and Marketing Directors.
 - **Goal:** Sell custom Next.js/React engineering to brands outgrowing their Shopify/WordPress templates.
 - **Required Action:** Post to the `whitespace` collection as an essay.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A graphic showing a brand's creative vision being forced into a rigid "Template Box."
 - **Idea 2:** A clean, custom UI component (like a bespoke product configurator) that is impossible to build on a standard template.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Product & Feature Limitation Angle
 *Use this if the intent is to appeal to founders frustrated by their inability to innovate.*
@@ -33,7 +48,7 @@ When you build your brand on the exact same theme as your competitors, it is imp
 
 A custom Next.js build allows us to design without constraints. We can introduce fluid animations, entirely unique layouts, and lightning-fast transitions that instantly signal to the customer that they are interacting with a top-tier brand. If your brand is premium, your digital execution cannot be generic.
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "Are you making marketing decisions based on what your website template allows you to do? If your tech stack is dictating your strategy, it is time to upgrade."

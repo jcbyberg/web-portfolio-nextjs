@@ -1,14 +1,28 @@
-## 1. Post Metadata & Strategy
+# Draft: Scroll Snapping
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Scroll Snapping
+- **Excerpt:** Exploring the scroll snapping design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 - **Target Audience:** Growth-stage SMBs, founders, and marketing directors.
 - **Goal:** Educate on how modern scroll-snapping CSS drives engagement and convert a technical feature into a business outcome.
 - **Required Action:** Deploy as a blog post under the whitespace collection.
 
-## 2. Image Ideas
+## 2. Image ideas
 - A side-by-side split screen showing a frantic, blurry scroll vs. a clean, locked-in viewport.
 - A high-contrast code snippet of CSS `scroll-snap-type` overlaid on a mobile phone mockup.
 - A Lighthouse scroll-performance metric or bounce rate graph showing a sharp decline after implementation.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Feature-to-Business Translation
 *[Focuses on how controlling the viewport translates directly to user engagement, making the technology a vehicle for business growth.]*
@@ -136,6 +150,6 @@ Using `x mandatory` with `scroll-snap-align: center` is the exact math required 
 
 A digital storefront that cannot control where its customers look is a storefront that bleeds revenue. By adopting native scroll-snapping, you stop treating your website like a passive brochure and start treating it like a guided sales presentation. When you dictate the pacing, you protect the conversion.
 
-## 4. Facebook Cross-Post Ideas
-- [Option A Hook] Your users aren't bouncing because of your copy. They're bouncing because they flicked their thumb and scrolled past your entire value proposition in 0.5 seconds. Here is why modern web design uses CSS scroll-snapping to force the pacing and protect revenue. [Link in comments]
-- [Option B Hook] Stop paying the "JavaScript Tax." Ten years ago, making a website feel like a premium app required heavy code that destroyed your page speed. Today, you can do it with three lines of CSS. Here is the code. [Link in comments]
+## 4. Facebook hooks
+- [Option A Hook] Your users aren't bouncing because of your copy. They're bouncing because they flicked their thumb and scrolled past your entire value proposition in 0.5 seconds. Here is why modern web design uses CSS scroll-snapping to force the pacing and protect revenue. (Assumes link in body)
+- [Option B Hook] Stop paying the "JavaScript Tax." Ten years ago, making a website feel like a premium app required heavy code that destroyed your page speed. Today, you can do it with three lines of CSS. Here is the code. (Assumes link in body)

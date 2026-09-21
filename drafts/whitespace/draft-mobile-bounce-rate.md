@@ -1,15 +1,30 @@
+# Draft: Mobile Bounce Rate
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Mobile Bounce Rate
+- **Excerpt:** Exploring the mobile bounce rate design trend and how it impacts modern web experiences.
+- **Tags:** design, ui, trend, css, ux
+
+Strategy:
+- **Target Audience:** Design-forward teams, product managers, and frontend developers.
+- **Goal:** Establish Whitespace as the authority on cutting-edge web design trends.
+
+
 # Draft: Why Your Bounce Rate is Highest on Mobile (And How to Fix It)
 
-## 1. Post Metadata & Strategy
+
 - **Target Audience:** E-commerce Directors and SMB Founders.
 - **Goal:** Educate on "Mobile-First" Next.js engineering and highlight the failure of responsive desktop templates.
 - **Required Action:** Post to the `whitespace` collection as an essay.
 
-## 2. Image Ideas
+## 2. Image ideas
 - **Idea 1:** A graphic showing an analytics dashboard where Mobile Traffic is 82%, but Mobile Revenue is only 30%.
 - **Idea 2:** A side-by-side comparison: A squished "responsive" desktop menu vs. a thumb-friendly, native-feeling mobile app navigation bar.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Data Disconnect Angle (Analytics Focus)
 *Use this if the intent is to highlight a glaring gap in their Google Analytics.*
@@ -31,7 +46,7 @@ If your screen flashes white while a new page loads, or if a popup modal stutter
 
 The reason standard websites feel clunky on phones is because they are downloading massive amounts of HTML and CSS on every single click. We bypass this entirely by building custom Next.js applications. Our architecture pre-fetches the data before the user even taps the button, resulting in instant, seamless page transitions that mimic a million-dollar native app. Stop losing mobile customers to clunky web experiences. 
 
-## 4. Facebook Cross-Post Ideas
+## 4. Facebook hooks
 
 **Facebook Hook Option 1:**
 "Your mobile traffic is 80% of your volume, but your mobile revenue is terrible. Why? Because your website was designed on a 4K monitor and squished to fit a phone."

@@ -1,14 +1,24 @@
-## 1. Post Metadata & Strategy
+# Draft: Mixed Typographic Pairs: Creating Hierarchy and Visual Impact
+
+## 1. Post metadata and strategy
+
+- **Collection:** whitespace
+- **Type:** essay
+- **Title:** Mixed Typographic Pairs: Creating Hierarchy and Visual Impact
+- **Excerpt:** Pairing contrasting typefaces creates hierarchy and perceived value. Here is how to combine serifs and sans-serifs to break visual monotony and guide reader attention.
+- **Tags:** typography, design, branding, ui, hierarchy
+
+Strategy:
 - **Target Audience:** Growth-stage SMBs, founders, and marketing directors.
 - **Goal:** Position Whitespace as the authority on modern, premium web design execution. Show that we don't just use templates; we use editorial design principles to drive engagement and perceived value.
-- **Required Action:** Deploy to D:\Projects\web-portfolio-nextjs\drafts\whitespace\Mixed-Typographic-Pairs.md, log in CONTENT-LEDGER.md
+- **Required Action:** Deploy using modern typographic pairings and CSS tokenization.
 
-## 2. Image Ideas
+## 2. Image ideas
 - Split-screen visual: On the left, a generic all-sans-serif headline ("Blanding"). On the right, the same headline using a Mixed Typographic Pair (Sans-serif with an italic Serif accent), highlighting the premium feel.
 - A code snippet overlaying an editorial fashion-style layout, demonstrating the intersection of engineering and design.
 - A high-contrast graphic showing the word "Trust" in a classic serif, intersecting with a sharp, brutalist sans-serif typeface.
 
-## 3. Blog Body: Wording Options
+## 3. Blog body: wording options
 
 ### Option A: The Perceived Value Translation
 *[Intent: Translate the technical design feature of mixed typography into a business outcome—specifically, how it instantly elevates a brand's perceived value without a costly ground-up rebrand.]*
@@ -158,12 +168,6 @@ Notice the optical adjustment in the CSS. Serifs often have different baseline m
 
 Stop letting your ideal customers skim past your value. Introduce a Mixed Typographic Pair, break the monotony, and force them to read exactly what you want them to read.
 
-## 4. Facebook Cross-Post Ideas
-
-**Option A (Perceived Value Angle):**
-Is your website suffering from "blanding"? If your design is completely set in a single, safe sans-serif font, you aren't looking clean—you're looking like a template. Discover how the "Mixed Typographic Pair" is allowing growth-stage brands to instantly elevate their perceived value without an expensive rebrand. The code to build it is inside.
-[Link in comments]
-
-**Option B (Attention Economy Angle):**
-You have traffic, but they aren't reading your core value prop. Why? Because a monotonous, single-font website signals to the brain that "this is all the same," putting visitors into a skimming trance. Break the visual monotony. Learn how pairing a brutalist sans-serif with an editorial serif creates visual speed bumps that force users to pay attention. Read the breakdown (and grab the CSS).
-[Link in comments]
+## 4. Facebook hooks
+- **Hook A (for Option A):** Is your website suffering from "blanding"? If your design is completely set in a single, safe sans-serif font, you aren't looking clean—you're looking like a template. Discover how the "Mixed Typographic Pair" is allowing growth-stage brands to instantly elevate their perceived value without an expensive rebrand. The code to build it is inside. (Assumes link in body)
+- **Hook B (for Option B):** You have traffic, but they aren't reading your core value prop. Why? Because a monotonous, single-font website signals to the brain that "this is all the same," putting visitors into a skimming trance. Break the visual monotony. Learn how pairing a brutalist sans-serif with an editorial serif creates visual speed bumps that force users to pay attention. (Assumes link in body)
