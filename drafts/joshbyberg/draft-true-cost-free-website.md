@@ -1,6 +1,10 @@
 # Draft: The True Cost of a "Free" Website Builder
 
 ## 1. Post Metadata & Strategy
+- **Title:** The True Cost of a "Free" Website Builder
+- **Excerpt:** A "free" drag-and-drop website builder isn't free — a slow, bloated DIY site costs Durham Region trades real jobs every month it stays online.
+- **Tags:** local seo, trades, durham region
+- **Type:** post
 - **Target Audience:** Local contractors, trades, and service operators in Durham Region.
 - **Goal:** Convince locals to abandon DIY builders (Wix/Squarespace) and invest in the $500 flat-rate package.
 - **Required Action:** Target `joshbyberg.com` / Oshawa landing page.

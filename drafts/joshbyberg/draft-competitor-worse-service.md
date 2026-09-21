@@ -1,6 +1,10 @@
 # Draft: Why the Competitor with Worse Service is Getting Your Calls
 
 ## 1. Post Metadata & Strategy
+- **Title:** Why the Competitor with Worse Service is Getting Your Calls
+- **Excerpt:** Your competitor isn't winning because they do better work — they're winning because their phone number is two seconds easier to find on a mobile screen.
+- **Tags:** mobile, trades, durham region
+- **Type:** post
 - **Target Audience:** Local contractors, trades, and service operators in Durham Region.
 - **Goal:** Challenge local pride to drive awareness of the $500 mobile-first web package.
 - **Required Action:** Target `joshbyberg.com` / Oshawa landing page.

@@ -1,6 +1,10 @@
 # Draft: The 3 Biggest Website Mistakes Local Trades Make
 
 ## 1. Post Metadata & Strategy
+- **Title:** The 3 Biggest Website Mistakes Local Trades Make
+- **Excerpt:** Most contractors in Durham Region are losing digital leads to three avoidable mistakes — no tap-to-call button, a hidden service area, and a bloated desktop-first design.
+- **Tags:** local seo, trades, durham region
+- **Type:** post
 - **Target Audience:** Local contractors, plumbers, electricians, and trades in Durham Region.
 - **Goal:** Educate local business owners on common pitfalls and drive them to the $500 flat-rate web design package.
 - **Required Action:** Target `joshbyberg.com` / Oshawa landing page.

@@ -1,6 +1,10 @@
 # Draft: Why "Referrals Only" is a Dangerous Business Strategy
 
 ## 1. Post Metadata & Strategy
+- **Title:** Why "Referrals Only" is a Dangerous Business Strategy
+- **Excerpt:** Relying entirely on word-of-mouth feels like a badge of honor, but it leaves a trades business with zero control over growth and no way to scale past unpredictable referrals.
+- **Tags:** local seo, trades, durham region
+- **Type:** post
 - **Target Audience:** Local contractors, trades, and service businesses in Durham Region.
 - **Goal:** Challenge the "word-of-mouth" pride to sell the $500 web design package as a lead generation engine.
 - **Required Action:** Target `joshbyberg.com` / Oshawa landing page.
